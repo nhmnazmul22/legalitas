@@ -51,12 +51,12 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.4147 0.1832 266.12);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
+  --secondary: oklch(0.5971 0.2285 329.52);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
+  --muted-foreground: oklch(0.5552 0.0296 266.41);
   --accent: oklch(0.968 0.007 247.896);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
@@ -118,5 +118,74 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  a,
+  button {
+    @apply cursor-pointer;
+  }
+  .container {
+    @apply !max-w-[1400px] !w-[95%] lg:!w-[90%] mx-auto md:!px-2;
+  }
+}
+
+.theme-gradient {
+  background: linear-gradient(
+    60deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.001);
+  padding-bottom: 7px;
+}
+
+.btn-gradient {
+  color: var(--color-white);
+  background-size: 300% 100%;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  transition: background-size 0.3s ease, background-position 0.3s ease;
+  background-position: left center;
+}
+
+.btn-gradient:hover {
+  background-size: 300% 300% !important;
+  background-position: right center;
+}
+
+/* Collapsible content */
+.CollapsibleContent {
+  overflow: hidden;
+}
+.CollapsibleContent[data-state="open"] {
+  animation: slideDown 300ms ease-out;
+}
+.CollapsibleContent[data-state="closed"] {
+  animation: slideUp 300ms ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
   }
 }
