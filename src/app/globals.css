@@ -139,7 +139,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.001);
-  padding-bottom: 7px;
 }
 
 .btn-gradient {

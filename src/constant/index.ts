@@ -1,4 +1,4 @@
-import { MenuItem } from "@/types";
+import { HeroServiceItemsType, MenuItem } from "@/types";
 
 const menuItems: MenuItem[] = [
   { title: "Peraturan", link: "/peraturan" },
@@ -83,4 +83,37 @@ const menuItems: MenuItem[] = [
   { title: "Proposal", link: "/proposal" },
 ];
 
-export { menuItems };
+const heroServiceItems: HeroServiceItemsType[] = [
+  {
+    id: 1,
+    thumbnail: "/hero-service-banner-01.png",
+    title: "Pendirian PT",
+    description:
+      "Bentuk badan usaha yang paling banyak digunakan di Indonesia.",
+    rating: "5",
+    startingPrice: "3",
+    link: "/",
+  },
+  {
+    id: 2,
+    thumbnail: "/hero-service-banner-01.png",
+    title: "Pendirian PT",
+    description:
+      "Bentuk badan usaha yang paling banyak digunakan di Indonesia.",
+    rating: "5",
+    startingPrice: "3",
+    link: "/",
+  },
+  {
+    id: 3,
+    thumbnail: "/hero-service-banner-01.png",
+    title: "Pendirian PT",
+    description:
+      "Bentuk badan usaha yang paling banyak digunakan di Indonesia.",
+    rating: "5",
+    startingPrice: "3",
+    link: "/",
+  },
+];
+
+export { heroServiceItems, menuItems };

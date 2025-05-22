@@ -25,13 +25,13 @@ const Navbar = () => {
             alt="Legalitas"
             width={130}
             height={130}
-            className="w-40 md:w-56 h-auto"
+            className="min-w-40 md:w-56 h-auto"
           />
         </Link>
         <SidebarTrigger className="lg:hidden" />
-        <div className="hidden lg:flex gap-5 items-center">
+        <div className="hidden lg:flex gap-3 items-center">
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className="gap-0">
               {menuItems.map((item) => {
                 if (!item.children) {
                   return (
@@ -40,7 +40,7 @@ const Navbar = () => {
                         <NavigationMenuLink
                           className={cn(
                             navigationMenuTriggerStyle(),
-                            "!text-base font-medium hover:text-primary duration-300"
+                            "!text-base font-medium hover:text-primary duration-300 !px-2 xl:!px-4"
                           )}
                         >
                           {item.title}
@@ -51,7 +51,7 @@ const Navbar = () => {
                 }
                 return (
                   <NavigationMenuItem key={item.title}>
-                    <NavigationMenuTrigger className="!text-base font-medium hover:text-primary duration-300">
+                    <NavigationMenuTrigger className="!text-base font-medium hover:text-primary duration-300 !px-2 xl:!px-4">
                       {item.title}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="flex gap-3 items-center justify-between">
