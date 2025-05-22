@@ -14,4 +14,11 @@ interface HeroServiceItemsType {
   startingPrice: string;
 }
 
-export type { HeroServiceItemsType, MenuItem };
+interface MainServiceItemsType {
+  id?: number | string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export type { HeroServiceItemsType, MainServiceItemsType, MenuItem };

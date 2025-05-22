@@ -1,4 +1,4 @@
-import { HeroServiceItemsType, MenuItem } from "@/types";
+import { HeroServiceItemsType, MainServiceItemsType, MenuItem } from "@/types";
 
 const menuItems: MenuItem[] = [
   { title: "Peraturan", link: "/peraturan" },
@@ -96,24 +96,49 @@ const heroServiceItems: HeroServiceItemsType[] = [
   },
   {
     id: 2,
-    thumbnail: "/hero-service-banner-01.png",
-    title: "Pendirian PT",
-    description:
-      "Bentuk badan usaha yang paling banyak digunakan di Indonesia.",
+    thumbnail: "/hero-service-banner-02.png",
+    title: "Pendirian PT Perorangan",
+    description: "PT yang didirikan oleh 1 (satu) orang.",
     rating: "5",
-    startingPrice: "3",
+    startingPrice: "2",
     link: "/",
   },
   {
     id: 3,
-    thumbnail: "/hero-service-banner-01.png",
-    title: "Pendirian PT",
-    description:
-      "Bentuk badan usaha yang paling banyak digunakan di Indonesia.",
+    thumbnail: "/hero-service-banner-03.png",
+    title: "Pendirian PT PMA",
+    description: "PT dengan unsur kepemilikan saham asing.",
     rating: "5",
-    startingPrice: "3",
+    startingPrice: "5.25",
     link: "/",
   },
 ];
 
-export { heroServiceItems, menuItems };
+const mainServiceItems: MainServiceItemsType[] = [
+  {
+    id: 1,
+    title: "22 Tahun Melayani",
+    description: "Sejak tahun 2002 kami telah memberikan layanan legalitas.",
+    icon: "/main-service-icon-01.png",
+  },
+  {
+    id: 2,
+    title: "Pendekatan Hukum",
+    description: "Kami bekerja berdasarkan dasar hukum dan aspek legalitas.",
+    icon: "/main-service-icon-02.png",
+  },
+  {
+    id: 3,
+    title: "Seluruh Indonesia",
+    description: "Jangkauan layanan legalitas paling luas - seluruh Indonesia.",
+    icon: "/main-service-icon-03.png",
+  },
+  {
+    id: 4,
+    title: "Rekanan & Partnership",
+    description: "Kami bekerjasama dengan penyedia virtual office terbaik.",
+    icon: "/main-service-icon-04.png",
+  },
+];
+
+export { heroServiceItems, mainServiceItems, menuItems };
