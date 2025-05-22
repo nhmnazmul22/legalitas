@@ -16,7 +16,7 @@ const MainServiceCard: React.FC<MainServiceItemsType> = ({
   description,
 }) => {
   return (
-    <Card className="bg-secondary/15 border-0 shadow-md rounded-md">
+    <Card className="bg-secondary/15 border-0 shadow-md rounded-md gap-4">
       <CardHeader className="border-0">
         <Image
           src={icon}
@@ -27,12 +27,12 @@ const MainServiceCard: React.FC<MainServiceItemsType> = ({
         />
       </CardHeader>
       <CardContent>
-        <h3 className="text-sm font-extrabold">{title}</h3>
-        <p className="text-base text-muted-foreground mt-3">{description}</p>
+        <h3 className="text-lg font-extrabold">{title}</h3>
+        <p className="text-sm text-muted-foreground mt-3">{description}</p>
       </CardContent>
       <CardFooter>
         <Link href="/">
-          <Button className="bg-secondary/20 text-secondary hover:bg-secondary/30 duration-300 group">
+          <Button className="bg-secondary/20 text-secondary hover:bg-secondary hover:text-white duration-300 group">
             Lebih lanjut
             <ArrowRight
               size={14}

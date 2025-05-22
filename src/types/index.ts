@@ -21,4 +21,17 @@ interface MainServiceItemsType {
   description: string;
 }
 
-export type { HeroServiceItemsType, MainServiceItemsType, MenuItem };
+interface ServiceType {
+  id?: string;
+  title: string;
+  price: string;
+  description: string;
+  includes: string[];
+}
+
+export type {
+  HeroServiceItemsType,
+  MainServiceItemsType,
+  MenuItem,
+  ServiceType,
+};

@@ -29,7 +29,7 @@ export default function AppSidebar() {
       <SidebarHeader className="px-5 pt-5 pb-2">
         <Link href="/">
           <Image
-            src="/logo.png"
+            src="/images/logo.png"
             alt="Legalitas"
             width={130}
             height={130}

@@ -39,12 +39,12 @@ const HeroCarousel = () => {
                     <p className="text-muted-foreground text-lg">
                       {item.description}
                     </p>
-                    <p className="flex gap-2 items-center m-0">
+                    <div className="flex gap-2 items-center m-0">
                       <RatingGen rating={Number(item.rating)} />
                       <span className="theme-gradient text-base font-medium">
                         {"(Lihat review lengkap)"}
                       </span>
-                    </p>
+                    </div>
                   </div>
                 </CardContent>
                 <CardFooter className="pb-3">

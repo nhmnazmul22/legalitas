@@ -1,4 +1,9 @@
-import { HeroServiceItemsType, MainServiceItemsType, MenuItem } from "@/types";
+import {
+  HeroServiceItemsType,
+  MainServiceItemsType,
+  MenuItem,
+  ServiceType,
+} from "@/types";
 
 const menuItems: MenuItem[] = [
   { title: "Peraturan", link: "/peraturan" },
@@ -86,7 +91,7 @@ const menuItems: MenuItem[] = [
 const heroServiceItems: HeroServiceItemsType[] = [
   {
     id: 1,
-    thumbnail: "/hero-service-banner-01.png",
+    thumbnail: "/images/hero-service-banner-01.png",
     title: "Pendirian PT",
     description:
       "Bentuk badan usaha yang paling banyak digunakan di Indonesia.",
@@ -96,7 +101,7 @@ const heroServiceItems: HeroServiceItemsType[] = [
   },
   {
     id: 2,
-    thumbnail: "/hero-service-banner-02.png",
+    thumbnail: "/images/hero-service-banner-02.png",
     title: "Pendirian PT Perorangan",
     description: "PT yang didirikan oleh 1 (satu) orang.",
     rating: "5",
@@ -105,7 +110,7 @@ const heroServiceItems: HeroServiceItemsType[] = [
   },
   {
     id: 3,
-    thumbnail: "/hero-service-banner-03.png",
+    thumbnail: "/images/hero-service-banner-03.png",
     title: "Pendirian PT PMA",
     description: "PT dengan unsur kepemilikan saham asing.",
     rating: "5",
@@ -119,26 +124,134 @@ const mainServiceItems: MainServiceItemsType[] = [
     id: 1,
     title: "22 Tahun Melayani",
     description: "Sejak tahun 2002 kami telah memberikan layanan legalitas.",
-    icon: "/main-service-icon-01.png",
+    icon: "/images/main-service-icon-01.png",
   },
   {
     id: 2,
     title: "Pendekatan Hukum",
     description: "Kami bekerja berdasarkan dasar hukum dan aspek legalitas.",
-    icon: "/main-service-icon-02.png",
+    icon: "/images/main-service-icon-02.png",
   },
   {
     id: 3,
     title: "Seluruh Indonesia",
     description: "Jangkauan layanan legalitas paling luas - seluruh Indonesia.",
-    icon: "/main-service-icon-03.png",
+    icon: "/images/main-service-icon-03.png",
   },
   {
     id: 4,
     title: "Rekanan & Partnership",
     description: "Kami bekerjasama dengan penyedia virtual office terbaik.",
-    icon: "/main-service-icon-04.png",
+    icon: "/images/main-service-icon-04.png",
   },
 ];
 
-export { heroServiceItems, mainServiceItems, menuItems };
+const services: ServiceType[] = [
+  {
+    id: "srv-1",
+    title: "Pendirian PT",
+    price: "Rp 3juta",
+    description: "Bentuk badan usaha yang banyak digunakan",
+    includes: [
+      "Pengecekan Nama PT",
+      "Pemesanan Nama PT",
+      "Persiapan Minuta",
+      "Akta Pendirian PT",
+      "SK Menteri",
+      "Dapat 20 KBLI",
+    ],
+  },
+  {
+    id: "srv-2",
+    title: "PT Perorangan",
+    price: "Rp 2.25juta",
+    description: "PT yang didirikan oleh 1 (satu) orang",
+    includes: [
+      "Pengecekan Nama PT Perorangan",
+      "Pemesanan Nama PT Perorangan",
+      "Pernyataan Pendaftaran",
+      "SK Menteri",
+      "Dapat 20 KBLI",
+    ],
+  },
+  {
+    id: "srv-3",
+    title: "Pendirian CV",
+    price: "Rp 2.25juta",
+    description: "Bentuk badan usaha yang paling tua dan sederhana",
+    includes: [
+      "Pengecekan Nama CV",
+      "Pemesanan Nama CV",
+      "Persiapan Minuta",
+      "Akta Pendirian CV",
+      "SK Menteri",
+      "Dapat 20 KBLI",
+    ],
+  },
+  {
+    id: "srv-4",
+    title: "Pendirian PT PMA",
+    price: "Rp 5.25juta",
+    description: "PT dengan unsur kepemilikan saham asing",
+    includes: [
+      "Pengecekan Nama PT PMA",
+      "Pemesanan Nama PT PMA",
+      "Persiapan Minuta",
+      "Akta Pendirian PT PMA",
+      "SK Menteri",
+      "Dapat 20 KBLI",
+    ],
+  },
+  {
+    id: "srv-5",
+    title: "Perubahan Akta",
+    price: "Rp 5juta",
+    description: "Perubahan anggaran dasar / Akta Notaris",
+    includes: [
+      "Drafting dokumen",
+      "Persiapan Minuta",
+      "Akta Notaris Perubahan",
+      "SK Persetujuan / SK Pemberitahuan",
+      "Dapat 20 KBLI",
+      "Update di OSS",
+    ],
+  },
+  {
+    id: "srv-6",
+    title: "SBUJK Konstruksi",
+    price: "Rp 31.5juta",
+    description: "Sertifikat standar ter-verifikasi di bidang konstruksi",
+    includes: [
+      "Termasuk pengurusan 2 (dua) SKT/SKTK Tenaga Ahli",
+      "Pengurusan SBU di LSBU",
+      "Pengurusan KTA di Asosiasi (Gapensi atau sejenisnya)",
+    ],
+  },
+  {
+    id: "srv-7",
+    title: "Registrasi K3L",
+    price: "Rp 5juta",
+    description: "Pendaftaran produk wajib K3L di Kemendag",
+    includes: [
+      "Konsultasi terkait produk",
+      "Uji lab dan label tersertifikasi",
+      "Izin K3L dari OSS",
+      "Konsultasi pelabelan",
+    ],
+  },
+  {
+    id: "srv-8",
+    title: "Pisah Harta",
+    price: "Rp 5juta",
+    description:
+      "Pembuatan dan register Perjanjian Pisah Harta / Prenuptial Agreement",
+    includes: [
+      "Konsultasi hukum keluarga",
+      "Akta Notaris Pisah Harta",
+      "Pendaftaran Akta Pisah Harta di KUA",
+      "Pendaftaran Akta Pisah Harta di Dukcapil",
+    ],
+  },
+];
+
+export { heroServiceItems, mainServiceItems, menuItems, services };

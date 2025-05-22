@@ -1,10 +1,10 @@
 "use client";
 
+import HeroCarousel from "@/components/main/Home/HeroCarousel";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 import { Button } from "../../ui/button";
-import HeroCarousel from "@/components/main/Home/HeroCarousel";
 
 const Hero = () => {
   const typewriterOptions = {
@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="bg-white w-[210px] text-center text-sm font-medium shadow-lg py-4 rounded-md">
             🏆 #1 Legalitas di Indonesia
           </div>
-          <h1 className="text-4xl sm:text-6xl xl:text-7xl leading-[50px] sm:leading-[80px] xl:leading-[100px] font-extrabold ">
+          <h1 className="text-4xl sm:text-6xl xl:text-7xl leading-[50px] sm:leading-[80px] xl:leading-[100px] font-extrabold">
             Memberikan Layanan Legalitas{" "}
             <span className="theme-gradient">
               <Typewriter

@@ -17,11 +17,11 @@ import { SidebarTrigger } from "../ui/sidebar";
 
 const Navbar = () => {
   return (
-    <nav className="py-3 min-h-[80px] shadow flex items-center w-full">
+    <nav className="py-3 min-h-[80px] shadow-md flex items-center w-full sticky top-0 bg-white z-[9999]">
       <div className="container flex justify-between items-center gap-2">
         <Link href="/">
           <Image
-            src="/logo.png"
+            src="/images/logo.png"
             alt="Legalitas"
             width={130}
             height={130}
