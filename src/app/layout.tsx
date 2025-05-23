@@ -3,6 +3,7 @@ import Navbar from "@/components/Layout/Navbar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import "swiper/css";
 import "./globals.css";
 
 const jakartaSans = Plus_Jakarta_Sans({

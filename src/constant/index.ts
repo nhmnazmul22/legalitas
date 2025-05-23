@@ -23,8 +23,6 @@ const menuItems: MenuItem[] = [
           {
             title: "CV / Commanditaire Veidotschap",
             link: "/layanan/badan-usaha/crisk",
-            title: "PT Perorangan",
-            link: "/layanan/badan-usaha/pt-perorangan",
           },
           { title: "New", link: "/layanan/badan-usaha/new" },
           { title: "PT PMA", link: "/layanan/badan-usaha/pt-pma" },
@@ -375,12 +373,22 @@ const riskTableContents: RiskTableContentsType[] = [
   },
 ];
 
+const reviweCompanyLogos: CompanyLogoType[] = [
+  { id: 1, link: "/images/review-company-01.png" },
+  { id: 2, link: "/images/review-company-02.png" },
+  { id: 3, link: "/images/review-company-03.png" },
+  { id: 4, link: "/images/review-company-04.png" },
+  { id: 5, link: "/images/review-company-05.png" },
+  { id: 6, link: "/images/review-company-06.png" },
+];
+
 export {
   companyLogos,
   heroServiceItems,
   mainServiceItems,
   menuItems,
   regulationText,
+  reviweCompanyLogos,
   riskTableContents,
   riskTags,
   services,
