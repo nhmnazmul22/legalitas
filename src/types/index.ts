@@ -39,11 +39,25 @@ interface CompanyLogoType {
   link: string;
 }
 
+interface RiskTagsType {
+  id?: number | string;
+  code: string;
+}
+
+interface RiskTableContentsType {
+  id?: number | string;
+  risk_Code: string;
+  risk_Title: string;
+  Description: string;
+}
+
 export type {
   CompanyLogoType,
   HeroServiceItemsType,
   MainServiceItemsType,
   MenuItem,
   RegulationTextType,
+  RiskTableContentsType,
+  RiskTagsType,
   ServiceType,
 };

@@ -1,7 +1,8 @@
-import Hero from "@/components/main/Home/Hero";
-import MainService from "@/components/main/Home/MainService";
-import Regulation from "@/components/main/Home/Regulation";
-import Services from "@/components/main/Home/Services";
+import Hero from "@/components/main/Hero";
+import MainService from "@/components/main/MainService";
+import Regulation from "@/components/main/Regulation";
+import Risks from "@/components/main/Risks";
+import Services from "@/components/main/Services";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <MainService />
       <Services />
       <Regulation />
+      <Risks />
     </>
   );
 }

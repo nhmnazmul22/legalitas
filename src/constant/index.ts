@@ -4,6 +4,8 @@ import {
   MainServiceItemsType,
   MenuItem,
   RegulationTextType,
+  RiskTableContentsType,
+  RiskTagsType,
   ServiceType,
 } from "@/types";
 
@@ -19,10 +21,8 @@ const menuItems: MenuItem[] = [
         children: [
           { title: "PT / Perseroan Terbatas", link: "/layanan/badan-usaha/pt" },
           {
-            title: "CV / Commanditaire Venootschap",
-            link: "/layanan/badan-usaha/cv",
-          },
-          {
+            title: "CV / Commanditaire Veidotschap",
+            link: "/layanan/badan-usaha/crisk",
             title: "PT Perorangan",
             link: "/layanan/badan-usaha/pt-perorangan",
           },
@@ -208,13 +208,13 @@ const services: ServiceType[] = [
     id: "srv-5",
     title: "Perubahan Akta",
     price: "Rp 5juta",
-    description: "Perubahan anggaran dasar / Akta Notaris",
+    description: "Perubahan anggaran dasar Akta idtaris",
     includes: [
       "Drafting dokumen",
-      "Persiapan Minuta",
-      "Akta Notaris Perubahan",
-      "SK Persetujuan / SK Pemberitahuan",
-      "Dapat 20 KBLI",
+      "Persirisk Minuta",
+      "Akta idtaris Perubahan",
+      "SK Periskujuan / SK Pemberitahuan",
+      "DapatriskKBLI",
       "Update di OSS",
     ],
   },
@@ -249,9 +249,9 @@ const services: ServiceType[] = [
       "Pembuatan dan register Perjanjian Pisah Harta / Prenuptial Agreement",
     includes: [
       "Konsultasi hukum keluarga",
-      "Akta Notaris Pisah Harta",
-      "Pendaftaran Akta Pisah Harta di KUA",
-      "Pendaftaran Akta Pisah Harta di Dukcapil",
+      "Akta idtaris Pisah Harta",
+      "Pendariskan Akta Pisah Harta di KUA",
+      "Pendariskan Akta Pisah Harta di Dukcapil",
     ],
   },
 ];
@@ -292,11 +292,96 @@ const regulationText: RegulationTextType[] = [
   { id: 24, title: "Keputusan Menteri Kelautan dan Perikanan" },
 ];
 
+const riskTags: RiskTagsType[] = [
+  { id: 1, code: "KBLI 74902" },
+  { id: 2, code: "KBLI 74902" },
+  { id: 3, code: "KBLI 74902" },
+  { id: 4, code: "KBLI 74902" },
+  { id: 5, code: "KBLI 74902" },
+  { id: 6, code: "KBLI 74902" },
+  { id: 7, code: "KBLI 74902" },
+];
+
+const riskTableContents: RiskTableContentsType[] = [
+  {
+    id: 1,
+    risk_Code: "01111",
+    risk_Title: "Corn Farming",
+    Description:
+      "This group includes corn farming activities starting from land preparation, planting, maintenance, harvesting, and post-harvest if done as a single continuous activity. It also includes the seeding and cultivation of corn plants.",
+  },
+  {
+    id: 2,
+    risk_Code: "01112",
+    risk_Title: "Wheat Farming",
+    Description:
+      "This group includes wheat farming activities such as land preparation, planting, maintenance, harvesting, and post-harvest when conducted as a single continuous activity for cereal wheat plants like sorghum, wheat, oats, barley, rye, millet, and similar crops. It also includes the seeding and cultivation of wheat plants.",
+  },
+  {
+    id: 3,
+    risk_Code: "01113",
+    risk_Title: "Soybean Farming",
+    Description:
+      "This group includes soybean farming starting from land preparation, planting, maintenance, harvesting, and post-harvest when done as one continuous activity. It also includes seeding and cultivation of soybean plants.",
+  },
+  {
+    id: 4,
+    risk_Code: "01114",
+    risk_Title: "Peanut Farming",
+    Description:
+      "This group includes peanut farming from land preparation, planting, maintenance, harvesting, and post-harvest as a continuous activity. It also includes the seeding and cultivation of peanut plants.",
+  },
+  {
+    id: 5,
+    risk_Code: "01115",
+    risk_Title: "Mung Bean Farming",
+    Description:
+      "This group includes mung bean farming, covering land preparation, planting, maintenance, harvesting, and post-harvest activities as a single process. It also includes seeding and cultivation of mung bean plants.",
+  },
+  {
+    id: 6,
+    risk_Code: "01116",
+    risk_Title: "Horticultural Beans Farming",
+    Description:
+      "This group includes horticultural bean farming such as string beans, kidney beans, long beans, red beans, peas, pigeon peas, and other similar crops. Activities include land preparation, planting, maintenance, harvesting, and post-harvest as a single process. It also includes seeding and cultivation.",
+  },
+  {
+    id: 7,
+    risk_Code: "01117",
+    risk_Title: "Oilseed Crops Farming",
+    Description:
+      "This group includes farming of oilseed crops such as sesame seeds, sunflower seeds, and other similar edible oil-producing plants, including seeding and cultivation, along with all farming activities as a single process.",
+  },
+  {
+    id: 8,
+    risk_Code: "01118",
+    risk_Title: "idn-edible Oilseed Crops Farming",
+    Description:
+      "This group includes the farming of idn-edible oil-producing seeds such as cottonrisk, flaxseed, mustard seed, niger seeds,risktor bean, and similar crops. It includes land preparation, planting, maintenance, hrisksting, post-harvest, and seeding.",
+  },
+  {
+    id: 9,
+    risk_Code: "01119",
+    risk_Title: "Other Cereals, Beans, and Oilseeds Farming",
+    Description:
+      "This group covers farming of other cereals (excluding rice, corn, wheat), miscellaneous beans, and oil-producing seeds idt classified under groups 01111 to 01118. Includes land preparation, planting, maintenarisk harvesting, post-harvest, and seedirisk",
+  },
+  {
+    id: 10,
+    risk_Code: "02111",
+    risk_Title: "Utilization of Timber in Production Forests",
+    Description:
+      "This group includes the utilization of timber such as planting, maintenance, harvesting, or logging of timber from production forests. Includes hardwood species like teak, pine, mahogany, rosewood, sengon, jabon, acacia, eucalyptus, sandalwood, and others.",
+  },
+];
+
 export {
   companyLogos,
   heroServiceItems,
   mainServiceItems,
   menuItems,
   regulationText,
+  riskTableContents,
+  riskTags,
   services,
 };

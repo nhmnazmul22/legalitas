@@ -1,10 +1,10 @@
 "use client";
 
-import HeroCarousel from "@/components/main/Home/HeroCarousel";
+import HeroCarousel from "@/components/main/HeroCarousel";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
-import { Button } from "../../ui/button";
+import { Button } from "../ui/button";
 
 const Hero = () => {
   const typewriterOptions = {
