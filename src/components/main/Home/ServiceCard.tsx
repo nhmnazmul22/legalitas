@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceType> = ({
   includes,
 }) => {
   return (
-    <Card className="bg-primary/10 border-0 shadow-md rounded-md gap-2 justify-between hover:scale-[1.02] transition-scale duration-300">
+    <Card className="bg-primary/5 border-0 shadow-md rounded-md gap-2 justify-between hover:scale-[1.02] transition-scale duration-300">
       <CardHeader>
         <CardTitle className="text-xl lg:text-2xl font-bold">{title}</CardTitle>
         <CardDescription className="text-muted-foreground text-base">

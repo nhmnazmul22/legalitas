@@ -1,7 +1,9 @@
 import {
+  CompanyLogoType,
   HeroServiceItemsType,
   MainServiceItemsType,
   MenuItem,
+  RegulationTextType,
   ServiceType,
 } from "@/types";
 
@@ -254,4 +256,47 @@ const services: ServiceType[] = [
   },
 ];
 
-export { heroServiceItems, mainServiceItems, menuItems, services };
+const companyLogos: CompanyLogoType[] = [
+  { id: 1, link: "/images/company-logo-1.png" },
+  { id: 2, link: "/images/company-logo-2.png" },
+  { id: 3, link: "/images/company-logo-3.png" },
+  { id: 4, link: "/images/company-logo-4.png" },
+  { id: 5, link: "/images/company-logo-5.png" },
+  { id: 6, link: "/images/company-logo-6.png" },
+];
+
+const regulationText: RegulationTextType[] = [
+  { id: 1, title: "Keputusan Menteri Keuangan" },
+  { id: 2, title: "Keputusan Badan Pemeriksa Keuangan" },
+  { id: 3, title: "Instruksi Menteri Dalam Negeri" },
+  { id: 4, title: "Ketetapan MPR" },
+  { id: 5, title: "Keputusan Menteri Kesehatan" },
+  { id: 6, title: "Keputusan Presiden (KEPPRES)" },
+  { id: 7, title: "Instruksi Presiden (INPRES)" },
+  { id: 8, title: "Keputusan Menteri Kelautan dan Perikanan" },
+  { id: 9, title: "Keputusan Komisi Pengawas Persaingan Usaha" },
+  { id: 10, title: "Keputusan Menteri Dalam Negeri" },
+  { id: 11, title: "Keputusan Kepala Badan Standardisasi Nasional" },
+  { id: 12, title: "Keputusan Kepala Badan Nasional Penanggulangan Bencana" },
+  { id: 13, title: "Keputusan Menteri Energi dan Sumber Daya Mineral" },
+  { id: 14, title: "Virtual Office" },
+  { id: 15, title: "Keputusan Menteri Luar Negeri" },
+  { id: 16, title: "Pembuatan PT" },
+  { id: 17, title: "Keputusan Menteri Energi dan Sumber Daya Mineral" },
+  { id: 18, title: "Keputusan Menteri Luar Negeri" },
+  { id: 19, title: "Keputusan Menteri Kesehatan" },
+  { id: 20, title: "Instruksi Presiden (INPRES)" },
+  { id: 21, title: "Jasa Pembuatan PT" },
+  { id: 22, title: "Keputusan Komisi Pengawas Persaingan Usaha" },
+  { id: 23, title: "Pembuatan PT" },
+  { id: 24, title: "Keputusan Menteri Kelautan dan Perikanan" },
+];
+
+export {
+  companyLogos,
+  heroServiceItems,
+  mainServiceItems,
+  menuItems,
+  regulationText,
+  services,
+};

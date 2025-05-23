@@ -29,9 +29,21 @@ interface ServiceType {
   includes: string[];
 }
 
+interface RegulationTextType {
+  id?: number | string;
+  title: string;
+}
+
+interface CompanyLogoType {
+  id?: number | string;
+  link: string;
+}
+
 export type {
+  CompanyLogoType,
   HeroServiceItemsType,
   MainServiceItemsType,
   MenuItem,
+  RegulationTextType,
   ServiceType,
 };

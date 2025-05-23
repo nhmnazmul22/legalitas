@@ -13,7 +13,7 @@ const Services = () => {
           subTitle="Yang Ditawarkan."
           classes="bg-primary/20 text-primary"
         />
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
           {services.map((service) => (
             <ServiceCard
               key={service.id}
