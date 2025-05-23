@@ -15,7 +15,10 @@ import RatingGen from "../common/RatingGen";
 const ReviewCard = () => {
   return (
     <Card className="max-w-[420px] py-10 px-5 border-0 shadow-md rounded-md ">
-      <CardHeader className="flex items-center gap-5 relative">
+      <CardHeader
+        className="flex items-center gap-5 relative "
+        style={{ direction: "ltr" }}
+      >
         <Avatar className="w-[60px] h-[60px] ring-2 ring-primary/20 p-[2px]">
           <AvatarImage src="/images/avater.png" />
           <AvatarFallback>CL</AvatarFallback>
@@ -46,7 +49,7 @@ const ReviewCard = () => {
           Lengkapnya
         </Link>
       </CardContent>
-      <CardFooter className="mt-2">
+      <CardFooter className="mt-2" style={{ direction: "ltr" }}>
         <Image
           src="/images/google-logo.png"
           alt="Google Logo"

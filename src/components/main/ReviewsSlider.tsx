@@ -5,9 +5,14 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReviewCard from "./ReviewCard";
 
-const ReviewsSlider = () => {
+type ReviewsSliderType = {
+  dir?: string;
+};
+
+const ReviewsSlider: React.FC<ReviewsSliderType> = ({ dir }) => {
   return (
     <Swiper
+      dir={dir && dir}
       slidesPerView="auto"
       spaceBetween={10}
       speed={6500}
