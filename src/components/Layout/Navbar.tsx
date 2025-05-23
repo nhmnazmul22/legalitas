@@ -25,7 +25,7 @@ const Navbar = () => {
             alt="Legalitas"
             width={130}
             height={130}
-            className="min-w-40 md:w-56 h-auto"
+            className="min-w-54 md:w-60 h-auto"
           />
         </Link>
         <SidebarTrigger className="lg:hidden" />

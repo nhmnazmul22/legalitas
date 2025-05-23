@@ -51,7 +51,7 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.4147 0.1832 266.12);
+  --primary: oklch(0.732 0.1843 53.63);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.5971 0.2285 329.52);
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -193,9 +193,13 @@
 }
 
 .hero-banner {
-  background-image: url(/images/hero-background.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: #ffdbb8;
+  background: linear-gradient(
+    350deg,
+    rgba(255, 219, 184, 1) 1%,
+    rgba(255, 222, 255, 1) 59%,
+    rgba(255, 255, 255, 1) 87%
+  );
 }
 
 .swiper {
