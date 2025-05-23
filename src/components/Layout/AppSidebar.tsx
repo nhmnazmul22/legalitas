@@ -25,7 +25,7 @@ export default function AppSidebar() {
   const [openDropdown, setOpenDropdown] = useState(false);
 
   return (
-    <Sidebar>
+    <Sidebar className="">
       <SidebarHeader className="px-5 pt-5 pb-2">
         <Link href="/">
           <Image

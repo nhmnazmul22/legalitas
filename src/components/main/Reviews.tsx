@@ -24,7 +24,7 @@ const Reviews = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 sliderAfter relative">
         <ReviewsSlider />
         <ReviewsSlider />
       </div>
