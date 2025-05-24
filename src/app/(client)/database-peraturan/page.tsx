@@ -1,8 +1,10 @@
 import SectionHeading from "@/components/common/SectionHeading";
+import Blogs from "@/components/main/Blogs";
 import FilterOptions from "@/components/main/FilterOptions";
 import RegulationTable from "@/components/main/regulation/RegulationTable";
 import RegulationTypes from "@/components/main/regulation/RegulationTypes";
 import SearchType from "@/components/main/regulation/SearchType";
+import Reviews from "@/components/main/Reviews";
 import TablePagination from "@/components/main/TablePagination";
 import { companyLogos } from "@/constant";
 import Image from "next/image";
@@ -41,6 +43,8 @@ export default function RegulationPage() {
           </div>
         </div>
       </div>
+      <Reviews />
+      <Blogs />
     </section>
   );
 }

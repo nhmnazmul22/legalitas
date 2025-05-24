@@ -8,6 +8,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { regulationTableList } from "@/constant";
+import { generateUrl } from "@/lib/utils";
+import Link from "next/link";
 const RegulationTable = () => {
   return (
     <Table className="text-base ">
@@ -46,7 +48,9 @@ const RegulationTable = () => {
               {item.about}
             </TableCell>
             <TableCell className="text-left whitespace-nowrap md:whitespace-normal">
-              <Button>Download</Button>
+              <Link href={`/database-peraturan/${generateUrl(item.type)}`}>
+                <Button>Download</Button>
+              </Link>
             </TableCell>
           </TableRow>
         ))}

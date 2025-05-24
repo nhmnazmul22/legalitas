@@ -40,6 +40,7 @@ const Regulation = () => {
           <MainButton
             text="Lihat 95.000++ peraturan"
             className="mt-10 mx-auto w-[260px] !h-[60px]"
+            link="/database-peraturan"
           />
         </div>
       </div>

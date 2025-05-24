@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Generate 1915 to 2025 years
+// Generate 1945 to 2025 years
 export const years = Array.from({ length: 2025 - 1945 + 1 }, (_, index) => {
   const year = 1945 + index;
   return {
@@ -13,3 +13,9 @@ export const years = Array.from({ length: 2025 - 1945 + 1 }, (_, index) => {
     label: year.toString(),
   };
 });
+
+// Generate url or params
+export const generateUrl = (text: string) => {
+  const lowercaseUrl = text.split(" ").join("-").toLowerCase();
+  return lowercaseUrl;
+};
