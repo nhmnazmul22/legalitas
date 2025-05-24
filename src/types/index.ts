@@ -51,7 +51,16 @@ interface RiskTableContentsType {
   Description: string;
 }
 
+interface BlogType {
+  id?: string | number;
+  thumbnail: string;
+  title: string;
+  shortDes: string;
+  link: string;
+}
+
 export type {
+  BlogType,
   CompanyLogoType,
   HeroServiceItemsType,
   MainServiceItemsType,

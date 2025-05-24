@@ -32,7 +32,7 @@ const MainServiceCard: React.FC<MainServiceItemsType> = ({
       </CardContent>
       <CardFooter>
         <Link href="/">
-          <Button className="bg-secondary/20 text-secondary hover:bg-secondary hover:text-white duration-300 group">
+          <Button className="bg-secondary/20 text-secondary hover:bg-primary hover:text-white duration-300 group">
             Lebih lanjut
             <ArrowRight
               size={14}

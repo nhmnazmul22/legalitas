@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-secondary-blue: #0b337b;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -165,6 +166,9 @@
     rgba(255, 238, 224, 1) 1%,
     rgba(255, 245, 240, 1) 80%
   );
+}
+.swiper-wrapper {
+  padding: 10px 0px;
 }
 
 .swiper {

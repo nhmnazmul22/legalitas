@@ -33,7 +33,7 @@ const ReviewCard = () => {
         </div>
         <Quote
           size={44}
-          className="absolute top-[-10px] right-0 stroke-primary/20"
+          className="absolute top-[-10px] right-0 stroke-secondary-blue/20"
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
@@ -44,7 +44,7 @@ const ReviewCard = () => {
         </p>
         <Link
           href="/"
-          className="text-primary italic font-semibold transition-all duration-300 hover:underline  underline-offset-2"
+          className="text-secondary-blue italic font-semibold transition-all duration-300 hover:underline  underline-offset-2"
         >
           Lengkapnya
         </Link>

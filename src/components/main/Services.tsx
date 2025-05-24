@@ -11,7 +11,6 @@ const Services = () => {
           badgeText="Layanan Legalitas"
           title="Layanan Legalitas"
           subTitle="Yang Ditawarkan."
-          classes="bg-primary/20 text-primary"
         />
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
           {services.map((service) => (
@@ -26,7 +25,7 @@ const Services = () => {
         </div>
         <MainButton
           text="Lihat semua layanan"
-          className="mt-14 mx-auto lg:!h-[70px] lg:!w-[250px] "
+          className="mt-14 mx-auto w-[260px] !h-[60px] "
         />
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Blogs from "@/components/main/Blogs";
 import Hero from "@/components/main/Hero";
 import MainService from "@/components/main/MainService";
 import Regulation from "@/components/main/Regulation";
@@ -14,6 +15,7 @@ export default function Home() {
       <Regulation />
       <Risks />
       <Reviews />
+      <Blogs />
     </>
   );
 }

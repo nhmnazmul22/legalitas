@@ -9,7 +9,7 @@ const RatingGen: React.FC<RatingGenProps> = ({ rating }) => {
     <div className="flex items-center">
       {Array.from({ length: rating }).map((_, index) => (
         <span key={index}>
-          <Star size={16} fill="#FF9747" stroke="none" />
+          <Star size={16} fill="#ff8002" stroke="none" />
         </span>
       ))}
     </div>

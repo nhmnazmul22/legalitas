@@ -32,7 +32,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="text-base md:text-lg xl:text-xl text-muted-foreground leading-[30px] md:leading-[40px] font-medium">
+          <p className="text-sm md:text-base text-muted-foreground leading-[28px] md:leading-[37px]">
             Legalitas.org sejak tahun 2002 memberikan layanan legalitas dan
             menyediakan 95.000++ database peraturan di Indonesia yang bisa di
             download dalam format PDF.

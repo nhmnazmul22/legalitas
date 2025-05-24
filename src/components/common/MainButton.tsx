@@ -14,7 +14,7 @@ const MainButton: React.FC<MainButtonProps> = ({ className, link, text }) => {
     <Link href={link ? link : ""}>
       <Button
         className={cn(
-          "btn-gradient w-[210px] h-[50px] text-base font-bold flex items-center group rounded-sm ",
+          "btn-gradient w-[210px] h-[50px] text-base font-bold flex items-center group rounded-sm",
           className && className
         )}
       >

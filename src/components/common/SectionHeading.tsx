@@ -18,7 +18,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
     <div className="text-center">
       <Badge
         className={cn(
-          "mx-auto bg-secondary/15 text-secondary text-sm font-semibold px-4 py-1 uppercase rounded-full",
+          "mx-auto bg-secondary/15 text-primary text-sm font-semibold px-4 py-1 uppercase rounded-full",
           classes
         )}
       >

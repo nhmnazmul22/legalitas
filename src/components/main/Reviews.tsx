@@ -5,7 +5,7 @@ import ReviewsSlider from "./ReviewsSlider";
 
 const Reviews = () => {
   return (
-    <section className="py-15 bg-primary/5">
+    <section className="py-15 bg-white">
       <div className="container">
         <SectionHeading
           badgeText="review klien"
