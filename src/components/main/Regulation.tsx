@@ -27,7 +27,7 @@ const Regulation = () => {
               </div>
             ))}
           </div>
-          <div className="mt-5 flex flex-wrap gap-2 text-center justify-center items-center ">
+          <div className="mt-5 flex flex-wrap gap-2 text-center justify-center items-center overflow-hidden">
             {regulationText.map((text) => (
               <Badge
                 key={`text-${text.id}`}

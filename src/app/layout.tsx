@@ -12,7 +12,7 @@ const poppinsSans = Poppins({
 export const metadata: Metadata = {
   title: "MITRA JASA LEGALITAS REV",
   description:
-    "Legalitas.org sejak tahun 2002 memberikan layanan legalitas dan menyediakan 55.000++ database peraturan di Indonesia yang bisa di download dalam format PDF.",
+    "Legalitas sejak tahun 2002 memberikan layanan legalitas dan menyediakan 55.000++ database peraturan di Indonesia yang bisa di download dalam format PDF.",
 };
 
 export default function RootLayout({
@@ -22,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppinsSans.className} antialiased`}>{children}</body>
+      <body
+        className={`${poppinsSans.className} antialiased overflow-x-hidden`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

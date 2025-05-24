@@ -65,7 +65,7 @@ export default function AppSidebar() {
                 return (
                   <>
                     <Link
-                      key={`${item.title}-${index}`}
+                      key={item.id}
                       href={item.link}
                       className="hover:text-primary duration-300 font-medium"
                     >
@@ -77,7 +77,7 @@ export default function AppSidebar() {
               }
               return (
                 <Collapsible
-                  key={`${item.title}-${index}`}
+                  key={item.id}
                   open={openDropdown}
                   onOpenChange={setOpenDropdown}
                 >
@@ -87,15 +87,12 @@ export default function AppSidebar() {
                   </CollapsibleTrigger>
                   <Separator className="mt-3" />
                   <CollapsibleContent className="flex flex-col gap-2 py-2 ps-2 CollapsibleContent">
-                    {item.children.map((child, index) => {
+                    {item.children.map((child) => {
                       return (
                         child.children && (
-                          <div key={`${child.title}-${index}`}>
-                            {child.children.map((subChild, index) => (
-                              <div
-                                key={`${subChild.title}-${index}`}
-                                className="flex flex-col"
-                              >
+                          <div key={child.id}>
+                            {child.children.map((subChild) => (
+                              <div key={subChild.id} className="flex flex-col">
                                 <Link
                                   href={subChild.link}
                                   className="hover:text-primary duration-300 font-medium"

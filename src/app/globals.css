@@ -92,7 +92,7 @@
     @apply cursor-pointer;
   }
   .container {
-    @apply !max-w-[1400px] !w-[90%] mx-auto md:!px-2;
+    @apply !max-w-[1400px] !w-[90%] max-sm:w-[98%] mx-auto sm:!px-2;
   }
 }
 

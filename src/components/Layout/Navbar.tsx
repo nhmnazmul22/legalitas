@@ -36,16 +36,15 @@ const Navbar = () => {
                 if (!item.children) {
                   return (
                     <NavigationMenuItem key={item.title}>
-                      <Link href={item.link}>
-                        <NavigationMenuLink
-                          className={cn(
-                            navigationMenuTriggerStyle(),
-                            "!text-base font-medium hover:text-primary duration-300 !px-2 xl:!px-4"
-                          )}
-                        >
-                          {item.title}
-                        </NavigationMenuLink>
-                      </Link>
+                      <NavigationMenuLink
+                        asChild
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                          "!text-base font-medium hover:text-primary duration-300 !px-2 xl:!px-4"
+                        )}
+                      >
+                        <Link href={item.link}>{item.title}</Link>
+                      </NavigationMenuLink>
                     </NavigationMenuItem>
                   );
                 }

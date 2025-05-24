@@ -1,4 +1,5 @@
 interface MenuItem {
+  id?: string | number;
   title: string;
   link: string;
   children?: MenuItem[];

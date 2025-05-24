@@ -10,82 +10,149 @@ import {
 } from "@/types";
 
 const menuItems: MenuItem[] = [
-  { title: "Peraturan", link: "/peraturan" },
+  { id: "1", title: "Peraturan", link: "/peraturan" },
   {
+    id: "2",
     title: "Layanan",
     link: "/layanan",
     children: [
       {
+        id: "2-1",
         title: "Badan Usaha",
         link: "/layanan/badan-usaha",
         children: [
-          { title: "PT / Perseroan Terbatas", link: "/layanan/badan-usaha/pt" },
           {
+            id: "2-1-1",
+            title: "PT / Perseroan Terbatas",
+            link: "/layanan/badan-usaha/pt",
+          },
+          {
+            id: "2-1-2",
             title: "CV / Commanditaire Veidotschap",
             link: "/layanan/badan-usaha/crisk",
           },
-          { title: "New", link: "/layanan/badan-usaha/new" },
-          { title: "PT PMA", link: "/layanan/badan-usaha/pt-pma" },
-          { title: "Firma", link: "/layanan/badan-usaha/firma" },
+          { id: "2-1-3", title: "New", link: "/layanan/badan-usaha/new" },
+          { id: "2-1-4", title: "PT PMA", link: "/layanan/badan-usaha/pt-pma" },
+          { id: "2-1-5", title: "Firma", link: "/layanan/badan-usaha/firma" },
           {
+            id: "2-1-6",
             title: "Persekutuan Perdata",
             link: "/layanan/badan-usaha/persekutuan-perdata",
           },
-          { title: "Perkumpulan", link: "/layanan/badan-usaha/perkumpulan" },
-          { title: "Yayasan", link: "/layanan/badan-usaha/yayasan" },
+          {
+            id: "2-1-7",
+            title: "Perkumpulan",
+            link: "/layanan/badan-usaha/perkumpulan",
+          },
+          {
+            id: "2-1-8",
+            title: "Yayasan",
+            link: "/layanan/badan-usaha/yayasan",
+          },
         ],
       },
       {
+        id: "2-2",
         title: "Perizinan",
         link: "/layanan/perizinan",
         children: [
-          { title: "NIB & OSS", link: "/layanan/perizinan/nib-oss" },
-          { title: "Izin PKP", link: "/layanan/perizinan/izin-pkp" },
-          { title: "Izin Restoran", link: "/layanan/perizinan/izin-restoran" },
           {
+            id: "2-2-1",
+            title: "NIB & OSS",
+            link: "/layanan/perizinan/nib-oss",
+          },
+          {
+            id: "2-2-2",
+            title: "Izin PKP",
+            link: "/layanan/perizinan/izin-pkp",
+          },
+          {
+            id: "2-2-3",
+            title: "Izin Restoran",
+            link: "/layanan/perizinan/izin-restoran",
+          },
+          {
+            id: "2-2-4",
             title: "Izin Konstruksi",
             link: "/layanan/perizinan/izin-konstruksi",
           },
-          { title: "Izin PSE", link: "/layanan/perizinan/izin-pse" },
-          { title: "Izin K3L", link: "/layanan/perizinan/izin-k3l" },
-          { title: "Izin Yayasan", link: "/layanan/perizinan/izin-yayasan" },
-          { title: "33++ Izin Lainnya", link: "/layanan/perizinan/lainnya" },
+          {
+            id: "2-2-5",
+            title: "Izin PSE",
+            link: "/layanan/perizinan/izin-pse",
+          },
+          {
+            id: "2-2-6",
+            title: "Izin K3L",
+            link: "/layanan/perizinan/izin-k3l",
+          },
+          {
+            id: "2-2-7",
+            title: "Izin Yayasan",
+            link: "/layanan/perizinan/izin-yayasan",
+          },
+          {
+            id: "2-2-8",
+            title: "33++ Izin Lainnya",
+            link: "/layanan/perizinan/lainnya",
+          },
         ],
       },
       {
+        id: "2-3",
         title: "Lainnya",
         link: "/layanan/lainnya",
         children: [
-          { title: "Virtual Office", link: "/layanan/lainnya/virtual-office" },
           {
+            id: "2-3-1",
+            title: "Virtual Office",
+            link: "/layanan/lainnya/virtual-office",
+          },
+          {
+            id: "2-3-2",
             title: "Perubahan Anggaran Dasar",
             link: "/layanan/lainnya/perubahan-anggaran-dasar",
           },
           {
+            id: "2-3-3",
             title: "Penutupan Perusahaan",
             link: "/layanan/lainnya/penutupan-perusahaan",
           },
           {
+            id: "2-3-4",
             title: "Perjanjian Pisah Harta",
             link: "/layanan/lainnya/perjanjian-pisah-harta",
           },
           {
+            id: "2-3-5",
             title: "Pendaftaran Merek",
             link: "/layanan/lainnya/pendaftaran-merek",
           },
-          { title: "KITAS Pekerja", link: "/layanan/lainnya/kitas-pekerja" },
-          { title: "KITAS Investor", link: "/layanan/lainnya/kitas-investor" },
-          { title: "17++ Layanan Lainnya", link: "/layanan/lainnya/lainnya" },
+          {
+            id: "2-3-6",
+            title: "KITAS Pekerja",
+            link: "/layanan/lainnya/kitas-pekerja",
+          },
+          {
+            id: "2-3-7",
+            title: "KITAS Investor",
+            link: "/layanan/lainnya/kitas-investor",
+          },
+          {
+            id: "2-3-8",
+            title: "17++ Layanan Lainnya",
+            link: "/layanan/lainnya/lainnya",
+          },
         ],
       },
     ],
   },
-  { title: "KBLI", link: "/kbli" },
-  { title: "Tentang", link: "/tentang" },
-  { title: "Review", link: "/review" },
-  { title: "Tulisan", link: "/tulisan" },
-  { title: "Kontak", link: "/kontak" },
-  { title: "Proposal", link: "/proposal" },
+  { id: "3", title: "KBLI", link: "/kbli" },
+  { id: "4", title: "Tentang", link: "/tentang" },
+  { id: "5", title: "Review", link: "/review" },
+  { id: "6", title: "Tulisan", link: "/tulisan" },
+  { id: "7", title: "Kontak", link: "/kontak" },
+  { id: "8", title: "Proposal", link: "/proposal" },
 ];
 
 const heroServiceItems: HeroServiceItemsType[] = [
@@ -382,7 +449,6 @@ const reviweCompanyLogos: CompanyLogoType[] = [
   { id: 6, link: "/images/review-company-06.png" },
 ];
 
-
 export {
   companyLogos,
   heroServiceItems,
@@ -392,5 +458,6 @@ export {
   reviweCompanyLogos,
   riskTableContents,
   riskTags,
-  services,
+  services
 };
+

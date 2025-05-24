@@ -3,17 +3,10 @@
 import HeroCarousel from "@/components/main/HeroCarousel";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { Typewriter } from "react-simple-typewriter";
+import TypeWriterText from "../common/TypeWritedText";
 import { Button } from "../ui/button";
 
 const Hero = () => {
-  const typewriterOptions = {
-    words: ["Sejak 2002.", "Terbaik.", "Profesional."],
-    loop: false,
-    cursor: true,
-    cursorStyle: "|",
-  };
-
   return (
     <section className="py-15 hero-banner h-auto">
       <div className="container flex flex-col lg:flex-row gap-10 lg:gap-5 items-center justify-between">
@@ -22,15 +15,7 @@ const Hero = () => {
             🏆 #1 Legalitas di Indonesia
           </div>
           <h1 className="text-4xl sm:text-6xl xl:text-7xl leading-[50px] sm:leading-[80px] xl:leading-[100px] font-extrabold">
-            Memberikan Layanan Legalitas{" "}
-            <span className="theme-gradient text-primary">
-              <Typewriter
-                words={typewriterOptions.words}
-                loop={typewriterOptions.loop}
-                cursor={typewriterOptions.cursor}
-                cursorStyle={typewriterOptions.cursorStyle}
-              />
-            </span>
+            Memberikan Layanan Legalitas <TypeWriterText />
           </h1>
           <p className="text-sm md:text-base text-muted-foreground leading-[28px] md:leading-[37px]">
             Legalitas.org sejak tahun 2002 memberikan layanan legalitas dan
