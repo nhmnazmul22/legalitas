@@ -151,7 +151,7 @@ const menuItems: MenuItem[] = [
     ],
   },
   { id: "3", title: "KBLI", link: "/kbli" },
-  { id: "4", title: "about", link: "/about" },
+  { id: "4", title: "Tentang", link: "/tentang" },
   { id: "5", title: "Review", link: "/review" },
   { id: "6", title: "Tulisan", link: "/tulisan" },
   { id: "7", title: "Kontak", link: "/kontak" },

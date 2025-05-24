@@ -5,7 +5,11 @@ import FilterOptions from "./FilterOptions";
 import RiskTable from "./RiskTable";
 import TablePagination from "./TablePagination";
 
-const Risks = () => {
+type RisksType = {
+  children?: React.ReactNode;
+};
+
+const Risks: React.FC<RisksType> = ({ children }) => {
   return (
     <section className="py-15 hero-banner bg-cover">
       <div className="container">
@@ -29,6 +33,7 @@ const Risks = () => {
             <strong>⚠️ Klik tabel 2x ⚠️ untuk lihat detail risiko.</strong>
             Masih 😭 bingung cari kode? Baca Panduan Cek Risiko KBLI
           </div>
+          {children && children}
           <div className="">
             <FilterOptions option={["10"]} />
             <RiskTable />
