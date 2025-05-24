@@ -31,7 +31,7 @@ const Regulation = () => {
             {regulationText.map((text) => (
               <Badge
                 key={`text-${text.id}`}
-                className="bg-primary/10 text-primary text-sm font-semibold hover:bg-secondary hover:text-white transition-all duration-300 cursor-pointer"
+                className="bg-primary/10 text-primary text-sm font-semibold hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer "
               >
                 {text.title}
               </Badge>

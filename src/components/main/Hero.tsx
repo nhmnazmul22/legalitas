@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
           <h1 className="text-4xl sm:text-6xl xl:text-7xl leading-[50px] sm:leading-[80px] xl:leading-[100px] font-extrabold">
             Memberikan Layanan Legalitas{" "}
-            <span className="theme-gradient">
+            <span className="theme-gradient text-primary">
               <Typewriter
                 words={typewriterOptions.words}
                 loop={typewriterOptions.loop}

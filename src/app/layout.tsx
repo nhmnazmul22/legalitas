@@ -1,44 +1,28 @@
-import AppSidebar from "@/components/Layout/AppSidebar";
-import Navbar from "@/components/Layout/Navbar";
-import { SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
-import { cookies } from "next/headers";
+import { Poppins } from "next/font/google";
 import "swiper/css";
 import "./globals.css";
 
-const jakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
+const poppinsSans = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Legalitas",
+  title: "MITRA JASA LEGALITAS REV",
   description:
     "Legalitas.org sejak tahun 2002 memberikan layanan legalitas dan menyediakan 55.000++ database peraturan di Indonesia yang bisa di download dalam format PDF.",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
-
   return (
     <html lang="en">
-      <body className={`${jakartaSans.className} antialiased`}>
-        <SidebarProvider defaultOpen={defaultOpen}>
-          <div className="block lg:hidden absolute z-[99]">
-            <AppSidebar />
-          </div>
-          <main className="w-full">
-            <Navbar />
-            {children}
-          </main>
-        </SidebarProvider>
-      </body>
+      <body className={`${poppinsSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
