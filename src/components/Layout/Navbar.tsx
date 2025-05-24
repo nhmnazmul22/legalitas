@@ -31,7 +31,7 @@ const Navbar = () => {
         <SidebarTrigger className="lg:hidden" />
         <div className="hidden lg:flex gap-3 items-center">
           <NavigationMenu>
-            <NavigationMenuList className="gap-0">
+            <NavigationMenuList className="gap-1">
               {menuItems.map((item) => {
                 if (!item.children) {
                   return (

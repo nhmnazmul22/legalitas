@@ -6,14 +6,14 @@ import Image from "next/image";
 
 const Regulation = () => {
   return (
-    <section className="bg-white py-15">
+    <section className=" py-15">
       <div className="container mt-10">
         <SectionHeading
           badgeText="Cari peraturan"
           title="Database Peraturan"
           subTitle="Terlengkap"
         />
-        <div className="mt-14 bg-white shadow-md rounded-md py-10 px-5 border border-primary/10">
+        <div className="mt-14 shadow-md rounded-md py-10 px-5 border border-primary/10">
           <div className="grid grid-cols-3 md:gird-cols-4 lg:grid-cols-6 gap-4 mx-auto max-w-5xl my-10">
             {companyLogos.map((logo) => (
               <div key={logo.id} className="flex justify-center items-center">

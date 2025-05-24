@@ -30,7 +30,7 @@ const Risks = () => {
             Masih 😭 bingung cari kode? Baca Panduan Cek Risiko KBLI
           </div>
           <div className="">
-            <FilterOptions />
+            <FilterOptions option={["10"]} />
             <RiskTable />
             <TablePagination />
           </div>

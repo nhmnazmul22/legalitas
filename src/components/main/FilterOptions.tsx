@@ -7,7 +7,11 @@ import {
 } from "@/components/ui/select";
 import { Input } from "../ui/input";
 
-const FilterOptions = () => {
+type FilterOptionsType = {
+  option: string[];
+};
+
+const FilterOptions: React.FC<FilterOptionsType> = ({ option }) => {
   return (
     <div className="my-6 flex gap-3 items-center justify-between">
       <div className="flex max-md:flex-col gap-2 items-center ">
@@ -17,7 +21,12 @@ const FilterOptions = () => {
             <SelectValue placeholder="10" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="light">10</SelectItem>
+            {option &&
+              option.map((value, index) => (
+                <SelectItem key={index} value={value}>
+                  {value}
+                </SelectItem>
+              ))}
           </SelectContent>
         </Select>
       </div>

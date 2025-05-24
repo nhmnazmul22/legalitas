@@ -60,13 +60,35 @@ interface BlogType {
   link: string;
 }
 
+interface RegulationType {
+  id?: string | number;
+  name: string;
+}
+
+interface RegulationRulesListType {
+  id?: number | string;
+  type: string;
+  count: number;
+}
+
+interface RegulationTableListType {
+  id?: number | string;
+  type: string;
+  number: number | string;
+  year: number | string;
+  about: string;
+}
+
 export type {
   BlogType,
   CompanyLogoType,
   HeroServiceItemsType,
   MainServiceItemsType,
   MenuItem,
+  RegulationRulesListType,
+  RegulationTableListType,
   RegulationTextType,
+  RegulationType,
   RiskTableContentsType,
   RiskTagsType,
   ServiceType,

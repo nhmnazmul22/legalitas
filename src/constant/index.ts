@@ -3,14 +3,17 @@ import {
   HeroServiceItemsType,
   MainServiceItemsType,
   MenuItem,
+  RegulationRulesListType,
+  RegulationTableListType,
   RegulationTextType,
+  RegulationType,
   RiskTableContentsType,
   RiskTagsType,
   ServiceType,
 } from "@/types";
 
 const menuItems: MenuItem[] = [
-  { id: "1", title: "Peraturan", link: "/peraturan" },
+  { id: "1", title: "Peraturan", link: "/database-peraturan" },
   {
     id: "2",
     title: "Layanan",
@@ -148,7 +151,7 @@ const menuItems: MenuItem[] = [
     ],
   },
   { id: "3", title: "KBLI", link: "/kbli" },
-  { id: "4", title: "Tentang", link: "/tentang" },
+  { id: "4", title: "about", link: "/about" },
   { id: "5", title: "Review", link: "/review" },
   { id: "6", title: "Tulisan", link: "/tulisan" },
   { id: "7", title: "Kontak", link: "/kontak" },
@@ -189,8 +192,8 @@ const heroServiceItems: HeroServiceItemsType[] = [
 const mainServiceItems: MainServiceItemsType[] = [
   {
     id: 1,
-    title: "22 Tahun Melayani",
-    description: "Sejak tahun 2002 kami telah memberikan layanan legalitas.",
+    title: "22 year Melayani",
+    description: "Sejak year 2002 kami telah memberikan layanan legalitas.",
     icon: "/images/main-service-icon-01.png",
   },
   {
@@ -291,7 +294,7 @@ const services: ServiceType[] = [
     includes: [
       "Termasuk pengurusan 2 (dua) SKT/SKTK Tenaga Ahli",
       "Pengurusan SBU di LSBU",
-      "Pengurusan KTA di Asosiasi (Gapensi atau sejenisnya)",
+      "Pengurusan KTA di Asosiasi (Gapensi atau setypenya)",
     ],
   },
   {
@@ -449,15 +452,306 @@ const reviweCompanyLogos: CompanyLogoType[] = [
   { id: 6, link: "/images/review-company-06.png" },
 ];
 
+const regulationTypes: RegulationType[] = [
+  { id: 1, name: "Semua type Peraturan" },
+  { id: 2, name: "Instruksi Menteri Dalam Negeri" },
+  { id: 3, name: "Instruksi Presiden (INPRES)" },
+  { id: 4, name: "Keputusan Badan Pemeriksa Keuangan" },
+  { id: 5, name: "Keputusan Kepala Badan Nasional Penanggulangan Bencana" },
+  { id: 6, name: "Keputusan Kepala Badan Standardisasi Nasional" },
+  { id: 7, name: "Keputusan Komisi Pengawas Persaingan Usaha" },
+  { id: 8, name: "Keputusan Menteri Dalam Negeri" },
+  { id: 9, name: "Keputusan Menteri Energi dan Sumber Daya Mineral" },
+  { id: 10, name: "Keputusan Menteri Kelautan dan Perikanan" },
+  { id: 11, name: "Keputusan Menteri Kesehatan" },
+  { id: 12, name: "Keputusan Menteri Keuangan" },
+  { id: 13, name: "Keputusan Menteri Luar Negeri" },
+  { id: 14, name: "Keputusan Menteri Pertanian" },
+  { id: 15, name: "Keputusan Presiden (KEPPRES)" },
+  { id: 16, name: "Ketetapan MPR" },
+  { id: 17, name: "Peraturan Arsip Nasional Republik Indonesia" },
+  { id: 18, name: "Peraturan Badan Informasi Geospasial" },
+  { id: 19, name: "Peraturan Badan Intelijen Negara" },
+  { id: 20, name: "Peraturan Badan Keamanan Laut" },
+  { id: 21, name: "Peraturan Badan Kepegawaian Negara" },
+  {
+    id: 22,
+    name: "Peraturan Badan Kependudukan dan Keluarga Berencana Nasional",
+  },
+  { id: 23, name: "Peraturan Badan Koordinasi Penanaman Modal" },
+  { id: 24, name: "Peraturan Badan Meteorologi, Klimatologi, dan Geofisika" },
+  { id: 25, name: "Peraturan Badan Narkotika Nasional" },
+  { id: 26, name: "Peraturan Badan Nasional Penanggulangan Bencana" },
+  { id: 27, name: "Peraturan Badan Nasional Penanggulangan Terorisme" },
+  { id: 28, name: "Peraturan Badan Pelindungan Pekerja Migran Indonesia" },
+  { id: 29, name: "Peraturan Badan Pemeriksa Keuangan" },
+  { id: 30, name: "Peraturan Badan Pengawas Obat dan Makanan" },
+  { id: 31, name: "Peraturan Badan Pengawas Pemilihan Umum" },
+  { id: 32, name: "Peraturan Badan Pengawas Tenaga Nuklir" },
+  { id: 33, name: "Peraturan Badan Pengawasan Keuangan dan Pembangunan" },
+  { id: 34, name: "Peraturan Badan Penyelenggara Jaminan Sosial Kesehatan" },
+  { id: 35, name: "Peraturan Badan Pusat Statistik" },
+  { id: 36, name: "Peraturan Badan Siber dan Sandi Negara" },
+  { id: 37, name: "Peraturan Badan Standardisasi Nasional" },
+  { id: 38, name: "Peraturan Badan Tenaga Nuklir Nasional" },
+  { id: 39, name: "Peraturan Bank Indonesia" },
+  { id: 40, name: "Peraturan Bupati (PERBUP)" },
+  { id: 41, name: "Peraturan Daerah (PERDA)" },
+  { id: 42, name: "Peraturan Daerah Istimewa" },
+  { id: 43, name: "Peraturan Daerah Khusus Provinsi Papua (PERDASUS PAPUA)" },
+  { id: 44, name: "Peraturan Dewan Perwakilan Daerah" },
+  { id: 45, name: "Peraturan Dewan Perwakilan Rakyat" },
+  { id: 46, name: "Peraturan Gubernur (PERGUB)" },
+  { id: 47, name: "Peraturan Gubernur Lembaga Ketahanan Nasional" },
+  { id: 48, name: "Peraturan Jaksa Agung" },
+  { id: 49, name: "Peraturan Kejaksaan Republik Indonesia" },
+  { id: 50, name: "Peraturan Kepala Arsip Nasional Republik Indonesia" },
+  { id: 51, name: "Peraturan Kepala Badan Ekonomi Kreatif" },
+  { id: 52, name: "Peraturan Kepala Badan Keamanan Laut" },
+  { id: 53, name: "Peraturan Kepala Badan Kepegawaian Negara" },
+  { id: 54, name: "Peraturan Kepala Badan Koordinasi Penanaman Modal" },
+  {
+    id: 55,
+    name: "Peraturan Kepala Badan Meteorologi, Klimatologi, dan Geofisika",
+  },
+  { id: 56, name: "Peraturan Kepala Badan Narkotika Nasional" },
+  { id: 57, name: "Peraturan Kepala Badan Nasional Penanggulangan Bencana" },
+  { id: 58, name: "Peraturan Kepala Badan Nasional Penanggulangan Terorisme" },
+  { id: 59, name: "Peraturan Kepala Badan Pengawas Obat dan Makanan" },
+  {
+    id: 60,
+    name: "Peraturan Kepala Badan Pengawasan Keuangan dan Pembangunan",
+  },
+  {
+    id: 61,
+    name: "Peraturan Kepala Badan Pengusahaan Kawasan Perdagangan Bebas dan Pelabuhan Bebas Batam",
+  },
+  {
+    id: 62,
+    name: "Peraturan Kepala Badan Pengusahaan Kawasan Perdagangan dan Pelabuhan Bebas Sabang",
+  },
+  { id: 63, name: "Peraturan Kepala Badan Pusat Statistik" },
+  { id: 64, name: "Peraturan Kepala Badan Standardisasi Nasional" },
+  { id: 65, name: "Peraturan Kepala Badan Tenaga Nuklir Nasional" },
+  { id: 66, name: "Peraturan Kepala Kepolisian Negara Republik Indonesia" },
+  { id: 67, name: "Peraturan Kepala Lembaga Administrasi Negara" },
+  {
+    id: 68,
+    name: "Peraturan Kepala Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah",
+  },
+  { id: 69, name: "Peraturan Kepala Perpustakaan Nasional" },
+  {
+    id: 70,
+    name: "Peraturan Kepala Pusat Pelaporan dan Analisis Transaksi Keuangan",
+  },
+  { id: 71, name: "Peraturan Kepolisian Negara Republik Indonesia" },
+  { id: 72, name: "Peraturan Ketua Komisi Nasional Hak Asasi Manusia" },
+  { id: 73, name: "Peraturan Ketua Ombudsman Republik Indonesia" },
+  { id: 74, name: "Peraturan Komisi Nasional Hak Asasi Manusia" },
+  { id: 75, name: "Peraturan Komisi Pemberantasan Korupsi" },
+  { id: 76, name: "Peraturan Komisi Pemilihan Umum" },
+  { id: 77, name: "Peraturan Komisi Pengawas Persaingan Usaha" },
+  { id: 78, name: "Peraturan Komisi Yudisial" },
+  { id: 79, name: "Peraturan Lembaga Administrasi Negara" },
+  { id: 80, name: "Peraturan Lembaga Ilmu Pengetahuan Indonesia" },
+  {
+    id: 81,
+    name: "Peraturan Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah",
+  },
+  { id: 82, name: "Peraturan Lembaga Penjamin Simpanan" },
+  { id: 83, name: "Peraturan Mahkamah Agung" },
+  { id: 84, name: "Peraturan Mahkamah Konstitusi" },
+  { id: 85, name: "Peraturan Majelis Permusyawaratan Rakyat" },
+  { id: 86, name: "Peraturan Menteri Agama" },
+  {
+    id: 87,
+    name: "Peraturan Menteri Agraria dan Tata Ruang/ Kepala Badan Pertanahan Nasional Republik Indonesia",
+  },
+  { id: 88, name: "Peraturan Menteri Badan Usaha Milik Negara" },
+  { id: 89, name: "Peraturan Menteri Dalam Negeri" },
+  {
+    id: 90,
+    name: "Peraturan Menteri Desa, Pembangunan Daerah Tertinggal, dan Transmigrasi",
+  },
+  { id: 91, name: "Peraturan Menteri Energi dan Sumber Daya Mineral" },
+  { id: 92, name: "Peraturan Menteri Hukum dan HAM" },
+  { id: 93, name: "Peraturan Menteri Kelautan dan Perikanan" },
+  { id: 94, name: "Peraturan Menteri Kesehatan" },
+  { id: 95, name: "Peraturan Menteri Ketenagakerjaan" },
+  { id: 96, name: "Peraturan Menteri Keuangan" },
+  { id: 97, name: "Peraturan Menteri Komunikasi dan Informatika" },
+  {
+    id: 98,
+    name: "Peraturan Menteri Koordinator Bidang Kemaritiman dan Investasi",
+  },
+  { id: 99, name: "Peraturan Menteri Koordinator Bidang Kesejahteraan Rakyat" },
+  {
+    id: 100,
+    name: "Peraturan Menteri Koordinator Bidang Pembangunan Manusia Dan Kebudayaan",
+  },
+];
+
+const regulationRulesList: RegulationRulesListType[] = [
+  {
+    id: 1,
+    type: "Instruksi Menteri Dalam Negeri",
+    count: 10,
+  },
+  {
+    id: 2,
+    type: "Keputusan Komisi Pengawas Persaingan Usaha",
+    count: 2,
+  },
+  {
+    id: 3,
+    type: "Ketetapan MPR",
+    count: 2,
+  },
+  {
+    id: 4,
+    type: "Keputusan Badan Pemeriksa Keuangan",
+    count: 5,
+  },
+  {
+    id: 5,
+    type: "Keputusan Menteri Keuangan",
+    count: 51,
+  },
+  {
+    id: 6,
+    type: "Instruksi Presiden (INPRES)",
+    count: 175,
+  },
+  {
+    id: 7,
+    type: "Keputusan Presiden (KEPPRES)",
+    count: 6919,
+  },
+  {
+    id: 8,
+    type: "Keputusan Menteri Kesehatan",
+    count: 27,
+  },
+  {
+    id: 9,
+    type: "Keputusan Kepala Badan Nasional Penanggulangan Bencana",
+    count: 1,
+  },
+  {
+    id: 10,
+    type: "Keputusan Menteri Luar Negeri",
+    count: 1,
+  },
+  {
+    id: 11,
+    type: "Keputusan Menteri Kelautan dan Perikanan",
+    count: 211,
+  },
+  {
+    id: 12,
+    type: "Keputusan Kepala Badan Standardisasi Nasional",
+    count: 4,
+  },
+  {
+    id: 13,
+    type: "Keputusan Menteri Energi dan Sumber Daya Mineral",
+    count: 2,
+  },
+  {
+    id: 14,
+    type: "Keputusan Menteri Pertanian",
+    count: 61,
+  },
+  {
+    id: 15,
+    type: "Keputusan Menteri Dalam Negeri",
+    count: 24,
+  },
+];
+
+const regulationTableList: RegulationTableListType[] = [
+  {
+    id: 1,
+    type: "Peraturan Bupati (PERBUP)",
+    number: 1,
+    year: 2024,
+    about:
+      "Penentuan Kemampuan Keuangan Daerah untuk Pemberian Tunjangan Komunikasi Intensif, Tunjangan Reses dan Dana Operasional Dewan Perwakilan Rakyat Daerah year 2024",
+  },
+  {
+    id: 2,
+    type: "Peraturan Gubernur (PERGUB)",
+    number: 1,
+    year: 2024,
+    about:
+      "Alokasi dan Penggunaan Dana Bagi Hasil Cukai Hasil Tembakau Bagian Pemerintah Provinsi Jawa Tengah dan Pemerintah Kabupaten/Kota di Jawa Tengah year Anggaran 2024",
+  },
+  {
+    id: 3,
+    type: "Peraturan Pemerintah (PP)",
+    number: 10,
+    year: 2024,
+    about:
+      "Penetapan Pensiun Pokok Purnawirawan, Warakawuri/Duda, Tunjangan Anak Yatim/Piatu, Anak Yatim Piatu, dan Tunjangan Orang Tua Anggota Kepolisian Negara Republik Indonesia",
+  },
+  {
+    id: 4,
+    type: "Peraturan Bupati (PERBUP)",
+    number: 1,
+    year: 2024,
+    about:
+      "Perubahan Kelima atas Peraturan Bupati Kudus number 10 year 2022 about Pemberian Tambahan Penghasilan kepada Pegawai Aparatur Sipil Negara di Lingkungan Pemerintah Kabupaten Kudus",
+  },
+  {
+    id: 5,
+    type: "Peraturan Presiden (PERPRES)",
+    number: 12,
+    year: 2024,
+    about: "Badan Meteorologi, Klimatologi, dan Geofisika",
+  },
+  {
+    id: 6,
+    type: "Peraturan Pemerintah (PP)",
+    number: 9,
+    year: 2024,
+    about:
+      "Penetapan Pensiun Pokok Purnawirawan, Warakawuri/Duda, Tunjangan Anak Yatim/Piatu, Anak Yatim Piatu, dan Tunjangan Orang Tua Anggota Tentara Nasional Indonesia",
+  },
+  {
+    id: 7,
+    type: "Peraturan Daerah (PERDA)",
+    number: 1,
+    year: 2024,
+    about: "Pajak Daerah dan Retribusi Daerah",
+  },
+  {
+    id: 8,
+    type: "Peraturan Presiden (PERPRES)",
+    number: 13,
+    year: 2024,
+    about:
+      "Hak Keuangan dan Fasilitas Bagi Ketua, Wakil Ketua, dan Anggota Komisi Nasional Hak Asasi Manusia",
+  },
+  {
+    id: 9,
+    type: "Peraturan Presiden (PERPRES)",
+    number: 14,
+    year: 2024,
+    about: "Penyelenggaraan Kegiatan Penangkapan dan Penyimpanan Karbon",
+  },
+];
+
 export {
   companyLogos,
   heroServiceItems,
   mainServiceItems,
   menuItems,
+  regulationRulesList,
+  regulationTableList,
   regulationText,
+  regulationTypes,
   reviweCompanyLogos,
   riskTableContents,
   riskTags,
-  services
+  services,
 };
-
