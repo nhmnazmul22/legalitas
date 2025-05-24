@@ -1,10 +1,10 @@
 "use client";
 
-import HeroCarousel from "@/components/main/HeroCarousel";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import TypeWriterText from "../common/TypeWritedText";
 import { Button } from "../ui/button";
+import HeroSwiper from "./HeroSwiper";
 
 const Hero = () => {
   return (
@@ -14,10 +14,10 @@ const Hero = () => {
           <div className="bg-white w-[210px] text-center text-sm font-medium shadow-lg py-4 rounded-md">
             🏆 #1 Legalitas di Indonesia
           </div>
-          <h1 className="text-4xl sm:text-6xl xl:text-7xl leading-[50px] sm:leading-[80px] xl:leading-[100px] font-extrabold">
+          <h1 className="text-4xl sm:text-5xl lg:text-[54px] leading-[50px] sm:leading-[80px] font-extrabold max-lg:max-w-xl">
             Memberikan Layanan Legalitas <TypeWriterText />
           </h1>
-          <p className="text-sm md:text-base text-muted-foreground leading-[28px] md:leading-[37px]">
+          <p className="text-sm md:text-base text-muted-foreground leading-[26px] md:leading-[32px]">
             Legalitas.org sejak tahun 2002 memberikan layanan legalitas dan
             menyediakan 95.000++ database peraturan di Indonesia yang bisa di
             download dalam format PDF.
@@ -32,8 +32,8 @@ const Hero = () => {
             </Button>
           </Link>
         </div>
-        <div className="hidden lg:block max-w-[400px] xl:max-w-[500px]">
-          <HeroCarousel />
+        <div className=" max-w-[430px] xl:max-w-[500px]">
+          <HeroSwiper />
         </div>
       </div>
     </section>
