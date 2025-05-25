@@ -98,9 +98,9 @@
 
 .theme-gradient {
   background: linear-gradient(
-    60deg,
-    var(--color-primary),
-    var(--color-secondary)
+    350deg,
+    rgba(255, 67, 54, 1) 0%,
+    rgba(247, 140, 10, 1) 72%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -110,24 +110,15 @@
 
 .btn-gradient {
   color: var(--color-white);
-  background-size: 300% 100%;
-  background-image: linear-gradient(
-    to right,
-    var(--color-primary),
-    var(--color-secondary),
-    var(--color-secondary),
-    var(--color-primary)
-  );
-
-  transition: background-size 0.3s ease, background-position 0.3s ease,
-    transform 0.5s ease;
+  background-image: linear-gradient(to right, #ff4336, #f78c0a, #ff4336);
+  background-size: 200% auto;
   background-position: left center;
+  transition: background-position 0.5s ease, transform 0.3s ease;
 }
 
 .btn-gradient:hover {
-  transform: translateY(-2px);
-  background-size: 300% 300% !important;
   background-position: right center;
+  transform: translateY(-2px);
 }
 
 /* Collapsible content */
@@ -167,6 +158,16 @@
     rgba(255, 245, 240, 1) 80%
   );
 }
+
+.secondary-hero-banner {
+  background: #ff4336;
+  background: linear-gradient(
+    350deg,
+    rgba(255, 67, 54, 1) 0%,
+    rgba(247, 140, 10, 1) 72%
+  );
+}
+
 .swiper-wrapper {
   padding: 10px 0px;
 }
@@ -195,4 +196,38 @@
 .swiper {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Styling blog content */
+.blog-content ol {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.blog-details .content-title {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 70px;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.blog-details p {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0.5rem 0;
+  color: var(--muted-foreground);
+}
+.blog-details .quote {
+  background: color-mix(in oklab, var(--primary) 5%, transparent);
+  margin: 1rem 0;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  color: var(--primary);
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
 }

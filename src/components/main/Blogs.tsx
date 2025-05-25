@@ -46,9 +46,11 @@ const Blogs = () => {
             />
           ))}
         </div>
+
         <MainButton
           text="Lihat semua tulisan"
           className="mt-14 mx-auto w-[260px] !h-[60px] "
+          link="/tulisan"
         />
       </div>
     </section>
