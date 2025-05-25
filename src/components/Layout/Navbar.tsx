@@ -40,7 +40,7 @@ const Navbar = () => {
                         asChild
                         className={cn(
                           navigationMenuTriggerStyle(),
-                          "!text-base font-medium hover:text-primary duration-300 !px-2 xl:!px-4"
+                          "!text-base max-xl:!text-sm font-medium hover:text-primary duration-300 !px-2 xl:!px-4"
                         )}
                       >
                         <Link href={item.link}>{item.title}</Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
                 }
                 return (
                   <NavigationMenuItem key={item.title}>
-                    <NavigationMenuTrigger className="!text-base font-medium hover:text-primary duration-300 !px-2 xl:!px-4">
+                    <NavigationMenuTrigger className="!text-base max-xl:!text-sm font-medium hover:text-primary duration-300 !px-2 xl:!px-4">
                       {item.title}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="flex gap-3 items-center justify-between">

@@ -42,7 +42,7 @@ export default function BlogPage() {
         </div>
       </div>
       <div className="container">
-        <div className="flex max-md:flex-col gap-5 my-10">
+        <div className="flex gap-5 my-10">
           <BlogContents />
           <Blog />
         </div>

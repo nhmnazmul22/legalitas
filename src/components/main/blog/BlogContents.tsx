@@ -1,6 +1,6 @@
 const BlogContents = () => {
   return (
-    <div className="max-w-[400px]">
+    <div className="max-w-[400px] block max-xl:hidden">
       <h4 className="text-lg font-semibold">Konten Tulisan</h4>
       <ul className="blog-content flex flex-col gap-1 mt-3 text-sm text-muted-foreground font-normal">
         <li>Dasar Hukum</li>
