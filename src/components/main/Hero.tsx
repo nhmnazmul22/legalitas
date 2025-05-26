@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="bg-white w-[210px] text-center text-sm font-medium shadow-lg py-4 rounded-md">
             🏆 #1 Legalitas di Indonesia
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-[54px] leading-[50px] sm:leading-[80px] font-extrabold max-lg:max-w-xl">
+          <h1 className="text-[34px] sm:text-5xl lg:text-[54px] leading-[50px] sm:leading-[80px] font-extrabold max-lg:max-w-xl">
             Memberikan Layanan Legalitas <TypeWriterText />
           </h1>
           <p className="text-sm md:text-base text-muted-foreground leading-[26px] md:leading-[32px]">
