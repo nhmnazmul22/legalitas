@@ -18,7 +18,7 @@ import { menuItems } from "@/constant";
 import { ArrowRight, Mail, Minus, Phone, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Button } from "../ui/button";
 
 export default function AppSidebar() {
@@ -63,16 +63,15 @@ export default function AppSidebar() {
             {menuItems.map((item, index) => {
               if (!item.children) {
                 return (
-                  <>
+                  <Fragment key={item.id}>
                     <Link
-                      key={item.id}
                       href={item.link}
                       className="hover:text-primary duration-300 font-medium"
                     >
                       {item.title}
                     </Link>
                     {index !== menuItems.length - 1 && <Separator />}
-                  </>
+                  </Fragment>
                 );
               }
               return (

@@ -79,6 +79,11 @@ interface RegulationTableListType {
   about: string;
 }
 
+interface ServicesListType {
+  id?: number | string;
+  name: string;
+}
+
 export type {
   BlogType,
   CompanyLogoType,
@@ -91,5 +96,6 @@ export type {
   RegulationType,
   RiskTableContentsType,
   RiskTagsType,
+  ServicesListType,
   ServiceType,
 };

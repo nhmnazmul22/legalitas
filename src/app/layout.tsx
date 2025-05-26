@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="max-md:overflow-x-auto">
       <body
         className={`${poppinsSans.className} antialiased overflow-x-hidden bg-slate-50 w-full`}
       >
