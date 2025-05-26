@@ -43,7 +43,9 @@ const Navbar = () => {
                           "!text-base max-xl:!text-sm font-medium hover:text-primary duration-300 !px-2 xl:!px-4"
                         )}
                       >
-                        <Link href={item.link}>{item.title}</Link>
+                        <Link href={item.link ? item.link : "/"}>
+                          {item.title}
+                        </Link>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                   );
@@ -59,7 +61,7 @@ const Navbar = () => {
                           return (
                             <div key={child.title}>
                               <Link
-                                href={child.link}
+                                href="/"
                                 className="uppercase text-muted-foreground text-sm font-medium"
                               >
                                 {child.title}
@@ -70,7 +72,9 @@ const Navbar = () => {
                                   child.children.map((subChild) => {
                                     return (
                                       <Link
-                                        href={subChild.link}
+                                        href={
+                                          subChild.link ? subChild.link : "/"
+                                        }
                                         key={subChild.title}
                                         className="w-full"
                                       >

@@ -1,7 +1,7 @@
 interface MenuItem {
   id?: string | number;
   title: string;
-  link: string;
+  link?: string;
   children?: MenuItem[];
 }
 

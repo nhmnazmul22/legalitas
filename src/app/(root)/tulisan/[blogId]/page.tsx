@@ -26,9 +26,7 @@ export default function BlogPage() {
               </BreadcrumbItem>
               <BreadcrumbSeparator className="text-white" />
               <BreadcrumbItem>
-                <BreadcrumbPage className="text-white">
-                  Breadcrumb
-                </BreadcrumbPage>
+                <BreadcrumbPage className="text-white">Tulisan</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>

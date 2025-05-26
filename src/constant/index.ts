@@ -23,21 +23,20 @@ const menuItems: MenuItem[] = [
       {
         id: "2-1",
         title: "Badan Usaha",
-        link: "/layanan/badan-usaha",
         children: [
           {
             id: "2-1-1",
             title: "PT / Perseroan Terbatas",
-            link: "/layanan/badan-usaha/pt",
+            link: "/layanan",
           },
           {
             id: "2-1-2",
             title: "CV / Commanditaire Veidotschap",
-            link: "/layanan/badan-usaha/crisk",
+            link: "/layanan",
           },
-          { id: "2-1-3", title: "New", link: "/layanan/badan-usaha/new" },
-          { id: "2-1-4", title: "PT PMA", link: "/layanan/badan-usaha/pt-pma" },
-          { id: "2-1-5", title: "Firma", link: "/layanan/badan-usaha/firma" },
+          { id: "2-1-3", title: "New", link: "/layanan" },
+          { id: "2-1-4", title: "PT PMA", link: "/layanan" },
+          { id: "2-1-5", title: "Firma", link: "/layanan" },
           {
             id: "2-1-6",
             title: "Persekutuan Perdata",
@@ -58,7 +57,6 @@ const menuItems: MenuItem[] = [
       {
         id: "2-2",
         title: "Perizinan",
-        link: "/layanan/perizinan",
         children: [
           {
             id: "2-2-1",
@@ -105,7 +103,6 @@ const menuItems: MenuItem[] = [
       {
         id: "2-3",
         title: "Lainnya",
-        link: "/layanan/lainnya",
         children: [
           {
             id: "2-3-1",
