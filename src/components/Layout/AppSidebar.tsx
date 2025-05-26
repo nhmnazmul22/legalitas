@@ -113,7 +113,7 @@ export default function AppSidebar() {
         </SidebarGroup>
         <SidebarGroup className="p-0 pt-2">
           <h3 className="text-2xl font-bold mb-7 mt-2">Dashboard Klien</h3>
-          <Link href="/" className="w-full">
+          <Link href="/login" className="w-full">
             <Button className="w-full btn-gradient h-[60px] text-lg font-bold flex items-center group">
               Login
               <ArrowRight

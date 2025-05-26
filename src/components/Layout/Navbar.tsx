@@ -94,7 +94,7 @@ const Navbar = () => {
               })}
             </NavigationMenuList>
           </NavigationMenu>
-          <Link href="/" className="w-full">
+          <Link href="/login" className="w-full">
             <Button className="w-[120px] btn-gradient h-[40px] text-sm font-semibold">
               Login Klien
             </Button>

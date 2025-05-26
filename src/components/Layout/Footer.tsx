@@ -99,7 +99,7 @@ const Footer = () => {
             <ul className="text-base text-muted-foreground flex flex-col gap-2 mt-3 ps-2">
               <li>
                 <Link
-                  href="/"
+                  href="/tentang"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
@@ -111,7 +111,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/database-peraturan"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
@@ -123,7 +123,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/kbli"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
@@ -135,7 +135,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/tulisan"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
@@ -147,7 +147,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/kontak"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
