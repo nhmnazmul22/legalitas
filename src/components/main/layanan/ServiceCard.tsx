@@ -5,7 +5,7 @@ import Link from "next/link";
 const ServiceCard = () => {
   return (
     <div className="bg-white rounded-md shadow-md hover:scale-[1.02] transition-all duration-300">
-      <Link href="/">
+      <Link href="/layanan/pt-perseroan-terbatas">
         <figure className="rounded-t-md overflow-hidden">
           <Image
             src="/images/hero-service-banner-01.png"
@@ -22,7 +22,7 @@ const ServiceCard = () => {
         <div className="flex gap-2 items-center mt-2">
           <RatingGen rating={5} size={30} />
           <Link
-            href="/"
+            href="/layanan/pt-perseroan-terbatas"
             className="text-xs underline hover:text-secondary-blue font-semibold"
           >
             100 Review
@@ -34,7 +34,11 @@ const ServiceCard = () => {
             Rp 3.000.000
           </span>
         </div>
-        <MainButton text="Detail" className="mt-5 w-full" />
+        <MainButton
+          text="Detail"
+          className="mt-5 w-full"
+          link="/layanan/pt-perseroan-terbatas"
+        />
       </div>
     </div>
   );

@@ -94,8 +94,13 @@
   .container {
     @apply !max-w-[1400px] !w-[90%] max-sm:w-[98%] mx-auto sm:!px-2;
   }
+  .service-paragraph {
+    @apply text-sm md:text-base mt-2 leading-[22px] md:leading-[28px];
+  }
+  .ser-para-highlight {
+    @apply bg-primary/20 text-primary px-2 py-1 rounded-md inline-block font-semibold mx-[1.5px] text-xs md:text-sm;
+  }
 }
-
 
 .theme-gradient {
   background: linear-gradient(
@@ -232,3 +237,5 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+/* Service Details page */
