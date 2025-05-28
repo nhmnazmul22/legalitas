@@ -65,7 +65,7 @@ export default function AppSidebar() {
                 return (
                   <Fragment key={item.id}>
                     <Link
-                      href={item.link}
+                      href={item.link ? item.link : "/"}
                       className="hover:text-primary duration-300 font-medium"
                     >
                       {item.title}
@@ -93,7 +93,7 @@ export default function AppSidebar() {
                             {child.children.map((subChild) => (
                               <div key={subChild.id} className="flex flex-col">
                                 <Link
-                                  href={subChild.link}
+                                  href={subChild.link ? subChild.link : "/"}
                                   className="hover:text-primary duration-300 font-medium"
                                 >
                                   {subChild.title}
