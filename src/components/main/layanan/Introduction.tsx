@@ -1,12 +1,10 @@
-import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-
+import Heading from "./Heading";
 
 const Introduction = () => {
   return (
     <div className="mt-5">
-      
-      <Separator className="mt-2 mb-4 border-[1.2px] border-primary" />
+      <Heading text="Pengantar" />
       <p className="service-paragraph">
         {`Perseroan Terbatas atau disingkat "PT" (bahasa Belanda: Naamloze
         Vennootschap) adalah salah satu badan hukum yang diakui oleh Negara

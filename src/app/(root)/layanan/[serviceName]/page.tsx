@@ -1,6 +1,10 @@
 import RatingGen from "@/components/common/RatingGen";
+import Condition from "@/components/main/layanan/Condition";
+import Faq from "@/components/main/layanan/Faq";
 import Introduction from "@/components/main/layanan/Introduction";
 import LegalBasis from "@/components/main/layanan/LegalBasis";
+import Pricing from "@/components/main/layanan/Pricing";
+import Process from "@/components/main/layanan/Process";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -208,16 +212,16 @@ export default function ServiceDetailsPage() {
                   <LegalBasis />
                 </TabsContent>
                 <TabsContent value="proses">
-                  Make changes to your account here.
+                  <Process />
                 </TabsContent>
                 <TabsContent value="syarat">
-                  Make changes to your account here.
+                  <Condition />
                 </TabsContent>
                 <TabsContent value="pricing">
-                  Make changes to your account here.
+                  <Pricing />
                 </TabsContent>
                 <TabsContent value="faq">
-                  Make changes to your account here.
+                  <Faq />
                 </TabsContent>
                 <TabsContent value="quiz">
                   Make changes to your account here.

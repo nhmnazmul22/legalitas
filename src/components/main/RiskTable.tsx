@@ -10,7 +10,7 @@ import { riskTableContents } from "@/constant";
 
 const RiskTable = () => {
   return (
-    <Table className="text-base ">
+    <Table className="text-base">
       <TableHeader>
         <TableRow>
           <TableHead className="font-bold w-[40px] whitespace-nowrap md:whitespace-normal">
