@@ -22,7 +22,7 @@ const Hero = () => {
             menyediakan 95.000++ database peraturan di Indonesia yang bisa di
             download dalam format PDF.
           </p>
-          <Link href="/">
+          <Link href="#why-us">
             <Button className="btn-gradient w-[210px] h-[50px] text-base font-bold flex items-center group">
               Lihat alasannya
               <ArrowRight

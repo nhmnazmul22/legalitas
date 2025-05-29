@@ -4,10 +4,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Heading from "./Heading";
 
 const Faq = () => {
   return (
     <div className="mt-5">
+      <Heading text="FAQ" />
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-base">

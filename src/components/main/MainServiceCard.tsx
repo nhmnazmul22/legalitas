@@ -31,7 +31,7 @@ const MainServiceCard: React.FC<MainServiceItemsType> = ({
         <p className="text-sm text-muted-foreground mt-3">{description}</p>
       </CardContent>
       <CardFooter>
-        <Link href="/">
+        <Link href="/tentang">
           <Button className="bg-secondary/20 text-secondary hover:bg-primary hover:text-white duration-300 group">
             Lebih lanjut
             <ArrowRight

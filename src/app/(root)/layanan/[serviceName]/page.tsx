@@ -1,10 +1,17 @@
 import RatingGen from "@/components/common/RatingGen";
+import Blogs from "@/components/main/Blogs";
+import BankPartner from "@/components/main/layanan/BankPartner";
 import Condition from "@/components/main/layanan/Condition";
 import Faq from "@/components/main/layanan/Faq";
 import Introduction from "@/components/main/layanan/Introduction";
 import LegalBasis from "@/components/main/layanan/LegalBasis";
 import Pricing from "@/components/main/layanan/Pricing";
 import Process from "@/components/main/layanan/Process";
+import Quiz from "@/components/main/layanan/Quiz";
+import Review from "@/components/main/layanan/Review";
+import Voucher from "@/components/main/layanan/Voucher";
+import MainService from "@/components/main/MainService";
+import Reviews from "@/components/main/Reviews";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,13 +20,20 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ServiceDetailsPage() {
+export default async function ServiceDetailsPage({
+  params,
+}: {
+  params: Promise<{ serviceName: string }>;
+}) {
+  const { serviceName } = await params;
+
   return (
-    <section className="">
+    <section className="relative">
       <div className="hero-banner">
         <div className="container py-10 md:py-20">
           <div className="max-w-3xl">
@@ -34,7 +48,7 @@ export default function ServiceDetailsPage() {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Dynamic Page</BreadcrumbPage>
+                  <BreadcrumbPage>{serviceName}</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -76,9 +90,9 @@ export default function ServiceDetailsPage() {
         </div>
       </div>
       <div className="container my-10">
-        <div className="flex flex-col md:flex-row gap-10 items-start">
-          <div className="max-w-4xl">
-            <div className="flex flex-col md:flex-row gap-5 items-start">
+        <div className="flex flex-col lg:flex-row gap-10 items-start">
+          <div className="flex-1">
+            <div className="flex flex-col xl:flex-row gap-5 items-start">
               <figure>
                 <Image
                   src="/images/hero-service-banner-01.png"
@@ -195,7 +209,7 @@ export default function ServiceDetailsPage() {
             </div>
             <div className="mt-10">
               <Tabs defaultValue="pengantar" className="w-full">
-                <TabsList className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 w-full bg-slate-100 shadow p-2 h-auto">
+                <TabsList className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-3 w-full bg-slate-100 shadow p-2 h-auto">
                   <TabsTrigger value="pengantar">Pengantar</TabsTrigger>
                   <TabsTrigger value="dasar-hukum">Dasar Hukum</TabsTrigger>
                   <TabsTrigger value="proses">Proses</TabsTrigger>
@@ -207,34 +221,104 @@ export default function ServiceDetailsPage() {
                 </TabsList>
                 <TabsContent value="pengantar">
                   <Introduction />
+                  <LegalBasis />
+                  <Process />
+                  <Condition />
+                  <Pricing />
+                  <Faq />
+                  <Quiz />
+                  <BankPartner />
+                  <Review />
                 </TabsContent>
                 <TabsContent value="dasar-hukum">
                   <LegalBasis />
+                  <Introduction />
+                  <Process />
+                  <Condition />
+                  <Pricing />
+                  <Faq />
+                  <Quiz />
+                  <BankPartner />
+                  <Review />
                 </TabsContent>
                 <TabsContent value="proses">
                   <Process />
+                  <Introduction />
+                  <LegalBasis />
+                  <Condition />
+                  <Pricing />
+                  <Faq />
+                  <Quiz />
+                  <BankPartner />
+                  <Review />
                 </TabsContent>
                 <TabsContent value="syarat">
                   <Condition />
+                  <Introduction />
+                  <LegalBasis />
+                  <Process />
+                  <Pricing />
+                  <Faq />
+                  <Quiz />
+                  <BankPartner />
+                  <Review />
                 </TabsContent>
                 <TabsContent value="pricing">
                   <Pricing />
+                  <Introduction />
+                  <LegalBasis />
+                  <Process />
+                  <Condition />
+                  <Faq />
+                  <Quiz />
+                  <BankPartner />
+                  <Review />
                 </TabsContent>
                 <TabsContent value="faq">
                   <Faq />
+                  <Introduction />
+                  <LegalBasis />
+                  <Process />
+                  <Condition />
+                  <Pricing />
+                  <Quiz />
+                  <BankPartner />
+                  <Review />
                 </TabsContent>
                 <TabsContent value="quiz">
-                  Make changes to your account here.
+                  <Quiz />
+                  <Introduction />
+                  <LegalBasis />
+                  <Process />
+                  <Condition />
+                  <Pricing />
+                  <Faq />
+                  <BankPartner />
+                  <Review />
                 </TabsContent>
                 <TabsContent value="review">
-                  Make changes to your account here.
+                  <Review />
+                  <Introduction />
+                  <LegalBasis />
+                  <Process />
+                  <Condition />
+                  <Pricing />
+                  <Faq />
+                  <Quiz />
+                  <BankPartner />
                 </TabsContent>
               </Tabs>
             </div>
           </div>
-          <div className="flex-1 bg-white shadow"></div>
+          <div className="w-full lg:max-w-md secondary-hero-banner shadow p-[3px] rounded-md sticky top-[10%]">
+            <Voucher />
+          </div>
         </div>
       </div>
+      <Separator className="my-10" />
+      <MainService />
+      <Reviews />
+      <Blogs />
     </section>
   );
 }

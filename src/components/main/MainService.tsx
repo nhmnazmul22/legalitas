@@ -4,7 +4,7 @@ import MainServiceCard from "./MainServiceCard";
 
 const MainService = () => {
   return (
-    <section className="py-15 mt-10">
+    <section className="py-15 mt-10" id="why-us">
       <div className="container">
         <SectionHeading
           badgeText="Why us?"
