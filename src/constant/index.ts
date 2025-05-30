@@ -65,7 +65,7 @@ const menuItems: MenuItem[] = [
           {
             id: "2-2-1",
             title: "NIB & OSS",
-            link: "/layanan/nib-oss",
+            link: "/layanan/jasa-nib-oss",
           },
           {
             id: "2-2-2",

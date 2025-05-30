@@ -14,8 +14,6 @@ type PageHeadingProps = {
 const PageHeading: React.FC<PageHeadingProps> = ({
   title,
   isTypeWriter,
-  shortDes,
-  reviews,
   subTitle,
 }) => {
   return (
