@@ -4,6 +4,7 @@ import BreadCrumb from "@/components/main/layanan/BreadCrumb";
 import Condition from "@/components/main/layanan/Condition";
 import Faq from "@/components/main/layanan/Faq";
 import LegalBasis from "@/components/main/layanan/LegalBasis";
+import OtherServiceSection from "@/components/main/layanan/OtherServiceSection";
 import PageHeading from "@/components/main/layanan/PageHeading";
 import Pricing from "@/components/main/layanan/Pricing";
 import Process from "@/components/main/layanan/Process";
@@ -24,7 +25,6 @@ export default async function ServiceDetailsPage() {
   const process = PageData.process;
   const requiredDocuments = PageData.requiredDocuments;
   const choosingBusinessField = PageData.choosingBusinessField;
-  const virtualOffice = PageData.virtualOffice;
   const faqs = PageData.faqs;
   const pricing = PageData.pricing;
   const quiz = PageData.quiz;
@@ -62,7 +62,6 @@ export default async function ServiceDetailsPage() {
                 process={process}
                 requiredDocuments={requiredDocuments}
                 choosingBusinessField={choosingBusinessField}
-                virtualOffice={virtualOffice}
                 faqs={faqs}
                 pricing={pricing}
                 quiz={quiz}
@@ -74,7 +73,8 @@ export default async function ServiceDetailsPage() {
                 choosingBusinessField={choosingBusinessField}
               />
               <Pricing pricing={pricing} />
-              {virtualOffice && <VirtualOfficeGallery />}
+              <OtherServiceSection />
+              <VirtualOfficeGallery />
               <Faq faq={faqs} />
               <Quiz quiz={quiz} />
               <BankPartner />

@@ -39,7 +39,7 @@ const menuItems: MenuItem[] = [
             title: "PT Perorangan",
             link: "/layanan/perseroan-perorangan",
           },
-          { id: "2-1-4", title: "PT PMA", link: "/layanan/pt-pma" },
+          { id: "2-1-4", title: "PT PMA", link: "/layanan/pma-penanaman" },
           { id: "2-1-5", title: "Firma", link: "/layanan/firma" },
           {
             id: "2-1-6",

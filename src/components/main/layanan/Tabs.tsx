@@ -22,7 +22,6 @@ type TabsSectionProps = {
   process: ProcessStep[];
   requiredDocuments: string[];
   choosingBusinessField: string[];
-  virtualOffice: boolean;
   faqs: FAQ[];
   pricing: PricingType;
   quiz: QuizItem[];

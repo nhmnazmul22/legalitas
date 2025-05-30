@@ -16,7 +16,7 @@ import Voucher from "@/components/main/layanan/Voucher";
 import MainService from "@/components/main/MainService";
 import Reviews from "@/components/main/Reviews";
 import { Separator } from "@/components/ui/separator";
-import PageData from "@/data/service/perseroan-perorangan.json";
+import PageData from "@/data/service/pma-penanaman.json";
 
 export default async function ServiceDetailsPage() {
   const basicInfo = PageData.serviceBasicInfo;
@@ -34,13 +34,13 @@ export default async function ServiceDetailsPage() {
       <div className="hero-banner">
         <div className="container py-10 md:py-20">
           <div className="max-w-3xl">
-            <BreadCrumb pageName="PT Perorangan" />
+            <BreadCrumb pageName="Penanaman Modal Asing" />
             {basicInfo && (
               <PageHeading
                 title={basicInfo.serviceName}
                 subTitle="Legalitas.org memberikan layanan legalitas"
                 shortDes={basicInfo.shortDes}
-                reviews={44}
+                reviews={100}
                 isTypeWriter={true}
               />
             )}
@@ -68,7 +68,6 @@ export default async function ServiceDetailsPage() {
               <LegalBasis />
               <Process process={process} />
               <Condition
-                isSingleBlog={true}
                 requireDocuments={requiredDocuments}
                 choosingBusinessField={choosingBusinessField}
               />
