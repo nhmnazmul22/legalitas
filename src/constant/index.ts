@@ -32,9 +32,13 @@ const menuItems: MenuItem[] = [
           {
             id: "2-1-2",
             title: "CV / Commanditaire Veidotschap",
-            link: "/layanan/commanditaire-veidotschap",
+            link: "/layanan/cv",
           },
-          { id: "2-1-3", title: "New", link: "/layanan/new" },
+          {
+            id: "2-1-3",
+            title: "PT Perorangan",
+            link: "/layanan/perseroan-perorangan",
+          },
           { id: "2-1-4", title: "PT PMA", link: "/layanan/pt-pma" },
           { id: "2-1-5", title: "Firma", link: "/layanan/firma" },
           {

@@ -1,4 +1,5 @@
 import RatingGen from "@/components/common/RatingGen";
+import TypeWriterText from "@/components/common/TypeWritedText";
 import Blogs from "@/components/main/Blogs";
 import BankPartner from "@/components/main/layanan/BankPartner";
 import Condition from "@/components/main/layanan/Condition";
@@ -7,7 +8,6 @@ import Introduction from "@/components/main/layanan/Introduction";
 import LegalBasis from "@/components/main/layanan/LegalBasis";
 import Pricing from "@/components/main/layanan/Pricing";
 import Process from "@/components/main/layanan/Process";
-import Quiz from "@/components/main/layanan/Quiz";
 import Review from "@/components/main/layanan/Review";
 import Voucher from "@/components/main/layanan/Voucher";
 import MainService from "@/components/main/MainService";
@@ -25,13 +25,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function ServiceDetailsPage({
-  params,
-}: {
-  params: Promise<{ serviceName: string }>;
-}) {
-  const { serviceName } = await params;
-
+export default async function ServiceDetailsPage() {
   return (
     <section className="relative">
       <div className="hero-banner">
@@ -44,24 +38,31 @@ export default async function ServiceDetailsPage({
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/">layanan</BreadcrumbLink>
+                  <BreadcrumbLink href="/layanan">Layanan</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>{serviceName}</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    CV / Commanditaire Vennootschap
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
             <div className=" mt-10 ">
               <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold theme-gradient">
-                Perseroan Terbatas
+                CV / Commanditaire Vennootschap
               </h2>
-              <p className="text-base md:text-lg my-2 leading-[30px] md:leading-[36px]">
-                Legalitas.org memberikan layanan legalitas sejak
-                2002.terbaik.profesional. Jasa Pendirian PT dengan bonus{" "}
+              <p className="text-base md:text-lg mt-2 leading-[30px] md:leading-[36px]">
+                Legalitas.org memberikan layanan legalitas{" "}
+                <span className="font-medium">
+                  <TypeWriterText />
+                </span>
+              </p>
+              <p className="text-base md:text-lg mb-2 leading-[30px] md:leading-[36px]">
+                Jasa Pendirian CV dengan bonus{" "}
                 <span className="secondary-hero-banner px-2 py-1 rounded-full text-white text-sm inline-block">
                   VOUCHER DISKON 10%
-                </span>{" "}
+                </span>
                 untuk pemesanan berikutnya!
               </p>
               <div className="flex items-center gap-3 mt-4">
@@ -82,7 +83,7 @@ export default async function ServiceDetailsPage({
                   href="/"
                   className="text-xs underline hover:text-secondary-blue duration-300 font-semibold"
                 >
-                  Lihat 100 Review
+                  Lihat 70 Review
                 </Link>
               </div>
             </div>
@@ -226,7 +227,6 @@ export default async function ServiceDetailsPage({
                   <Condition />
                   <Pricing />
                   <Faq />
-                  <Quiz />
                   <BankPartner />
                   <Review />
                 </TabsContent>
@@ -237,7 +237,6 @@ export default async function ServiceDetailsPage({
                   <Condition />
                   <Pricing />
                   <Faq />
-                  <Quiz />
                   <BankPartner />
                   <Review />
                 </TabsContent>
@@ -248,7 +247,6 @@ export default async function ServiceDetailsPage({
                   <Condition />
                   <Pricing />
                   <Faq />
-                  <Quiz />
                   <BankPartner />
                   <Review />
                 </TabsContent>
@@ -259,7 +257,6 @@ export default async function ServiceDetailsPage({
                   <Process />
                   <Pricing />
                   <Faq />
-                  <Quiz />
                   <BankPartner />
                   <Review />
                 </TabsContent>
@@ -270,7 +267,6 @@ export default async function ServiceDetailsPage({
                   <Process />
                   <Condition />
                   <Faq />
-                  <Quiz />
                   <BankPartner />
                   <Review />
                 </TabsContent>
@@ -281,12 +277,10 @@ export default async function ServiceDetailsPage({
                   <Process />
                   <Condition />
                   <Pricing />
-                  <Quiz />
                   <BankPartner />
                   <Review />
                 </TabsContent>
                 <TabsContent value="quiz">
-                  <Quiz />
                   <Introduction />
                   <LegalBasis />
                   <Process />
@@ -304,7 +298,6 @@ export default async function ServiceDetailsPage({
                   <Condition />
                   <Pricing />
                   <Faq />
-                  <Quiz />
                   <BankPartner />
                 </TabsContent>
               </Tabs>

@@ -19,3 +19,11 @@ export const generateUrl = (text: string) => {
   const lowercaseUrl = text.split(" ").join("-").toLowerCase();
   return lowercaseUrl;
 };
+
+export const generatePageName = (name: string) => {
+  const nameArray = name.split("-");
+  const pageNameArray = nameArray.map((value) => {
+    return `${value[0].toUpperCase()}${value.slice(1, value.length)}`;
+  });
+  return pageNameArray.join(" ");
+};

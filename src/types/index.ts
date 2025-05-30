@@ -84,18 +84,99 @@ interface ServicesListType {
   name: string;
 }
 
+type BonusItem = {
+  bonusTitle: string;
+  bonusSubTitle: string;
+  icon: string;
+};
+type ServiceBasicInfo = {
+  serviceName: string;
+  shortDes: string;
+  isBestSeller: boolean;
+  thumbnail: string;
+  description: string;
+  lotsOfBonus: BonusItem[];
+};
+
+type IntroductionType = {
+  content: string[];
+  isBoxStyle: boolean;
+};
+type ProcessStep = {
+  subsection: string;
+  content: string[];
+};
+type PricingFeature = {
+  name: string;
+  plans: {
+    "plans-1": boolean;
+    "plans-2": boolean;
+    "plans-3": boolean;
+  };
+};
+type PricingType = {
+  plans: string[];
+  features: PricingFeature[];
+  prices: {
+    "plans-1": string;
+    "plans-2": string;
+    "plans-3": string;
+  };
+  footerImg: string;
+};
+type FAQ = {
+  question: string;
+  ans: string;
+};
+type QuizItem = {
+  id: number;
+  question: string;
+  options: string[];
+};
+type VoucherDetailsType = {
+  thumbnail: string;
+  services: string[];
+  price: string;
+  isLimitedTime: boolean;
+  voucherImg: string;
+  features: string[];
+  isJobCompletion: boolean;
+};
+type ServiceData = {
+  serviceBasicInfo: ServiceBasicInfo;
+  introduction: IntroductionType;
+  process: ProcessStep[];
+  requiredDocuments: string[];
+  choosingBusinessField: string[];
+  pricing: PricingType;
+  virtualOffice: boolean;
+  faqs: FAQ[];
+  quiz: QuizItem[];
+  voucherDetails: VoucherDetailsType;
+};
+
 export type {
   BlogType,
+  BonusItem,
   CompanyLogoType,
+  FAQ,
   HeroServiceItemsType,
+  IntroductionType,
   MainServiceItemsType,
   MenuItem,
+  PricingFeature,
+  PricingType,
+  ProcessStep,
+  QuizItem,
   RegulationRulesListType,
   RegulationTableListType,
   RegulationTextType,
   RegulationType,
   RiskTableContentsType,
   RiskTagsType,
+  ServiceBasicInfo,
+  ServiceData,
   ServicesListType,
   ServiceType,
+  VoucherDetailsType,
 };
