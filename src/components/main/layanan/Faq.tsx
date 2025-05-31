@@ -13,25 +13,27 @@ type FaqProps = {
 
 const Faq: React.FC<FaqProps> = ({ faq }) => {
   return (
-    <div className="mt-5">
-      <Heading text="FAQ" />
-      <Accordion type="single" collapsible>
-        {faq.map((value, index) => (
-          <AccordionItem
-            key={`${value.question}-${index}`}
-            value={value.question}
-          >
-            <AccordionTrigger className="text-base">
-              {value.question}
-            </AccordionTrigger>
+    faq.length > 0 && (
+      <div className="mt-5">
+        <Heading text="FAQ" />
+        <Accordion type="single" collapsible>
+          {faq.map((value, index) => (
+            <AccordionItem
+              key={`${value.question}-${index}`}
+              value={value.question}
+            >
+              <AccordionTrigger className="text-base">
+                {value.question}
+              </AccordionTrigger>
 
-            <AccordionContent className="text-muted-foreground text-sm leading-[24px]">
-              {value.ans}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
+              <AccordionContent className="text-muted-foreground text-sm leading-[24px]">
+                {value.ans}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    )
   );
 };
 

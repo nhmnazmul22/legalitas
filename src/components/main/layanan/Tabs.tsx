@@ -10,31 +10,44 @@ import Quiz from "@/components/main/layanan/Quiz";
 import Review from "@/components/main/layanan/Review";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
+  Condition3Props,
   FAQ,
   IntroductionType,
   PricingType,
+  PricingType2,
   ProcessStep,
+  ProcessStep2,
   QuizItem,
 } from "@/types";
+import Condition2 from "./Condition2";
+import Condition3 from "./Condition3";
 
 type TabsSectionProps = {
   introduction: IntroductionType;
-  process: ProcessStep[];
-  requiredDocuments: string[];
-  choosingBusinessField: string[];
+  process?: ProcessStep[];
+  process2?: ProcessStep2;
+  requiredDocuments?: string[];
+  requiredDocuments2?: string[][];
+  condition?: Condition3Props;
+  choosingBusinessField?: string[];
   faqs: FAQ[];
-  pricing: PricingType;
+  pricing?: PricingType;
+  pricing2?: PricingType2[];
   quiz: QuizItem[];
 };
 
 const TabsSection: React.FC<TabsSectionProps> = ({
   introduction,
-  process,
+  process2,
   requiredDocuments,
   choosingBusinessField,
   faqs,
   pricing,
+  pricing2,
   quiz,
+  process,
+  requiredDocuments2,
+  condition,
 }) => {
   return (
     <Tabs defaultValue="pengantar" className="w-full">
@@ -58,16 +71,24 @@ const TabsSection: React.FC<TabsSectionProps> = ({
         <LegalBasis />
       </TabsContent>
       <TabsContent value="proses">
-        <Process process={process} />
+        <Process process={process} process2={process2} />
       </TabsContent>
       <TabsContent value="syarat">
-        <Condition
-          requireDocuments={requiredDocuments}
-          choosingBusinessField={choosingBusinessField}
-        />
+        {requiredDocuments && choosingBusinessField && (
+          <Condition
+            requireDocuments={requiredDocuments}
+            choosingBusinessField={choosingBusinessField}
+          />
+        )}
+        {requiredDocuments2 && (
+          <Condition2 requiredDocuments={requiredDocuments2} />
+        )}
+        {condition && (
+          <Condition3 title={condition.title} content={condition.content} />
+        )}
       </TabsContent>
       <TabsContent value="pricing">
-        <Pricing pricing={pricing} />
+        <Pricing pricing={pricing} pricing2={pricing2} />
       </TabsContent>
       <TabsContent value="faq">
         <Faq faq={faqs} />

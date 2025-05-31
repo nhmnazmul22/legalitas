@@ -15,6 +15,7 @@ const PageHeading: React.FC<PageHeadingProps> = ({
   title,
   isTypeWriter,
   subTitle,
+  shortDes,
 }) => {
   return (
     <div className=" mt-10 ">
@@ -30,11 +31,7 @@ const PageHeading: React.FC<PageHeadingProps> = ({
         )}
       </p>
       <p className="text-base md:text-lg mb-2 leading-[30px] md:leading-[36px]">
-        Jasa Pendirian PT dengan bonus{" "}
-        <span className="secondary-hero-banner px-2 py-1 rounded-full text-white text-sm inline-block">
-          VOUCHER DISKON 10%
-        </span>
-        untuk pemesanan berikutnya!
+        {shortDes}
       </p>
       <div className="flex items-center gap-3 mt-4">
         <div className="bg-primary/20 rounded-full px-3 py-2 flex items-center gap-2 w-fit ring-1 ring-primary">

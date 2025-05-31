@@ -70,7 +70,7 @@ const menuItems: MenuItem[] = [
           {
             id: "2-2-2",
             title: "Izin PKP",
-            link: "/layanan/izin-pkp",
+            link: "/layanan/pengusaha-kena-pajak",
           },
           {
             id: "2-2-3",
@@ -90,17 +90,17 @@ const menuItems: MenuItem[] = [
           {
             id: "2-2-6",
             title: "Izin K3L",
-            link: "/layana/izin-k3l",
+            link: "/layanan/registrasi-k3l",
           },
           {
             id: "2-2-7",
             title: "Izin Yayasan",
-            link: "/layanan/izin-yayasan",
+            link: "/layanan/yayasan",
           },
           {
             id: "2-2-8",
             title: "33++ Izin Lainnya",
-            link: "/layanan/lainnya",
+            link: "/layanan",
           },
         ],
       },
@@ -126,12 +126,12 @@ const menuItems: MenuItem[] = [
           {
             id: "2-3-4",
             title: "Perjanjian Pisah Harta",
-            link: "/layanan/perjanjian-pisah-harta",
+            link: "/layanan/akta-pisah-harta",
           },
           {
             id: "2-3-5",
             title: "Pendaftaran Merek",
-            link: "/layanan/pendaftaran-merek",
+            link: "/layanan/daftar-merek",
           },
           {
             id: "2-3-6",
@@ -145,8 +145,8 @@ const menuItems: MenuItem[] = [
           },
           {
             id: "2-3-8",
-            title: "17++ Layanan Lainnya",
-            link: "/layanan/lainnya",
+            title: "17++ Layanan",
+            link: "/layanan",
           },
         ],
       },

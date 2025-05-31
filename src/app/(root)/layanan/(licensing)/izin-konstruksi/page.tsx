@@ -15,7 +15,7 @@ import Voucher from "@/components/main/layanan/Voucher";
 import MainService from "@/components/main/MainService";
 import Reviews from "@/components/main/Reviews";
 import { Separator } from "@/components/ui/separator";
-import PageData from "@/data/service/jasa-nib-oss.json";
+import PageData from "@/data/service/izin-konstruksi.json";
 
 export default async function ServiceDetailsPage() {
   const basicInfo = PageData.serviceBasicInfo;
@@ -32,7 +32,7 @@ export default async function ServiceDetailsPage() {
       <div className="hero-banner">
         <div className="container py-10 md:py-20">
           <div className="max-w-3xl">
-            <BreadCrumb pageName="Jasa NIB & OSS" />
+            <BreadCrumb pageName="Jasa Izin Konstruksi" />
             {basicInfo && (
               <PageHeading
                 title={basicInfo.serviceName}

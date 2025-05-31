@@ -102,16 +102,22 @@ type IntroductionType = {
   content: string[];
   isBoxStyle: boolean;
 };
+
 type ProcessStep = {
   subsection: string;
   content: string[];
 };
+
+type ProcessStep2 = {
+  content: string[];
+};
+
 type PricingFeature = {
   name: string;
   plans: {
     "plans-1": boolean;
     "plans-2": boolean;
-    "plans-3": boolean;
+    "plans-3"?: boolean;
   };
 };
 type PricingType = {
@@ -120,9 +126,15 @@ type PricingType = {
   prices: {
     "plans-1": string;
     "plans-2": string;
-    "plans-3": string;
+    "plans-3"?: string;
   };
-  footerImg: string;
+  footerImg?: string;
+};
+type PricingType2 = {
+  priceTitle: string;
+  price: string;
+  subTitle: string;
+  isJobCompletion: boolean;
 };
 type FAQ = {
   question: string;
@@ -142,6 +154,14 @@ type VoucherDetailsType = {
   features: string[];
   isJobCompletion: boolean;
 };
+type Condition3Props = {
+  title: string;
+  content: {
+    title: string;
+    item: string[];
+  }[];
+};
+
 type ServiceData = {
   serviceBasicInfo: ServiceBasicInfo;
   introduction: IntroductionType;
@@ -159,6 +179,7 @@ export type {
   BlogType,
   BonusItem,
   CompanyLogoType,
+  Condition3Props,
   FAQ,
   HeroServiceItemsType,
   IntroductionType,
@@ -166,7 +187,9 @@ export type {
   MenuItem,
   PricingFeature,
   PricingType,
+  PricingType2,
   ProcessStep,
+  ProcessStep2,
   QuizItem,
   RegulationRulesListType,
   RegulationTableListType,

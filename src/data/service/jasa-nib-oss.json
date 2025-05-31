@@ -1,0 +1,94 @@
+{
+  "serviceBasicInfo": {
+    "serviceName": "Pengurusan NIB di OSS",
+    "shortDes": "Jasa pengurusan NIB di OSS dengan diskon 10% untuk pemesanan berikutnya!",
+    "isBestSeller": true,
+    "thumbnail": "/images/service-img/service-img-01.png",
+    "description": "Jasa pengurusan NIB di OSS proses cepat selesai | Melayani seluruh Indonesia | Problem Sertifikat Standar, PKKPR di OSS? Kami solusinya!",
+    "lotsOfBonus": [
+      {
+        "bonusTitle": "Brankas",
+        "bonusSubTitle": "Cloud",
+        "icon": "/images/icon/bonus-icon-03.png"
+      },
+      {
+        "bonusTitle": "Akun",
+        "bonusSubTitle": "OSS",
+        "icon": "/images/icon/bonus-icon-06.png"
+      }
+    ]
+  },
+  "introduction": {
+    "content": [
+      "<b>Perseroan Terbatas</b> atau disingkat \"<b>PT</b>\" (bahasa Belanda: <i>Naamloze Vennootschap</i>) adalah salah satu badan hukum yang diakui oleh Negara Republik Indonesia yang bisa digunakan untuk kegiatan komersial di Indonesia<br>",
+      "Legalitas.org menyediakan layanan jasa pendirian PT dengan   <span className='secondary-hero-banner px-2 py-1 rounded-full text-white text-sm inline-block'>VOUCHER DISKON 10%</span> untuk pemesanan berikutnya. Berikut ini adalah alasan kenapa harus menggunakan layanan jasa pembuatan PT di Legalitas.org."
+    ],
+    "isBoxStyle": false
+  },
+  "process": {
+    "content": [
+      "<p>Hubungi dengan konsultan terbaik kami di Kontak Legalitas.org</p>",
+      "Legalitas.org menyediakan layanan jasa pengurusan PKP dengan  <span class='theme-gradient'>PROMO DISKON 10%</span> untuk pemesanan berikutnya. Berikut ini adalah alasan kenapa harus menggunakan layanan jasa urus PKP di&nbsp; Legalitas.org"
+    ]
+  },
+  "requiredDocuments": [
+    [
+      "Nama & NIK",
+      "Alamat Tinggal",
+      "Bidang Usaha",
+      "Lokasi Penanaman Modal",
+      "Besaran Rencana Penanaman Modal",
+      "Rencana Penggunaan Tenaga Kerja",
+      "Nomor Kontak Usaha",
+      "NPWP Pelaku Usaha perseorangan",
+      "Rencana Permintaan Fasilitas Fiskal, Kepabeanan dan/atau fasilitas lainnya"
+    ],
+    [
+      "Nama badan usaha",
+      "Jenis bidang usaha",
+      "Status penanaman modal",
+      "Nomor akta pendirian atau nomor pendaftaran beserta pengesahannya",
+      "Alamat korespondensi",
+      "Besaran Rencana Penanaman Modal",
+      "Data pengurus dan pemegang saham Negara Asal Penanaman Modal, jika terdapat penanaman modal asing",
+      "Maksud dan tujuan badan usaha",
+      "Nomor telepon badan usaha",
+      "Alamat email badan usaha",
+      "NPWP badan usaha"
+    ]
+  ],
+
+  "pricing": [
+    {
+      "priceTitle": "Pengurusan NIB di OSS",
+      "price": "1.8 juta",
+      "subTitle": "Pengurusan Nomor Induk Berusaha di OSS",
+      "isJobCompletion": true
+    }
+  ],
+  "faqs": [],
+  "quiz": [],
+  "voucherDetails": {
+    "thumbnail": "/images/company-google-img.png",
+    "services": [
+      "Pendirian PT",
+      "PT + Izin",
+      "PT + Izin + Virtual Office",
+      "PT + Izin + Virtual Office + PKP",
+      "PT + Izin + Virtual Office SCBD",
+      "PT + Izin + Virtual Office SCBD + PKP"
+    ],
+    "price": "Rp. 3.000.000",
+    "isLimitedTime": true,
+    "voucherImg": "/images/voucher-img.png",
+    "features": [
+      "Pengecekan Nama PT",
+      "Pemesanan Nama PT",
+      "Persiapan Minuta",
+      "Akta Pendirian PT",
+      "SK Menteri",
+      "Dapat 20 KBLI"
+    ],
+    "isJobCompletion": true
+  }
+}

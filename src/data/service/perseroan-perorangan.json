@@ -40,17 +40,18 @@
   },
   "introduction": {
     "content": [
-      "<b>Perseroan Terbatas</b> atau disingkat \"<b>PT</b>\" (bahasa Belanda: <i>Naamloze Vennootschap</i>) adalah salah satu badan hukum yang diakui oleh Negara Republik Indonesia yang bisa digunakan untuk kegiatan komersial di Indonesia<br>",
-      "Legalitas.org menyediakan layanan jasa pendirian PT dengan   <span className='secondary-hero-banner px-2 py-1 rounded-full text-white text-sm inline-block'>VOUCHER DISKON 10%</span> untuk pemesanan berikutnya. Berikut ini adalah alasan kenapa harus menggunakan layanan jasa pembuatan PT di Legalitas.org."
+      "Perseroan Perorangan atau disingkat <b>PT Perorangan</b>&nbsp;adalah badan hukum perseroan yang didirikan oleh 1 orang yang merangkap Direktur dan pemilik, yang memenuhi kriteria usaha Mikro dan Kecil.",
+      "<p>Dasar hukum Perseroan Perorangan adalah UU No 11 tahun 2020 tentang Cipta Kerja atau yang biasa disebut dengan <b>Omnibus Law.</b></p>",
+      "Dengan ketentuan ini, maka dimungkinkan didirikan PT hanya 1 orang saja dengan tujuan untuk meningkatkan daya saing pelaku usaha mikro dan kecil di Indonesia<br>",
+      "<p>Legalitas.org menyediakan layanan jasa pendirian PT Perorangandengan  <span class='theme-gradient'>PROMO DISKON 10%</span> untuk pemesanan berikutnya. Berikut ini adalah alasan kenapa harus menggunakan layanan jasa pembuatan PT di Legalitas.org.<br></p>"
     ],
     "isBoxStyle": true
   },
   "process": [
     {
-      "subsection": "Pendiri PT",
+      "subsection": "Pendiri PT Perorangan",
       "content": [
-        "Sesuai dengan ketentuan Pasal 7 ayat (1) UU 40/2007 tentang Perseroan Terbatas bahwa PT didirikan oleh 2 orang atau lebih. Dimana pengertian \"orang\" sesuai dengan Penjelasan UUPT adalah orang perseorangan, baik warga negara Indonesia maupun asing atau badan hukum Indonesia atau asing.",
-        "Pendiri PT ketika proses jasa pembuatan PT telah menyepakati tentang nama, tempat kedudukan, bidang usaha, permodalan dan pengurus serta hal lainnya yang akan dituangkan di dalam akta notaris."
+        "Sesuai dengan ketentuan UU 11/2020 tentang Cipta Kerja, PT Perorangan adalah PT yang didirikan oleh 1 (satu) orang saja yang memenuhi kriteria usaha mikro dan kecil.<br/>Perseroan perorangan didirikan oleh Warga Negara Indonesia, berusia setidaknya 17 tahun dan cakap hukum. Dengan mengisi Pernyataan Pendirian dalam bahasa Indonesia secara elektonik."
       ]
     },
     {
@@ -61,7 +62,7 @@
       ]
     },
     {
-      "subsection": "Menteri Hukum & Hak Asasi Manusia",
+      "subsection": "Tidak Ada Akta Notaris",
       "content": [
         "Sesuai dengan Pasal 7 ayat (4) UU 40/2007 tentang Perseroan Terbatas, Menteri adalah Menteri Hukum dan HAM, menerbitkan Surat Keputusan pengesahan badan hukum perseroan terbatas."
       ]

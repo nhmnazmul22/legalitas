@@ -1,7 +1,7 @@
 import Blogs from "@/components/main/Blogs";
 import BankPartner from "@/components/main/layanan/BankPartner";
 import BreadCrumb from "@/components/main/layanan/BreadCrumb";
-import Condition2 from "@/components/main/layanan/Condition2";
+import Condition3 from "@/components/main/layanan/Condition3";
 import Faq from "@/components/main/layanan/Faq";
 import LegalBasis from "@/components/main/layanan/LegalBasis";
 import PageHeading from "@/components/main/layanan/PageHeading";
@@ -15,13 +15,13 @@ import Voucher from "@/components/main/layanan/Voucher";
 import MainService from "@/components/main/MainService";
 import Reviews from "@/components/main/Reviews";
 import { Separator } from "@/components/ui/separator";
-import PageData from "@/data/service/jasa-nib-oss.json";
+import PageData from "@/data/service/perubahan-anggaran-dasar.json";
 
 export default async function ServiceDetailsPage() {
   const basicInfo = PageData.serviceBasicInfo;
   const introduction = PageData.introduction;
   const process = PageData.process;
-  const requiredDocuments = PageData.requiredDocuments;
+  const conditions = PageData.conditions;
   const faqs = PageData.faqs;
   const pricing = PageData.pricing;
   const quiz = PageData.quiz;
@@ -32,7 +32,7 @@ export default async function ServiceDetailsPage() {
       <div className="hero-banner">
         <div className="container py-10 md:py-20">
           <div className="max-w-3xl">
-            <BreadCrumb pageName="Jasa NIB & OSS" />
+            <BreadCrumb pageName="Jasa Perubahan Anggaran Dasar" />
             {basicInfo && (
               <PageHeading
                 title={basicInfo.serviceName}
@@ -57,14 +57,17 @@ export default async function ServiceDetailsPage() {
               <TabsSection
                 introduction={introduction}
                 process2={process}
-                requiredDocuments2={requiredDocuments}
+                condition={conditions}
                 faqs={faqs}
                 pricing2={pricing}
                 quiz={quiz}
               />
               <LegalBasis />
               <Process process2={process} />
-              <Condition2 requiredDocuments={requiredDocuments} />
+              <Condition3
+                title={conditions.title}
+                content={conditions.content}
+              />
               <Pricing pricing2={pricing} />
               <Faq faq={faqs} />
               <Quiz quiz={quiz} />
