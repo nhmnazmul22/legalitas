@@ -1,0 +1,87 @@
+[
+  {
+    "title": "PT / Perseroan Terbatas",
+    "description": "Bentuk badan usaha yang banyak digunakan",
+    "features": [
+      "Pengecekan Nama PT",
+      "Pemesanan Nama PT",
+      "Persiapan Minuta",
+      "Akta Pendirian PT",
+      "SK Menteri",
+      "Dapat 20 KBLI "
+    ],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp 3.000.000",
+    "link": "/layanan/perseroan-terbatas",
+    "thumbnail": "/images/service-img/service-img-01.png"
+  },
+  {
+    "title": "CV / Commanditaire Vennootschap",
+    "description": "Bentuk badan usaha yang paling tua dan sederhana",
+    "features": [
+      "Pengecekan Nama CV",
+      "Pemesanan Nama CV",
+      "Persiapan Minuta",
+      "Akta Pendirian CV",
+      "SK Menteri",
+      "Dapat 20 KBLI "
+    ],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp 2.250.000",
+    "link": "/layanan/cv",
+    "thumbnail": "/images/service-img/service-img-02.png"
+  },
+  {
+    "title": "PT / Perseroan Terbatas",
+    "description": "Bentuk badan usaha yang banyak digunakan",
+    "features": [
+      "Pengecekan Nama PT",
+      "Pemesanan Nama PT",
+      "Persiapan Minuta",
+      "Akta Pendirian PT",
+      "SK Menteri",
+      "Dapat 20 KBLI "
+    ],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp 3juta",
+    "link": "",
+    "thumbnail": ""
+  },
+  {
+    "title": "PT / Perseroan Terbatas",
+    "description": "Bentuk badan usaha yang banyak digunakan",
+    "features": [
+      "Pengecekan Nama PT",
+      "Pemesanan Nama PT",
+      "Persiapan Minuta",
+      "Akta Pendirian PT",
+      "SK Menteri",
+      "Dapat 20 KBLI "
+    ],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp 3juta",
+    "link": "",
+    "thumbnail": ""
+  },
+  {
+    "title": "PT / Perseroan Terbatas",
+    "description": "Bentuk badan usaha yang banyak digunakan",
+    "features": [
+      "Pengecekan Nama PT",
+      "Pemesanan Nama PT",
+      "Persiapan Minuta",
+      "Akta Pendirian PT",
+      "SK Menteri",
+      "Dapat 20 KBLI "
+    ],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp 3juta",
+    "link": "",
+    "thumbnail": ""
+  }
+]
