@@ -65,7 +65,7 @@ const Navbar = () => {
                             <div key={child.title}>
                               <Link
                                 href="/"
-                                className="uppercase text-muted-foreground text-sm font-medium whitespace-normal"
+                                className="uppercase text-muted-foreground text-sm font-medium"
                               >
                                 {child.title}
                               </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
                                       >
                                         <Button
                                           variant="ghost"
-                                          className="text-sm w-full justify-start font-medium hover:text-primary duration-300"
+                                          className="text-sm w-full justify-start font-medium hover:text-primary duration-300 whitespace-normal text-left"
                                         >
                                           {subChild.title}
                                         </Button>
