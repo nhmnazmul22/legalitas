@@ -12,7 +12,7 @@ const Services = () => {
           title="Layanan Legalitas"
           subTitle="Yang Ditawarkan."
         />
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
           {services.map((service) => (
             <ServiceCard
               key={service.id}

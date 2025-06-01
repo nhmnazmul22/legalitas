@@ -240,3 +240,28 @@
 }
 
 /* Service Details page */
+
+.white-background-effect {
+  position: relative;
+  isolation: isolate;
+}
+
+.white-background-effect::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 120px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.925) 85%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  will-change: backdrop-filter;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

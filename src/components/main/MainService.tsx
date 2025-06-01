@@ -11,7 +11,7 @@ const MainService = () => {
           title="Kenapa Memilih"
           subTitle="Legalitas.org?"
         />
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {mainServiceItems.map((item) => (
             <MainServiceCard
               key={item.id}

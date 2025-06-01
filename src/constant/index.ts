@@ -3,6 +3,7 @@ import {
   HeroServiceItemsType,
   MainServiceItemsType,
   MenuItem,
+  MenuItemsWithBanner,
   RegulationRulesListType,
   RegulationTableListType,
   RegulationTextType,
@@ -160,10 +161,49 @@ const menuItems: MenuItem[] = [
   { id: "8", title: "Proposal", link: "/proposal" },
 ];
 
+const menuWithBanner: MenuItemsWithBanner[] = [
+  {
+    id: "m-1",
+    menuName: "Paket PT + VO Jakarta Selatan",
+    bannerImg: "/images/category-banner-01.png",
+    link: "/layanan/pembuatan-pt-virtual-office",
+  },
+  {
+    id: "m-2",
+    menuName: "Paket PT + VO Jakarta Pusat",
+    bannerImg: "/images/category-banner-01.png",
+    link: "/layanan/pembuatan-pt-virtual-office",
+  },
+  {
+    id: "m-3",
+    menuName: "Paket PT + VO Jakarta Utara",
+    bannerImg: "/images/category-banner-02.png",
+    link: "/layanan/pembuatan-pt-virtual-office",
+  },
+  {
+    id: "m-4",
+    menuName: "Paket PT + VO Jakarta Barat",
+    bannerImg: "/images/category-banner-01.png",
+    link: "/tulisan/rekomendasi-virtual-office-jakarta",
+  },
+  {
+    id: "m-5",
+    menuName: "Paket PT + VO Jakarta Timur",
+    bannerImg: "/images/category-banner-01.png",
+    link: "/layanan/pembuatan-pt-virtual-office",
+  },
+  {
+    id: "m-6",
+    menuName: "Paket PT + VO SCBD",
+    bannerImg: "/images/category-banner-02.png",
+    link: "tulisan/rekomendasi-virtual-office-jakarta",
+  },
+];
+
 const heroServiceItems: HeroServiceItemsType[] = [
   {
     id: 1,
-    thumbnail: "/images/hero-service-banner-01.png",
+    thumbnail: "/images/service-img/service-img-01.png",
     title: "Pendirian PT",
     description:
       "Bentuk badan usaha yang paling banyak digunakan di Indonesia.",
@@ -803,6 +843,7 @@ export {
   heroServiceItems,
   mainServiceItems,
   menuItems,
+  menuWithBanner,
   regulationRulesList,
   regulationTableList,
   regulationText,

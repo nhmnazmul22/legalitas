@@ -7,7 +7,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { menuItems } from "@/constant";
+import { menuItems, menuWithBanner } from "@/constant";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,7 +30,7 @@ const Navbar = () => {
         </Link>
         <SidebarTrigger className="lg:hidden" />
         <div className="hidden lg:flex gap-3 items-center">
-          <NavigationMenu>
+          <NavigationMenu className="mx-auto">
             <NavigationMenuList className="gap-1">
               {menuItems.map((item) => {
                 if (!item.children) {
@@ -55,14 +55,17 @@ const Navbar = () => {
                     <NavigationMenuTrigger className="!text-base max-xl:!text-sm font-medium hover:text-primary duration-300 !px-2 xl:!px-4">
                       {item.title}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="flex gap-3 items-center justify-between">
-                      <ul className="grid grid-cols-3 w-[800px] gap-5 p-2 text-muted-foreground font-medium">
+                    <NavigationMenuContent
+                      className="flex gap-4.
+                     items-center justify-between"
+                    >
+                      <ul className="grid grid-cols-4 w-4xl gap-5 p-2 text-muted-foreground font-medium">
                         {item.children.map((child) => {
                           return (
                             <div key={child.title}>
                               <Link
                                 href="/"
-                                className="uppercase text-muted-foreground text-sm font-medium"
+                                className="uppercase text-muted-foreground text-sm font-medium whitespace-normal"
                               >
                                 {child.title}
                               </Link>
@@ -91,6 +94,27 @@ const Navbar = () => {
                             </div>
                           );
                         })}
+                        <div className="grid grid-cols-1 gap-0">
+                          {menuWithBanner.map((menu) => (
+                            <div key={menu.id} className="relative">
+                              <figure className="h-full">
+                                <Image
+                                  src={menu.bannerImg}
+                                  alt={menu.menuName}
+                                  width={500}
+                                  height={500}
+                                  className="h-full object-cover"
+                                />
+                              </figure>
+                              <Link
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-full text-sm px-5 text-black font-semibold hover:text-secondary-blue duration-300"
+                                href={menu.link}
+                              >
+                                {menu.menuName}
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>

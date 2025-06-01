@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import Image from "next/image";
 import Link from "next/link";
+import ShowMoreButton from "../ShowMoreButton";
 import Heading from "./Heading";
 
 const Review = () => {
@@ -52,54 +53,56 @@ const Review = () => {
           </div>
         </div>
       </div>
-      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div className="bg-primary/5 p-5 rounded-md">
-          <Badge className="bg-primary/10 p-2">
-            <Image
-              src="/images/google-logo.png"
-              alt="Google"
-              width={300}
-              height={300}
-              className="w-16"
-            />
-          </Badge>
-          <h3 className="text-lg font-semibold my-2">Hikmawatul Wardani</h3>
-          <RatingGen rating={5} size={20} />
-          <p className="text-muted-foreground text-sm mt-3 italic">
-            Legalitas.org adalah solusi saat kita mendirikan perusahaan. Terima
-            kasih saya banyak terbantu oleh team Legalitas, terutama mb Natali,
-            mb Endang dan mas Angga yang bekerja profesional, gerak cepat, dan
-            sangat reaponsif atas semua chat maupun pertanyaan-pertanyaan saya.
-            Itu menunjukkan bahwa mereka memiliki pengetahuan dan pengalaman
-            yang cukup luas dan menjadi solusi bagi para pelaku usaha yang
-            membutuhkan pengurusan dokumen, perizinan dan pendirian badan usaha.
-            Sukses terus untuk Legalitas.org
-          </p>
+      <ShowMoreButton>
+        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-primary/5 p-5 rounded-md">
+            <Badge className="bg-primary/10 p-2">
+              <Image
+                src="/images/google-logo.png"
+                alt="Google"
+                width={300}
+                height={300}
+                className="w-16"
+              />
+            </Badge>
+            <h3 className="text-lg font-semibold my-2">Hikmawatul Wardani</h3>
+            <RatingGen rating={5} size={20} />
+            <p className="text-muted-foreground text-sm mt-3 italic">
+              Legalitas.org adalah solusi saat kita mendirikan perusahaan.
+              Terima kasih saya banyak terbantu oleh team Legalitas, terutama mb
+              Natali, mb Endang dan mas Angga yang bekerja profesional, gerak
+              cepat, dan sangat reaponsif atas semua chat maupun
+              pertanyaan-pertanyaan saya. Itu menunjukkan bahwa mereka memiliki
+              pengetahuan dan pengalaman yang cukup luas dan menjadi solusi bagi
+              para pelaku usaha yang membutuhkan pengurusan dokumen, perizinan
+              dan pendirian badan usaha. Sukses terus untuk Legalitas.org
+            </p>
+          </div>
+          <div className="bg-primary/5 p-5 rounded-md">
+            <Badge className="bg-primary/10 p-2">
+              <Image
+                src="/images/google-logo.png"
+                alt="Google"
+                width={300}
+                height={300}
+                className="w-16"
+              />
+            </Badge>
+            <h3 className="text-lg font-semibold my-2">Hikmawatul Wardani</h3>
+            <RatingGen rating={5} size={20} />
+            <p className="text-muted-foreground text-sm mt-3 italic">
+              Legalitas.org adalah solusi saat kita mendirikan perusahaan.
+              Terima kasih saya banyak terbantu oleh team Legalitas, terutama mb
+              Natali, mb Endang dan mas Angga yang bekerja profesional, gerak
+              cepat, dan sangat reaponsif atas semua chat maupun
+              pertanyaan-pertanyaan saya. Itu menunjukkan bahwa mereka memiliki
+              pengetahuan dan pengalaman yang cukup luas dan menjadi solusi bagi
+              para pelaku usaha yang membutuhkan pengurusan dokumen, perizinan
+              dan pendirian badan usaha. Sukses terus untuk Legalitas.org
+            </p>
+          </div>
         </div>
-        <div className="bg-primary/5 p-5 rounded-md">
-          <Badge className="bg-primary/10 p-2">
-            <Image
-              src="/images/google-logo.png"
-              alt="Google"
-              width={300}
-              height={300}
-              className="w-16"
-            />
-          </Badge>
-          <h3 className="text-lg font-semibold my-2">Hikmawatul Wardani</h3>
-          <RatingGen rating={5} size={20} />
-          <p className="text-muted-foreground text-sm mt-3 italic">
-            Legalitas.org adalah solusi saat kita mendirikan perusahaan. Terima
-            kasih saya banyak terbantu oleh team Legalitas, terutama mb Natali,
-            mb Endang dan mas Angga yang bekerja profesional, gerak cepat, dan
-            sangat reaponsif atas semua chat maupun pertanyaan-pertanyaan saya.
-            Itu menunjukkan bahwa mereka memiliki pengetahuan dan pengalaman
-            yang cukup luas dan menjadi solusi bagi para pelaku usaha yang
-            membutuhkan pengurusan dokumen, perizinan dan pendirian badan usaha.
-            Sukses terus untuk Legalitas.org
-          </p>
-        </div>
-      </div>
+      </ShowMoreButton>
     </div>
   );
 };

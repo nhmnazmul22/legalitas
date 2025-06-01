@@ -69,7 +69,7 @@ const HeroSwiper = () => {
                 <p className="text-muted-foreground">
                   mulai dari{" "}
                   <span className="theme-gradient text-2xl font-bold ms-2">
-                    Rp 3{item.startingPrice}juta
+                    Rp {item.startingPrice} juta
                   </span>
                 </p>
               </CardFooter>

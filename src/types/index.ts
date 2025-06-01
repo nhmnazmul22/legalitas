@@ -5,6 +5,13 @@ interface MenuItem {
   children?: MenuItem[];
 }
 
+interface MenuItemsWithBanner {
+  id?: string | number;
+  menuName: string;
+  bannerImg: string;
+  link: string;
+}
+
 interface HeroServiceItemsType {
   id?: number | string;
   thumbnail: string;
@@ -185,6 +192,7 @@ export type {
   IntroductionType,
   MainServiceItemsType,
   MenuItem,
+  MenuItemsWithBanner,
   PricingFeature,
   PricingType,
   PricingType2,
