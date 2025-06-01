@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import BottomServiceSection from "../BottomServiceSection";
 import AuthorInfo from "./AuthorInfo";
 import BlogDetails from "./BlogDetails";
 import BlogListCard from "./BlogListCard";
@@ -42,6 +43,7 @@ const Blog = () => {
       </div>
       <Separator />
       <AuthorInfo />
+      <BottomServiceSection classNames="lg:grid-cols-3 mt-10" isBadge={false} />
       <CommentsList />
       <CommentForm />
       <BlogListCard />

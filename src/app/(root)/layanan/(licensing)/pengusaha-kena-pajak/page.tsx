@@ -1,4 +1,5 @@
 import Blogs from "@/components/main/Blogs";
+import BottomServiceSection from "@/components/main/BottomServiceSection";
 import BankPartner from "@/components/main/layanan/BankPartner";
 import BreadCrumb from "@/components/main/layanan/BreadCrumb";
 import Condition2 from "@/components/main/layanan/Condition2";
@@ -71,6 +72,7 @@ export default async function ServiceDetailsPage() {
               <BankPartner />
               <Review />
             </div>
+            <BottomServiceSection />
           </div>
           <div className="w-full lg:max-w-md secondary-hero-banner shadow p-[3px] rounded-md sticky top-[10%]">
             <Voucher voucherDetails={voucherDetails} />
