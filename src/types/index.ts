@@ -182,6 +182,14 @@ type ServiceData = {
   voucherDetails: VoucherDetailsType;
 };
 
+interface ProposalType {
+  _id?: string | number;
+  category: string;
+  name: string;
+  price: string;
+  features: string[];
+}
+
 export type {
   BlogType,
   BonusItem,
@@ -198,6 +206,7 @@ export type {
   PricingType2,
   ProcessStep,
   ProcessStep2,
+  ProposalType,
   QuizItem,
   RegulationRulesListType,
   RegulationTableListType,

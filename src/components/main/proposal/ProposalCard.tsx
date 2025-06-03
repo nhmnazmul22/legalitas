@@ -1,20 +1,26 @@
 import MainButton from "@/components/common/MainButton";
 import { Badge } from "@/components/ui/badge";
+import { ProposalType } from "@/types";
 import Image from "next/image";
 import ProposalFormDialog from "./ProposalFormDialog";
 
-const ProposalCard = () => {
+const ProposalCard: React.FC<ProposalType> = ({
+  _id,
+  name,
+  category,
+  price,
+  features,
+}) => {
   return (
     <div className="bg-white p-5 rounded-md shadow-md">
       <Badge className="rounded-sm px-3 py-1 text-xs md:text-sm">
-        Penanaman Modal Asing
+        {category}
       </Badge>
       <div className="mt-3">
-        <h3 className="text-xl font-semibold">Pendirian PMA</h3>
-        <p className="theme-gradient text-lg font-semibold ">Rp. 5.250.000</p>
+        <h3 className="text-xl font-semibold">{name}</h3>
+        <p className="theme-gradient text-lg font-semibold ">{price}</p>
         <p className="text-muted-foreground text-sm mt-2">
-          Pengecekan Nama PT, Pemesanan Nama PT, Persiapan Minuta, Akta
-          Pendirian PT, SK Menteri, Dapat 20 KBLI
+          {features.join(",")}
         </p>
       </div>
       <figure className="mt-5 max-w-75">
@@ -28,7 +34,15 @@ const ProposalCard = () => {
           Kode voucher akan dikirimkan melalui Whatsapp
         </figcaption>
       </figure>
-      <ProposalFormDialog>
+      <ProposalFormDialog
+        proposal={{
+          _id: _id,
+          name: name,
+          category: category,
+          price: price,
+          features: features,
+        }}
+      >
         <MainButton text="Minta Proposal" className="mt-5" />
       </ProposalFormDialog>
     </div>

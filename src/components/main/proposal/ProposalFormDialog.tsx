@@ -10,27 +10,30 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import { ProposalType } from "@/types";
 
 type ProposalFormDialogType = {
   children: React.ReactNode;
+  proposal: ProposalType;
 };
 
-const ProposalFormDialog: React.FC<ProposalFormDialogType> = ({ children }) => {
+const ProposalFormDialog: React.FC<ProposalFormDialogType> = ({
+  children,
+  proposal,
+}) => {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <DialogHeader className="text-left">
-          <h3 className="text-xl font-semibold leading-[22px]">PMA + Izin</h3>
+          <h3 className="text-xl font-semibold leading-[22px]">
+            {proposal.name}
+          </h3>
           <p className="theme-gradient text-base font-semibold">
-            Rp. 10,500,000
+            {proposal.price}
           </p>
           <p className="text-muted-foreground text-sm mt-2 leading-[22px]">
-            Pengecekan Nama PT, Pemesanan Nama PT, Akta Pendirian PT PMA, SK
-            Menteri, NPWP, SKT Pajak, NIB / Izin Usaha, [BONUS] Dapat 20 KBLI,
-            [BONUS] Buka 5 (lima) rekening Bank, [BONUS] Stempel perusahaan,
-            [BONUS] Kartu nama 1 (satu) Direktur, [BONUS] EFIN Badan, [BONUS]
-            Akun OSS & Izin Impor
+            {proposal.features.join(", ")}
           </p>
         </DialogHeader>
         <div className="flex flex-col gap-2 mt-5">
