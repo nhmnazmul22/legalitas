@@ -2,6 +2,7 @@ import AppSidebar from "@/components/Layout/AppSidebar";
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 import { cookies } from "next/headers";
 
 export default async function RootLayout({
@@ -21,6 +22,7 @@ export default async function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Toaster />
       </main>
     </SidebarProvider>
   );

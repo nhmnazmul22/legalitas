@@ -1,3 +1,4 @@
+import { AuthProvider } from "@/context/AuthProvider";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "swiper/css";
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${poppinsSans.className} antialiased overflow-x-hidden bg-slate-50 w-full`}
       >
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

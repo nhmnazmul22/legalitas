@@ -14,7 +14,7 @@
     "review": "0",
     "price": "Rp 3.000.000",
     "link": "/layanan/perseroan-terbatas",
-    "thumbnail": "/images/service-img/service-img-01.png"
+    "thumbnail": "https://legalitas.org/uploads/1/2024-02/jasa_pendirian_pt.jpg"
   },
   {
     "title": "CV / Commanditaire Vennootschap",
@@ -31,57 +31,479 @@
     "review": "0",
     "price": "Rp 2.250.000",
     "link": "/layanan/cv",
-    "thumbnail": "/images/service-img/service-img-02.png"
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_pendirian_cv.jpg"
   },
   {
-    "title": "PT / Perseroan Terbatas",
-    "description": "Bentuk badan usaha yang banyak digunakan",
+    "title": "PT Perorangan",
+    "description": "PT yang didirikan oleh 1 (satu) orang",
     "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
+      "Pengecekan Nama PT Perorangan",
+      "Pemesanan Nama PT Perorangan",
+      "Pernyataan Pendaftaran",
       "SK Menteri",
-      "Dapat 20 KBLI "
+      "Dapat 20 KBLI"
     ],
     "rating": 5,
-    "review": "0",
-    "price": "Rp 3juta",
-    "link": "",
-    "thumbnail": ""
+    "review": "44",
+    "price": "Rp 2.000.000",
+    "link": "/layanan/perseroan-perorangan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-02/jasa_pendirian_pt_perorangan.jpg"
   },
   {
-    "title": "PT / Perseroan Terbatas",
-    "description": "Bentuk badan usaha yang banyak digunakan",
+    "title": "Penanaman Modal Asing",
+    "description": "PT dengan unsur kepemilikan saham asing",
     "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
+      "Pengecekan Nama PT PMA",
+      "Pemesanan Nama PT PMA",
       "Persiapan Minuta",
-      "Akta Pendirian PT",
+      "Akta Pendirian PT PMA",
       "SK Menteri",
-      "Dapat 20 KBLI "
+      "Dapat 20 KBLI"
     ],
     "rating": 5,
-    "review": "0",
-    "price": "Rp 3juta",
-    "link": "",
-    "thumbnail": ""
+    "review": "32",
+    "price": "Rp 5.250.000",
+    "link": "/layanan/pma-penanaman",
+    "thumbnail": "https://legalitas.org/uploads/1/2023-12/jasa_pendirian_pma.jpg"
   },
   {
-    "title": "PT / Perseroan Terbatas",
-    "description": "Bentuk badan usaha yang banyak digunakan",
+    "title": "Firma",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "30",
+    "price": "Rp 2.250.000",
+    "link": "/layanan/firma",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_pendirian_firma.jpg"
+  },
+  {
+    "title": "Persekutuan Perdata",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "20",
+    "price": "Rp 2.250.000",
+    "link": "/layanan/persekutuan-perdata",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_pendirian_persekutuan_perdata.jpg"
+  },
+  {
+    "title": "Perkumpulan",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "23",
+    "price": "Rp. 3.000.000",
+    "link": "/layanan/perkumpulan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_pendirian_perkumpulan.jpg"
+  },
+  {
+    "title": "Yayasan",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "16",
+    "price": "Rp. 3.000.000",
+    "link": "/layanan/yayasan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_pendirian_yayasan.jpg"
+  },
+  {
+    "title": "Virtual Office",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "22",
+    "price": "Rp. 2.388.925",
+    "link": "/layanan/virtual-office",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-04/sewa_virtual_office.jpg"
+  },
+  {
+    "title": "Jasa Perubahan Anggaran Dasar",
+    "description": "Perubahan anggaran dasar / Akta Notaris",
     "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
+      "Drafting dokumen",
       "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI "
+      "Akta Notaris Perubahan",
+      "SK Persetujuan / SK Pemberitahuan",
+      "Dapat 20 KBLI"
     ],
     "rating": 5,
+    "review": "30",
+    "price": "Rp. 1.000.000",
+    "link": "/layanan/perubahan-anggaran-dasar",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-04/perubahan_anggaran_dasar.jpg"
+  },
+  {
+    "title": "Jasa Pendaftaran Merek",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "16",
+    "price": "Rp. 3.500.000",
+    "link": "/layanan/daftar-merek",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-04/jasa_daftar_merek.jpg"
+  },
+  {
+    "title": "Jasa NIB & OSS",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "24",
+    "price": "Rp. 1.800.000",
+    "link": "/layanan/jasa-nib-oss",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_oss_nib.jpg"
+  },
+  {
+    "title": "Jasa Izin Restoran",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "7",
+    "price": "Rp. 1.500.000",
+    "link": "/layanan/izin-restoran",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_izin_restoran.jpg"
+  },
+  {
+    "title": "Jasa Izin Konstruksi",
+    "description": "Sertifikat standar ter-verifikasi di bidang konstruksi",
+    "features": [
+      "Termasuk pengurusan 2 (dua) SKT/SKK Tenaga Ahli",
+      "Pengurusan SBU di LSBU",
+      "Pengurusan KTA di Asosiasi (Gapensi atau sejenisnya)"
+    ],
+    "rating": 5,
+    "review": "6",
+    "price": "Rp. 35.000.000",
+    "link": "/layanan/izin-konstruksi",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_izin_konstruksi.jpg"
+  },
+  {
+    "title": "Jasa Registrasi K3L",
+    "description": "Pendaftaran produk wajib K3L di Kemendag",
+    "features": [
+      "Konsultasi terkait produk",
+      "Uji lab dari lembaga tersertifikasi",
+      "Izin K3L dari OSS",
+      "Konsultasi pelabelan"
+    ],
+    "rating": 5,
+    "review": "18",
+    "price": "Rp. 3.000.000",
+    "link": "/layanan/registrasi-k3l",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-04/jasa_registrasi_k3l.jpg"
+  },
+  {
+    "title": "Perjanjian Pisah Harta / Pra Nikah",
+    "description": "Pembuatan dan register Perjanjian Pisah Harta / Prenuptial Agreement",
+    "features": [
+      "Konsultasi hukum keluarga",
+      "Akta Notaris Pisah Harta",
+      "Pendaftaran Akta Pisah Harta di KUA",
+      "Pendaftaran Akta Pisah Harta di Dukcapil"
+    ],
+    "rating": 5,
+    "review": "16",
+    "price": "Rp. 3.000.000",
+    "link": "/layanan/akta-pisah-harta",
+    "thumbnail": "https://legalitas.org/uploads/1/2025-01/perjanjian_pisah_harta.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Izin KITAS",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "1",
+    "price": "Rp. 16.200.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-04/jasa_urus_kitas_tenaga_kerja_asing.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan KITAS Investor",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "1",
+    "price": "Rp. 18.000.000",
+    "link": "/layanan/kitas-investor",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-04/jasa_kitas_investor.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan KITAP",
+    "description": "",
+    "features": [],
+    "rating": 5,
     "review": "0",
-    "price": "Rp 3juta",
-    "link": "",
-    "thumbnail": ""
+    "price": "Rp. 23.400.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-04/jasa_kitap_kartu_izin_tinggal_tetap.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan BPOM",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "1",
+    "price": "Rp. 0",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_bpom.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan NPWP",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "21",
+    "price": "Rp. 500.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_npwp.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan SKT",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "5",
+    "price": "Rp. 500.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_skt_surat_keterangan_terdaftar_pajak.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan API",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 1.800.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-04/jasa_urus_api_angka_pengenal_importir.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan IPAK",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 13.500.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_ipak.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Sertifikat Halal",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 0",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_sertifikat_halal_mui.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Izin Klinik",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 27.000.000",
+    "link": "/layanan/",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_izin_klinik.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Sertifikasi ISO 9001",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 9.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_sertifikasi_iso_9001.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Implementasi ISO 9001",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 45.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_implementasi_iso_9001.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Sertifikasi ISO 14001",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 9.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_sertifikasi_iso_14001.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Implementasi ISO 14001",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 45.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_implementasi_iso_14001.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan IMB",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 27.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/pengurusan_imb_izin_mendirikan_bangunan.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan NIK",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 1.800.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_nik_nomor_induk_kepabeanan.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan IUMK",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "1",
+    "price": "Rp. 1.350.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_iumk_izin_usaha_mikro_kecil.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Paspor",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 1.800.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_paspor.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan PI - Persetujuan Impor",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 13.500.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_pi_persetujuan_impor_kemendag.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan KITE",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 13.500.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_kite_kemudahan_import_tujuan_export.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan IUI",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 45.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_izin_usaha_industri.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan TDG",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 13.500.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_tdg_tanda_daftar_gudang.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan PKRT",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 13.500.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_pkrt_perbekalan_kesehatan_rumah_tangga.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan PIRT",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 9.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_pirt_pangan_industri_rumah_tangga.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan PBF",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 18.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_pbf_pedagang_besar_farmasi.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan Izin Edar",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "1",
+    "price": "Rp. 9.000.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_izin_edar.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan TDUP Mice",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "0",
+    "price": "Rp. 11.700.000",
+    "link": "/layanan/",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_tdup_mice.jpg"
+  },
+  {
+    "title": "Jasa Pengurusan SIUJPT",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "1",
+    "price": "Rp. 22.500.000",
+    "link": "/layanan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_urus_siujpt_surat_izin_usaha_jasa_pengurusan_transportasi.jpg"
+  },
+  {
+    "title": "Jasa Penutupan Perusahaan",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "13",
+    "price": "Rp. 2.000.000",
+    "link": "/layanan/penutupan-perusahaan",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-11/jasa_penutupan_perusahaan.jpg"
+  },
+  {
+    "title": "Pembuatan PT dan Virtual Office",
+    "description": "",
+    "features": [],
+    "rating": 5,
+    "review": "37",
+    "price": "Rp. 7.900.000",
+    "link": "/layanan/pembuatan-pt-virtual-office",
+    "thumbnail": "https://legalitas.org/uploads/1/2025-03/pembuatan_pt_virtual_office.jpg"
   }
 ]
