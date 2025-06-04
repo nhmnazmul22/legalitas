@@ -1,16 +1,55 @@
-import FilterOptions from "@/components/main/proposal/FilterOptions";
-import ProposalCard from "@/components/main/proposal/ProposalCard";
+"use client";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 import { ProposalType } from "@/types";
+import ProposalCard from "@/components/main/proposal/ProposalCard";
 import Link from "next/link";
+import SkeletonCard from "@/components/skeleton/SkeletonCard";
+import FilterOptions from "@/components/main/proposal/FilterOptions";
 
-export default async function ProposalPage() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/proposals`
-  );
-  const proposals: ProposalType[] = (await res.json()).data;
+export default function ProposalPage() {
+  const [proposals, setProposals] = useState<ProposalType[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  
+  const searchParams = useSearchParams();
+  const pname = searchParams.get("pname")?.toLowerCase() || "";
 
+  const category = useSelector((state: RootState) => state.filter.category);
+
+  useEffect(() => {
+    const fetchProposals = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/proposals`
+        );
+        const data = await res.json();
+        const normalize = (str: string) =>
+          str
+            .toLowerCase()
+            .replace(/[^a-z0-9]/gi, " ")
+            .trim();
+        const filtered = data.data.filter((proposal: ProposalType) => {
+          const matchName = pname
+            ? normalize(proposal.name) === normalize(pname)
+            : true;
+          const matchCategory = category
+            ? proposal.category.toLowerCase() === category
+            : true;
+          return matchName && matchCategory;
+        });
+
+        setProposals(filtered);
+      } catch (err) {
+        console.error("Failed to fetch proposals:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProposals();
+  }, [pname, category]);
 
   return (
     <section className="py-10 bg-primary/5">
@@ -29,16 +68,22 @@ export default async function ProposalPage() {
             <FilterOptions />
           </div>
           <div className="flex flex-col gap-5 flex-1">
-            {proposals.map((proposal) => (
-              <ProposalCard
-                key={proposal._id}
-                id={proposal._id}
-                name={proposal.name}
-                category={proposal.category}
-                price={proposal.price}
-                features={proposal.features}
-              />
-            ))}
+            {loading ? (
+              <SkeletonCard />
+            ) : proposals.length > 0 ? (
+              proposals.map((proposal) => (
+                <ProposalCard
+                  key={proposal._id}
+                  id={proposal._id}
+                  name={proposal.name}
+                  category={proposal.category}
+                  price={proposal.price}
+                  features={proposal.features}
+                />
+              ))
+            ) : (
+              <p>Tidak ada hasil ditemukan.</p>
+            )}
           </div>
         </div>
       </div>

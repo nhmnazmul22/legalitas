@@ -1,10 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  selectedOptions: {
-    category: null,
-    searchQuery: "",
-  },
+  category: null,
+  searchQuery: "",
 };
 
 const filterSlice = createSlice({
@@ -12,18 +10,14 @@ const filterSlice = createSlice({
   initialState,
   reducers: {
     setCategory: (state, action) => {
-      state.selectedOptions.category = action.payload;
+      state.category = action.payload;
     },
     setSearchQuery: (state, action) => {
-      state.selectedOptions.searchQuery = action.payload;
-    },
-    resetFilters: (state) => {
-      state.selectedOptions = initialState.selectedOptions;
+      state.searchQuery = action.payload;
     },
   },
 });
 
-export const { setCategory, setSearchQuery, resetFilters } =
-  filterSlice.actions;
+export const { setCategory, setSearchQuery } = filterSlice.actions;
 
 export default filterSlice.reducer;

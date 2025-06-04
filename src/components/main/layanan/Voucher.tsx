@@ -102,7 +102,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
         <MainButton
           text="Minta proposal"
           className="mt-5 mx-auto w-full"
-          link={`/proposals?pname=${selectedService?.name}`}
+          link={`/proposal?pname=${selectedService?.name}`}
         />
         {voucherDetails.isJobCompletion && (
           <p className="text-xs text-muted-foreground text-center flex items-center gap-2 justify-center mt-2">
