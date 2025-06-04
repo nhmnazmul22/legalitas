@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "swiper/css";
 import "./globals.css";
-import { Provider } from 'react-redux';
-import {store} from "@/store"
 
 const poppinsSans = Poppins({
   variable: "--font-poppins",
@@ -27,9 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${poppinsSans.className} antialiased overflow-x-hidden bg-slate-50 w-full`}
-      <Provider store={store}>
         <AuthProvider>{children}</AuthProvider>
-      </Provider>
       </body>
     </html>
   );
