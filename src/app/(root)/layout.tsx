@@ -21,7 +21,7 @@ export default async function RootLayout({
       </div>
       <main className="w-full">
         <Navbar />
-        
+        {children}
         <Footer />
         <Toaster />
       </main>
