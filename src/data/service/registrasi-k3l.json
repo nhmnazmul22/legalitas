@@ -58,23 +58,38 @@
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
     "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
+      "Pengurusan K3L",
+      "Uji Lab K3L",
+      "[ALL IN] Pengurusan K3L & Uji Lab"
     ],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Jasa Registrasi K3L",
+        "name": "Pengurusan K3L",
+        "price": "Rp. 5.000.000",
+        "features": [
+          "Konsultasi produk",
+          "Analisa produk",
+          "Pendaftaran K3L di Kemendag & OSS",
+          "Konsultasi label produk",
+          "TANPA UJI LAB"
+        ]
+      },
+      {
+        "category": "Jasa Registrasi K3L",
+        "name": "Uji Lab K3L",
+        "price": "Rp. 3.000.000",
+        "features": ["Konsultasi produk", "Asistensi uji lab K3L di lab resmi"]
+      },
+      {
+        "category": "Jasa Registrasi K3L",
+        "name": "[ALL IN] Pengurusan K3L & Uji Lab",
+        "price": "Rp. 7.500.000",
+        "features": ["Paket lengkap pengurusan K3L & Uji lab di lembaga resmi"]
+      }
     ],
     "isJobCompletion": true
   }

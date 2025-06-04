@@ -32,6 +32,7 @@ export default async function ProposalPage() {
             {proposals.map((proposal) => (
               <ProposalCard
                 key={proposal._id}
+                id={proposal._id}
                 name={proposal.name}
                 category={proposal.category}
                 price={proposal.price}

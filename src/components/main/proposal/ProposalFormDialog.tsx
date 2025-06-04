@@ -30,10 +30,21 @@ const ProposalFormDialog: React.FC<ProposalFormDialogType> = ({
   const [clientEmail, setClientEmail] = useState("");
   const [clientWhatsAppNumber, setClientWhatsAppNumber] = useState("");
   const [voucherCode, setVoucherCode] = useState("");
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+
+  const resetValues = ()=>{
+    setDialogOpen(false)
+    setClientName("")
+    setClientEmail("")
+    setClientWhatsAppNumber("")
+    setVoucherCode("")
+  }
 
   const handleSubmit = async () => {
     if (!clientName || !clientEmail || !clientWhatsAppNumber) {
       toast.error("Harap isi semua bidang yang wajib diisi.");
+      resetValues()
       return;
     }
 
@@ -42,9 +53,9 @@ const ProposalFormDialog: React.FC<ProposalFormDialogType> = ({
         clientName,
         clientEmail,
         clientWhatsAppNumber,
-        proposalId: proposal._id,
+        proposalId: proposal.id,
       };
-
+      console.log(requestBody)
       if (voucherCode.trim() !== "") {
         requestBody.voucherCode = voucherCode.trim();
       }
@@ -53,16 +64,19 @@ const ProposalFormDialog: React.FC<ProposalFormDialogType> = ({
         "/api/proposals/request-proposal",
         requestBody
       );
-
+      
       toast.success("Permintaan proposal berhasil dikirim!");
+      resetValues()
+  
     } catch (error: any) {
       toast.error("Terjadi kesalahan saat mengirim permintaan.");
+      resetValues()
       console.error(error);
     }
   };
 
   return (
-    <Dialog>
+    <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <DialogHeader className="text-left">

@@ -69,23 +69,94 @@
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
     "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
+      "PT - Penonaktifan Perusahaan",
+      "PT - Tutup Perusahaan (Non-Likuidasi)",
+      "PT Po - Penonaktifan Perusahaan",
+      "CV - Penonaktifan Perusahaan",
+      "CV - Tutup Perusahaan (Non-Likuidasi)",
+      "PMA - Penonaktifan Perusahaan",
+      "PMA - Tutup Perusahaan (Non-Likuidasi)"
     ],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Jasa Penutupan Perusahaan",
+        "name": "PT - Penonaktifan Perusahaan",
+        "price": "Rp. 4.000.000",
+        "features": [
+          "Akta Penonaktifan di Notaris",
+          "Pengurusan KSWP status tidak aktif",
+          "TIDAK PERLU LAPOR SPT LAGI"
+        ]
+      },
+      {
+        "category": "Jasa Penutupan Perusahaan",
+        "name": "PT - Tutup Perusahaan (Non-Likuidasi)",
+        "price": "Rp. 8.000.000",
+        "features": [
+          "[LEBIH CEPAT] RUPS Pembubaran",
+          "Akta Pembubaran",
+          "SK Menteri Pembubaran",
+          "Pengumuman Koran",
+          "Pencabutan Izin Usaha & Non-Aktif NPWP"
+        ]
+      },
+      {
+        "category": "Jasa Penutupan Perusahaan",
+        "name": "PT Po - Penonaktifan Perusahaan",
+        "price": "Rp. 2.000.000",
+        "features": [
+          "Akta Penonaktifan di Notaris",
+          "Pengurusan KSWP status tidak aktif",
+          "TIDAK PERLU LAPOR SPT LAGI"
+        ]
+      },
+      {
+        "category": "Jasa Penutupan Perusahaan",
+        "name": "CV - Penonaktifan Perusahaan",
+        "price": "Rp. 3.000.000",
+        "features": [
+          "Akta Penonaktifan di Notaris",
+          "Pengurusan KSWP status tidak aktif",
+          "TIDAK PERLU LAPOR SPT LAGI"
+        ]
+      },
+      {
+        "category": "Jasa Penutupan Perusahaan",
+        "name": "CV - Tutup Perusahaan (Non-Likuidasi)",
+        "price": "Rp. 6.000.000",
+        "features": [
+          "[LEBIH CEPAT] RUPS Pembubaran",
+          "Akta Pembubaran",
+          "SK Menteri Pembubaran",
+          "Pengumuman Koran",
+          "Pencabutan Izin Usaha & Non-Aktif NPWP"
+        ]
+      },
+      {
+        "category": "Jasa Penutupan Perusahaan",
+        "name": "PMA - Penonaktifan Perusahaan",
+        "price": "Rp. 5.000.000",
+        "features": [
+          "Akta Penonaktifan di Notaris",
+          "Pengurusan KSWP status tidak aktif",
+          "TIDAK PERLU LAPOR SPT LAGI"
+        ]
+      },
+      {
+        "category": "Jasa Penutupan Perusahaan",
+        "name": "PMA - Tutup Perusahaan (Non-Likuidasi)",
+        "price": "Rp. 9.000.000",
+        "features": [
+          "[LEBIH CEPAT] RUPS Pembubaran",
+          "Akta Pembubaran",
+          "SK Menteri Pembubaran",
+          "Pengumuman Koran",
+          "Pencabutan Izin Usaha & Non-Aktif NPWP"
+        ]
+      }
     ],
     "isJobCompletion": true
   }

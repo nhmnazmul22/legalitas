@@ -5,7 +5,7 @@ import Image from "next/image";
 import ProposalFormDialog from "./ProposalFormDialog";
 
 const ProposalCard: React.FC<ProposalType> = ({
-  _id,
+  id,
   name,
   category,
   price,
@@ -36,7 +36,7 @@ const ProposalCard: React.FC<ProposalType> = ({
       </figure>
       <ProposalFormDialog
         proposal={{
-          _id: _id,
+          id: id,
           name: name,
           category: category,
           price: price,
@@ -50,7 +50,3 @@ const ProposalCard: React.FC<ProposalType> = ({
 };
 
 export default ProposalCard;
-
-//
-//
-//

@@ -76,23 +76,58 @@
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
     "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
+      "Pengurusan SPPL",
+      "Pengurusan SLHS (Sertifikat Laik Higiene Sanitasi)",
+      "Sertifikat Higiene Sanitasi Penjamah Pangan",
+      "Sertifikat Higiene Sanitasi Penanggung Jawab Usaha",
+      "[ALL IN] Izin Restoran"
     ],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Jasa Izin Restoran",
+        "name": "Pengurusan SPPL",
+        "price": "Rp. 2.000.000",
+        "features": [
+          "Pengurusan SPPL (Surat Pernyataan Kesanggupan Pengelolaan dan Pemantauan Lingkungan Hidup)"
+        ]
+      },
+      {
+        "category": "Jasa Izin Restoran",
+        "name": "Pengurusan SLHS (Sertifikat Laik Higiene Sanitasi)",
+        "price": "Rp. 5.000.000",
+        "features": [
+          "Pengurusan SLHS (Sertifikat Laik Higiene Sanitasi) sampai selesai"
+        ]
+      },
+      {
+        "category": "Jasa Izin Restoran",
+        "name": "Sertifikat Higiene Sanitasi Penjamah Pangan",
+        "price": "Rp. 1.500.000",
+        "features": [
+          "Pelatihan & Sertifikasi Higiene Sanitasi Penjamah Pangan per orang"
+        ]
+      },
+      {
+        "category": "Jasa Izin Restoran",
+        "name": "Sertifikat Higiene Sanitasi Penanggung Jawab Usaha",
+        "price": "Rp. 1.500.000",
+        "features": [
+          "Pelatihan & Sertifikasi Higiene Sanitasi Penjamah Pangan per orang"
+        ]
+      },
+      {
+        "category": "Jasa Izin Restoran",
+        "name": "[ALL IN] Izin Restoran",
+        "price": "Rp. 10.000.000",
+        "features": [
+          "Paket lengkap izin restoran",
+          "Paket untuk 1 orang karyawan",
+          "Call us for more details"
+        ]
+      }
     ],
     "isJobCompletion": true
   }

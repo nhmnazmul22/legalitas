@@ -306,24 +306,46 @@
   "quiz": [],
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
-    "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
-    ],
+    "services": ["Pendirian Yayasan", "Pendirian Yayasan + Izin"],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Yayasan",
+        "name": "Pendirian Yayasan",
+        "price": "Rp. 3.000.000",
+        "features": [
+          "Pengecekan Nama Yayasan",
+          "Pemesanan Nama Yayasan",
+          "Persiapan Minuta",
+          "Akta Pendirian Yayasan",
+          "SK Menteri",
+          "[BONUS] Dapat 20 KBLI"
+        ]
+      },
+      {
+        "category": "Yayasan",
+        "name": "Pendirian Yayasan + Izin",
+        "price": "Rp. 6.000.000",
+        "features": [
+          "Pengecekan Nama Yayasan",
+          "Pemesanan Nama Yayasan",
+          "Persiapan Minuta",
+          "Akta Pendirian Yayasan",
+          "SK Menteri",
+          "Dapat 20 KBLI",
+          "NPWP Yayasan",
+          "SKT Pajak",
+          "NIB",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Ketua",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS"
+        ]
+      }
     ],
     "isJobCompletion": true
   }

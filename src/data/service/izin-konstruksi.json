@@ -57,24 +57,22 @@
   "quiz": [],
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
-    "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
-    ],
+    "services": ["Izin Konstruksi / SIUJK"],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Jasa Izin Konstruksi",
+        "name": "Izin Konstruksi / SIUJK",
+        "price": "Rp. 35.000.000",
+        "features": [
+          "Pengurusan 2 (dua) orang SKK/SKA",
+          "Pelatihan & Ujian 2 (dua) orang SKK/SKA",
+          "Pendaftaran SBU di LSBU",
+          "Pendaftaran KTA di Asosiasi (Gapensi atau sejenisnya)"
+        ]
+      }
     ],
     "isJobCompletion": true
   }

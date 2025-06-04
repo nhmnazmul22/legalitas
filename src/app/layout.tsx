@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "swiper/css";
 import "./globals.css";
+import StoreProvider from "@/context/StoreProvider";
 
 const poppinsSans = Poppins({
   variable: "--font-poppins",
@@ -23,8 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppinsSans.className} antialiased overflow-x-hidden bg-slate-50 w-full`}>
-        <AuthProvider>{children}</AuthProvider>
+      <body
+        className={`${poppinsSans.className} antialiased overflow-x-hidden bg-slate-50 w-full`}
+      >
+        <StoreProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </StoreProvider>
       </body>
     </html>
   );

@@ -51,23 +51,37 @@
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
     "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
+      "Perjanjian Pisah Harta Pra Menikah",
+      "Pendaftaran Pisah Harta KUA/Dukcapil Jakarta",
+      "[ALL IN] Perjanjian Pisah Harta"
     ],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Perjanjian Pisah Harta / Pra Nikah",
+        "name": "Perjanjian Pisah Harta Pra Menikah",
+        "price": "Rp. 5.000.000",
+        "features": ["Konsultasi Gratis", "Akta Pisah Harta Notariil"]
+      },
+      {
+        "category": "Perjanjian Pisah Harta / Pra Nikah",
+        "name": "Pendaftaran Pisah Harta KUA/Dukcapil Jakarta",
+        "price": "Rp. 3.000.000",
+        "features": ["Pendaftaran Pisah Harta KUA/Dukcapil Jakarta"]
+      },
+      {
+        "category": "Perjanjian Pisah Harta / Pra Nikah",
+        "name": "[ALL IN] Perjanjian Pisah Harta",
+        "price": "Rp. 8.000.000",
+        "features": [
+          "Konsultasi Gratis",
+          "Akta Pisah Harta Notariil",
+          "Pendaftaran Pisah Harta KUA/Dukcapil Jakarta",
+          "Call us for more details"
+        ]
+      }
     ],
     "isJobCompletion": true
   }

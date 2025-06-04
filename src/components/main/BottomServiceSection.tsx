@@ -32,37 +32,40 @@ const BottomServiceSection: React.FC<BottomServiceSectionProps> = ({
           title="Perubahan Akta"
           price="Rp 5juta"
           description="Perubahan anggaran dasar / Akta Notaris"
-          includes={[
+          features={[
             "Drafting dokumen",
             "Persiapan Minuta",
             "Akta Notaris Perubahan",
             "SK Persetujuan / SK Pemberitahuan",
             " Dapat 20 KBLI",
           ]}
+          link="/"
         />
         <ServiceCard
           title="Perubahan Akta"
           price="Rp 5juta"
           description="Perubahan anggaran dasar / Akta Notaris"
-          includes={[
+          features={[
             "Drafting dokumen",
             "Persiapan Minuta",
             "Akta Notaris Perubahan",
             "SK Persetujuan / SK Pemberitahuan",
             " Dapat 20 KBLI",
           ]}
+          link="/"
         />
         <ServiceCard
           title="Perubahan Akta"
           price="Rp 5juta"
           description="Perubahan anggaran dasar / Akta Notaris"
-          includes={[
+          features={[
             "Drafting dokumen",
             "Persiapan Minuta",
             "Akta Notaris Perubahan",
             "SK Persetujuan / SK Pemberitahuan",
             " Dapat 20 KBLI",
           ]}
+          link="/"
         />
       </div>
     </div>

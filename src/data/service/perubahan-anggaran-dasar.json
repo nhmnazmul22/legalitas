@@ -69,23 +69,42 @@
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
     "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
+      "Perubahan Anggaran Dasar PT",
+      "Perubahan Anggaran Dasar CV",
+      "Akta Jual Beli Saham (Notariil)"
     ],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Jasa Perubahan Anggaran Dasar",
+        "name": "Perubahan Anggaran Dasar PT",
+        "price": "Rp. 5.000.000",
+        "features": [
+          "Perubahan anggaran dasar PT",
+          "Akta Notaris",
+          "SK Menteri",
+          "Agenda RUPS Bebas"
+        ]
+      },
+      {
+        "category": "Jasa Perubahan Anggaran Dasar",
+        "name": "Perubahan Anggaran Dasar CV",
+        "price": "Rp. 3.000.000",
+        "features": [
+          "Perubahan anggaran dasar CV",
+          "Akta Notaris",
+          "SK Menteri",
+          "Agenda RUPS Bebas"
+        ]
+      },
+      {
+        "category": "Jasa Perubahan Anggaran Dasar",
+        "name": "Akta Jual Beli Saham (Notariil)",
+        "price": "Rp. 1.000.000",
+        "features": ["Akta Jual Beli Saham dibuat oleh Notaris"]
+      }
     ],
     "isJobCompletion": true
   }

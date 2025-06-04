@@ -122,24 +122,39 @@
   "quiz": [],
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
-    "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
-    ],
+    "services": ["Virtual Office Jakarta", "Virtual Office Premium @SCBD"],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Virtual Office",
+        "name": "Virtual Office Jakarta",
+        "price": "Rp. 2.651.707",
+        "features": [
+          "5 lokasi seluruh Jakarta",
+          "60 jam Meeting Room",
+          "Bebas meeting di 6 lokasi",
+          "Layanan Resepsionis",
+          "Layanan Surat Menyurat",
+          "Zonasi Komersial",
+          "Bisa PKP"
+        ]
+      },
+      {
+        "category": "Virtual Office",
+        "name": "Virtual Office Premium @SCBD",
+        "price": "Rp. 5.538.900",
+        "features": [
+          "Gedung Indonesia Stock Exchange @SCBD",
+          "60 jam Meeting Room",
+          "Bebas meeting di 6 lokasi",
+          "Layanan Resepsionis",
+          "Layanan Surat Menyurat",
+          "Zonasi Komersial",
+          "Bisa PKP"
+        ]
+      }
     ],
     "isJobCompletion": true
   }

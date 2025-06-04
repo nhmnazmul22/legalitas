@@ -87,7 +87,7 @@ export default function LoginPage() {
                   <li>
                     Salin atau tulis sendiri kredensial login dan gunakan untuk
                     masuk
-                  </li>
+                  </li> 
                 </ul>
               </div>
               <Separator className="my-4 bg-secondary-blue/20" />

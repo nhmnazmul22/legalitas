@@ -30,11 +30,16 @@ interface MainServiceItemsType {
 }
 
 interface ServiceType {
+  _id?: string;
   id?: string;
   title: string;
   price: string;
   description: string;
-  includes: string[];
+  features: string[];
+  rating?: number;
+  reviws?: string;
+  link: string;
+  thumbnail?: string;
 }
 
 interface RegulationTextType {
@@ -152,13 +157,19 @@ type QuizItem = {
   question: string;
   options: string[];
 };
+
 type VoucherDetailsType = {
   thumbnail: string;
   services: string[];
   price: string;
   isLimitedTime: boolean;
   voucherImg: string;
-  features: string[];
+  features_Price: {
+    category: string;
+    name: string;
+    price: string;
+    features: string[];
+  }[];
   isJobCompletion: boolean;
 };
 type Condition3Props = {
@@ -184,12 +195,12 @@ type ServiceData = {
 
 interface ProposalType {
   _id?: string | number;
+  id?: string | number;
   category: string;
   name: string;
   price: string;
   features: string[];
 }
-
 export type {
   BlogType,
   BonusItem,

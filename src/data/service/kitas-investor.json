@@ -61,24 +61,17 @@
   "quiz": [],
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
-    "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
-    ],
+    "services": ["Jasa Pengurusan KITAS Investor"],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "Jasa Pengurusan KITAS Investor",
+        "name": "Jasa Pengurusan KITAS Investor",
+        "price": "Rp. 18.000.000",
+        "features": ["Pengurusan KITAS Investor"]
+      }
     ],
     "isJobCompletion": true
   }

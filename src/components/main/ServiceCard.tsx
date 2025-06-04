@@ -1,3 +1,4 @@
+"use client";
 import MainButton from "@/components/common/MainButton";
 import RatingGen from "@/components/common/RatingGen";
 import {
@@ -16,7 +17,8 @@ const ServiceCard: React.FC<ServiceType> = ({
   title,
   description,
   price,
-  includes,
+  features,
+  link,
 }) => {
   return (
     <ShowMoreButton>
@@ -33,9 +35,9 @@ const ServiceCard: React.FC<ServiceType> = ({
           <p className="text-sm mb-2 font-bold text-muted-foreground">
             Termasuk:
           </p>
-          {includes.length > 0 && (
+          {features.length > 0 && (
             <ul className="flex flex-col gap-2">
-              {includes.map((item, index) => (
+              {features.map((item, index) => (
                 <li
                   key={`${item}-${index}`}
                   className="flex items-center justify-start gap-2 text-sm "
@@ -63,7 +65,7 @@ const ServiceCard: React.FC<ServiceType> = ({
               {price}
             </span>
           </div>
-          <MainButton text="Detail" className="mt-5" />
+          <MainButton text="Detail" className="mt-5" link={link} />
         </CardFooter>
       </Card>
     </ShowMoreButton>

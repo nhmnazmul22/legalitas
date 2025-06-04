@@ -309,23 +309,157 @@
   "voucherDetails": {
     "thumbnail": "/images/company-google-img.png",
     "services": [
-      "Pendirian PT",
-      "PT + Izin",
-      "PT + Izin + Virtual Office",
-      "PT + Izin + Virtual Office + PKP",
-      "PT + Izin + Virtual Office SCBD",
-      "PT + Izin + Virtual Office SCBD + PKP"
+      "Pendirian PT Perorangan",
+      "PT Perorangan + Izin",
+      "PT Perorangan + Izin + Virtual Office",
+      "PT Perorangan + Izin + Virtual Office SCBD",
+      "PT Perorangan + Izin + Virtual Office + PKP",
+      "PT Perorangan + Izin + Virtual Office SCBD + PKP"
     ],
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features": [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI"
+    "features_price": [
+      {
+        "category": "PT Perorangan",
+        "name": "Pendirian PT Perorangan",
+        "price": "Rp. 2.000.000",
+        "features": [
+          "Pengecekan & Pemesanan Nama PT",
+          "Pernyataan Pendaftaran",
+          "SK Menteri",
+          "Dapat 20 KBLI"
+        ]
+      },
+      {
+        "category": "PT Perorangan",
+        "name": "PT Perorangan + Izin",
+        "price": "Rp. 4.500.000",
+        "features": [
+          "Pengecekan & Pemesanan Nama PT",
+          "Pernyataan Pendaftaran",
+          "SK Menteri",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      },
+      {
+        "category": "PT Perorangan",
+        "name": "PT Perorangan + Izin + Virtual Office",
+        "price": "Rp. 6.262.782",
+        "features": [
+          "Pengecekan & Pemesanan Nama PT",
+          "Pernyataan Pendaftaran",
+          "SK Menteri",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "K3L - SPPL - UMK Tata Ruang",
+          "Virtual Office 1 tahun",
+          "Alamat kantor yang prestisius",
+          "Meeting di 6 Lokasi di Jakarta",
+          "Total 21 Meeting Room",
+          "Layanan Resepsionis",
+          "Penerimaan Surat",
+          "Smart TV - Pantry - Coffee & Tea",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      },
+      {
+        "category": "PT Perorangan",
+        "name": "PT Perorangan + Izin + Virtual Office SCBD",
+        "price": "Rp. 6.708.000",
+        "features": [
+          "Pengecekan & Pemesanan Nama PT",
+          "Pernyataan Pendaftaran",
+          "SK Menteri",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "K3L - SPPL - UMK Tata Ruang",
+          "Virtual Office 1 tahun",
+          "Lokasi Strategis di Gedung Bursa Efek Indonesia SCBD",
+          "Meeting di 6 Lokasi di Jakarta",
+          "Total 21 Meeting Room",
+          "Layanan Resepsionis",
+          "Penerimaan Surat",
+          "Smart TV - Pantry - Coffee & Tea",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      },
+      {
+        "category": "PT Perorangan",
+        "name": "PT Perorangan + Izin + Virtual Office + PKP",
+        "price": "Rp. 8.062.782",
+        "features": [
+          "Pengecekan & Pemesanan Nama PT",
+          "Pernyataan Pendaftaran",
+          "SK Menteri",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "K3L - SPPL - UMK Tata Ruang",
+          "SPPKP",
+          "Virtual Office 1 tahun",
+          "Alamat kantor yang prestisius",
+          "Meeting di 6 Lokasi di Jakarta",
+          "Total 21 Meeting Room",
+          "Layanan Resepsionis",
+          "Penerimaan Surat",
+          "Smart TV - Pantry - Coffee & Tea",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      },
+      {
+        "category": "PT Perorangan",
+        "name": "PT Perorangan + Izin + Virtual Office SCBD + PKP",
+        "price": "Rp. 8.508.000",
+        "features": [
+          "Pengecekan & Pemesanan Nama PT",
+          "Pernyataan Pendaftaran",
+          "SK Menteri",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "K3L - SPPL - UMK Tata Ruang",
+          "SPPKP",
+          "Virtual Office 1 tahun",
+          "Lokasi Strategis di Gedung Bursa Efek Indonesia SCBD",
+          "Meeting di 6 Lokasi di Jakarta",
+          "Total 21 Meeting Room",
+          "Layanan Resepsionis",
+          "Penerimaan Surat",
+          "Smart TV - Pantry - Coffee & Tea",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      }
     ],
     "isJobCompletion": true
   }

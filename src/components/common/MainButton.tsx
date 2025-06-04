@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -7,9 +8,15 @@ type MainButtonProps = {
   className?: string;
   link?: string;
   text: string;
+  onClick?: () => void;
 };
 
-const MainButton: React.FC<MainButtonProps> = ({ className, link, text }) => {
+const MainButton: React.FC<MainButtonProps> = ({
+  className,
+  link,
+  text,
+  onClick,
+}) => {
   return (
     <Link href={link ? link : ""}>
       <Button
@@ -17,6 +24,7 @@ const MainButton: React.FC<MainButtonProps> = ({ className, link, text }) => {
           "btn-gradient w-[210px] h-[50px] text-base font-bold flex items-center group rounded-sm",
           className && className
         )}
+        onClick={onClick}
       >
         {text}
         <ArrowRight
