@@ -258,114 +258,6 @@ const mainServiceItems: MainServiceItemsType[] = [
   },
 ];
 
-const services: ServiceType[] = [
-  {
-    id: "srv-1",
-    title: "Pendirian PT",
-    price: "Rp 3juta",
-    description: "Bentuk badan usaha yang banyak digunakan",
-    includes: [
-      "Pengecekan Nama PT",
-      "Pemesanan Nama PT",
-      "Persiapan Minuta",
-      "Akta Pendirian PT",
-      "SK Menteri",
-      "Dapat 20 KBLI",
-    ],
-  },
-  {
-    id: "srv-2",
-    title: "PT Perorangan",
-    price: "Rp 2.25juta",
-    description: "PT yang didirikan oleh 1 (satu) orang",
-    includes: [
-      "Pengecekan Nama PT Perorangan",
-      "Pemesanan Nama PT Perorangan",
-      "Pernyataan Pendaftaran",
-      "SK Menteri",
-      "Dapat 20 KBLI",
-    ],
-  },
-  {
-    id: "srv-3",
-    title: "Pendirian CV",
-    price: "Rp 2.25juta",
-    description: "Bentuk badan usaha yang paling tua dan sederhana",
-    includes: [
-      "Pengecekan Nama CV",
-      "Pemesanan Nama CV",
-      "Persiapan Minuta",
-      "Akta Pendirian CV",
-      "SK Menteri",
-      "Dapat 20 KBLI",
-    ],
-  },
-  {
-    id: "srv-4",
-    title: "Pendirian PT PMA",
-    price: "Rp 5.25juta",
-    description: "PT dengan unsur kepemilikan saham asing",
-    includes: [
-      "Pengecekan Nama PT PMA",
-      "Pemesanan Nama PT PMA",
-      "Persiapan Minuta",
-      "Akta Pendirian PT PMA",
-      "SK Menteri",
-      "Dapat 20 KBLI",
-    ],
-  },
-  {
-    id: "srv-5",
-    title: "Perubahan Akta",
-    price: "Rp 5juta",
-    description: "Perubahan anggaran dasar Akta idtaris",
-    includes: [
-      "Drafting dokumen",
-      "Persirisk Minuta",
-      "Akta idtaris Perubahan",
-      "SK Periskujuan / SK Pemberitahuan",
-      "DapatriskKBLI",
-      "Update di OSS",
-    ],
-  },
-  {
-    id: "srv-6",
-    title: "SBUJK Konstruksi",
-    price: "Rp 31.5juta",
-    description: "Sertifikat standar ter-verifikasi di bidang konstruksi",
-    includes: [
-      "Termasuk pengurusan 2 (dua) SKT/SKTK Tenaga Ahli",
-      "Pengurusan SBU di LSBU",
-      "Pengurusan KTA di Asosiasi (Gapensi atau setypenya)",
-    ],
-  },
-  {
-    id: "srv-7",
-    title: "Registrasi K3L",
-    price: "Rp 5juta",
-    description: "Pendaftaran produk wajib K3L di Kemendag",
-    includes: [
-      "Konsultasi terkait produk",
-      "Uji lab dan label tersertifikasi",
-      "Izin K3L dari OSS",
-      "Konsultasi pelabelan",
-    ],
-  },
-  {
-    id: "srv-8",
-    title: "Pisah Harta",
-    price: "Rp 5juta",
-    description:
-      "Pembuatan dan register Perjanjian Pisah Harta / Prenuptial Agreement",
-    includes: [
-      "Konsultasi hukum keluarga",
-      "Akta idtaris Pisah Harta",
-      "Pendariskan Akta Pisah Harta di KUA",
-      "Pendariskan Akta Pisah Harta di Dukcapil",
-    ],
-  },
-];
-
 const companyLogos: CompanyLogoType[] = [
   { id: 1, link: "/images/company-logo-1.png" },
   { id: 2, link: "/images/company-logo-2.png" },
@@ -851,6 +743,5 @@ export {
   reviweCompanyLogos,
   riskTableContents,
   riskTags,
-  services,
   servicesList,
 };
