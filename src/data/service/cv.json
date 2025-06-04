@@ -3,7 +3,7 @@
     "serviceName": "CV / Commanditaire Vennootschap",
     "shortDes": "Jasa Pendirian CV dengan bonus VOUCHER DISKON 10% untuk pemesanan berikutnya!",
     "isBestSeller": true,
-    "thumbnail": "/images/service-img/service-img-02.png",
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_pendirian_cv.jpg",
     "description": "Jasa legalitas di Indonesia sejak tahun 2002 | Legalitas.org menyediakan layanan pendirian CV + Virtual Office di Jakarta dan bisa PKP | Call Now",
     "lotsOfBonus": [
       {
@@ -315,6 +315,7 @@
       "SK Menteri",
       "Dapat 20 KBLI"
     ],
-    "isJobCompletion": true
+    "isJobCompletion": true,
+    "link": "/proposal?cate=CV/Commanditaire Vennootschap"
   }
 }
