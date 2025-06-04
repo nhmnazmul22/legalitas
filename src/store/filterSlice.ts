@@ -3,8 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   selectedOptions: {
     category: null,
-    priceRange: null,
-    rating: null,
     searchQuery: "",
   },
 };
