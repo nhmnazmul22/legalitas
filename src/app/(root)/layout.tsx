@@ -5,6 +5,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
 import { cookies } from "next/headers";
 import { Provider } from 'react-redux';
+import store from "@/store"
 
 export default async function RootLayout({
   children,
@@ -21,7 +22,7 @@ export default async function RootLayout({
       </div>
       <main className="w-full">
         <Navbar />
-        {children}
+       <Provider store={store}> {children} </Provider>
         <Footer />
         <Toaster />
       </main>
