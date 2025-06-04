@@ -85,7 +85,7 @@
     "price": "Rp. 3.000.000",
     "isLimitedTime": true,
     "voucherImg": "/images/voucher-img.png",
-    "features_price": [
+    "features_Price": [
       {
         "category": "Jasa Izin Restoran",
         "name": "Pengurusan SPPL",
