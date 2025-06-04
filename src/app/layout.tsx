@@ -21,7 +21,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  
+
+return (
     <html lang="en">
       <body
         className={`${poppinsSans.className} antialiased overflow-x-hidden bg-slate-50 w-full`}
