@@ -45,7 +45,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
   }, [selectedValue]);
 
   return (
-    <div className="w-full lg:w-fit secondary-hero-banner shadow p-[3px] rounded-md sticky top-[18%]">
+    <div className="w-full lg:max-w-sm secondary-hero-banner shadow p-[3px] rounded-md sticky top-[18%]">
       <div className="p-5 mx-auto w-full bg-white rounded-md">
         <figure className="rounded-md overflow-hidden">
           <Image

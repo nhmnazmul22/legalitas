@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/select";
 import { servicesList } from "@/constant";
 import { AppDispatch } from "@/store";
-import { setCategory, setSearchQuery } from "@/store/filterSlice";
+import { setCategory } from "@/store/filterSlice";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 

@@ -22,7 +22,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchRules } from "@/store/ruleSlice";
 import type { RootState, AppDispatch } from "@/store";
 import { Loader } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const RiskTable = () => {
   const dispatch = useDispatch<AppDispatch>();

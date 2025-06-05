@@ -55,7 +55,7 @@ export default function ProposalPage() {
     <section className="py-10 bg-primary/5">
       <div className="container">
         <div className="flex max-md:flex-col gap-5 relative">
-          <div className="secondary-hero-banner text-white px-5 py-10 rounded-md shadow-md flex flex-col gap-3 max-h-[230px] md:sticky md:top-[10%] md:z-[10]">
+          <div className="secondary-hero-banner text-white px-5 py-10 rounded-md shadow-md flex flex-col gap-3 max-h-[230px] md:sticky md:top-[13%] ">
             <h2 className="text-2xl md:text-4xl xl:text-5xl font-semibold">
               Proposal
             </h2>
