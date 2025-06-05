@@ -1,19 +1,9 @@
-
-
 import SectionHeading from "@/components/common/SectionHeading";
 import { Badge } from "@/components/ui/badge";
 import { riskTags } from "@/constant";
-import FilterOptions from "./FilterOptions";
-import RiskTable from "./RiskTable";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
+import FilterOptions from "@/components/main/FilterOptions";
+import RuleTable from "@/components/main/rules/RuleTable";
+
 type RisksType = {
   children?: React.ReactNode;
 };
@@ -45,32 +35,8 @@ const Risks: React.FC<RisksType> = ({ children }) => {
           {children && children}
           <div className="">
             <FilterOptions option={["10"]} />
-            <RiskTable />
-            <Pagination className="mt-10">
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious href="/kbli" />
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink href="/kbli">1</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink href="/kbli">2</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink href="/kbli">3</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink href="/kbli">4</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationEllipsis />
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationNext href="/kbli" />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
+            <RuleTable />
+            
           </div>
         </div>
       </div>

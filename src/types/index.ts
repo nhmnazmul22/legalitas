@@ -65,6 +65,14 @@ interface RiskTableContentsType {
   Description: string;
 }
 
+interface RuleTableContentsType {
+  _id?: string;
+  no: string;
+  ruleCode: string;
+  rule: string;
+  description: string;
+}
+
 interface BlogType {
   id?: string | number;
   thumbnail: string;
@@ -245,4 +253,5 @@ export type {
   ServiceType,
   VoucherDetailsType,
   UserType,
+  RuleTableContentsType,
 };

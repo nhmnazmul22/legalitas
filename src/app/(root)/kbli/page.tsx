@@ -1,12 +1,11 @@
 import Blogs from "@/components/main/Blogs";
 import Reviews from "@/components/main/Reviews";
-import Risks from "@/components/main/Risks";
 import { Separator } from "@/components/ui/separator";
-
+import Rule from "@/components/main/rules/Rule";
 export default function RegulationPage() {
   return (
     <>
-      <Risks>
+      <Rule>
         <div className="my-5 flex flex-col gap-3">
           <h3 className="text-lg font-semibold">Tabel KBLI</h3>
           <Separator className="bg-primary " />
@@ -22,7 +21,7 @@ export default function RegulationPage() {
             jasa pembuatan PT wajib menggunakan KBLI tahun 2020.
           </p>
         </div>
-      </Risks>
+      </Rule>
       <Reviews />
       <Blogs />
     </>

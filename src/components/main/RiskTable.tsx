@@ -1,3 +1,4 @@
+
 import {
   Table,
   TableBody,
@@ -9,6 +10,8 @@ import {
 import { riskTableContents } from "@/constant";
 
 const RiskTable = () => {
+ 
+ 
   return (
     <Table className="text-base">
       <TableHeader>
