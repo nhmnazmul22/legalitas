@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
 
             <MainButton
-              link="/"
+              link="/kontak"
               text="Kirimkan pertanyaan"
               className="w-[270px] mt-5"
             />
@@ -34,7 +34,7 @@ const Footer = () => {
             <ul className="text-base text-muted-foreground flex flex-col gap-2 mt-3 ps-2">
               <li>
                 <Link
-                  href="/"
+                  href="/layanan/perseroan-terbatas"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/layanan/pma-penanaman"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/layanan/perseroan-perorangan"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
@@ -70,7 +70,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/layanan/firma"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
@@ -82,7 +82,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/layanan/perkumpulan"
                   className=" flex gap-2 items-center group transition-all duration-300  -translate-x-5 hover:text-primary hover:underline hover:translate-x-1"
                 >
                   <ArrowRight
