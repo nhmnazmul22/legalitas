@@ -20,9 +20,9 @@ export default async function RootLayout({
       </div>
       <main className="w-full">
         <Navbar />
-       {children}
+        {children}
         <Footer />
-        <Toaster />
+        <Toaster position="top-right" />
       </main>
     </SidebarProvider>
   );

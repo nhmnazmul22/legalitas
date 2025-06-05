@@ -14,6 +14,7 @@ const MainServiceCard: React.FC<MainServiceItemsType> = ({
   icon,
   title,
   description,
+  link,
 }) => {
   return (
     <Card className="bg-secondary/15 border-0 shadow-md rounded-md gap-4">
@@ -31,7 +32,7 @@ const MainServiceCard: React.FC<MainServiceItemsType> = ({
         <p className="text-sm text-muted-foreground mt-3">{description}</p>
       </CardContent>
       <CardFooter>
-        <Link href="/tentang">
+        <Link href={link}>
           <Button className="bg-secondary/20 text-secondary hover:bg-primary hover:text-white duration-300 group">
             Lebih lanjut
             <ArrowRight

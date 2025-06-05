@@ -21,7 +21,7 @@ export const authOptions: AuthOptions = {
             password: credentials.password,
           });
 
-          const user = response.data;
+          const { user } = response.data;
 
           if (user) {
             return user;
@@ -48,10 +48,12 @@ export const authOptions: AuthOptions = {
 
     async session({ session, token }) {
       if (token) {
-        session.user.id = token.id;
-        session.user.email = token.email;
-        session.user.username = token.username;
-        session.user.status = token.status;
+        session.user = {
+          id: token.id,
+          email: token.email,
+          username: token.username,
+          status: token.status,
+        };
       }
       return session;
     },

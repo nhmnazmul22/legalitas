@@ -16,7 +16,7 @@ import Voucher from "@/components/main/layanan/Voucher";
 import MainService from "@/components/main/MainService";
 import Reviews from "@/components/main/Reviews";
 import { Separator } from "@/components/ui/separator";
-import PageData from "@/data/service/izin-pse.json";
+import PageData from "@/data/service/registrasi-k3l.json";
 
 export default async function ServiceDetailsPage() {
   const basicInfo = PageData.serviceBasicInfo;

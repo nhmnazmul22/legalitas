@@ -29,7 +29,7 @@ export default function ContactPage() {
           </span>
           <div>
             <p className="text-white font-semibold my-2 text-xl">Whatsapp</p>
-            <p className="text-white">0811-1191-750</p>
+            <p className="text-white">+628213250555 | +6282143525559</p>
           </div>
         </div>
         <div className="secondary-hero-banner rounded-md flex gap-3 items-start p-5">
@@ -38,7 +38,7 @@ export default function ContactPage() {
           </span>
           <div>
             <p className="text-white font-semibold my-2 text-xl">Email</p>
-            <p className="text-white">legal@legalitas.org</p>
+            <p className="text-white">mitrajasalegalitas@email.com</p>
           </div>
         </div>
         <div className="secondary-hero-banner rounded-md flex gap-3 items-start p-5">
@@ -48,11 +48,12 @@ export default function ContactPage() {
           <div>
             <p className="text-white font-semibold my-2 text-xl">Lokasi</p>
             <p className="text-white">
-              MTH Square GF A4/A <br /> Jl. MT Haryono Kav. <br /> 10 Jakarta
-              Timur 13330
+              Jl. Pumpungan V No.46 A. <br />
+              Menur Pumpungan, Kec. <br />
+              Sukolilo, Surabaya, Jawa Timur 60118
             </p>
             <Link
-              href="/"
+              href="https://maps.app.goo.gl/n5jra8zmNGqPiewVA"
               className="mt-2 text-white underline font-semibold flex gap-2 items-center"
             >
               Google Maps <ArrowRight size={16} />
@@ -120,6 +121,16 @@ export default function ContactPage() {
               </Button>
             </form>
           </div>
+        </div>
+        <div className="mt-10 w-full rounded-md overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7914.997968524046!2d112.764016!3d-7.297698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbb08e27b4a5%3A0x3db559c5cee500f4!2sMitra%20Jasa%20Legalitas%20Surabaya!5e0!3m2!1sen!2sid!4v1749112189829!5m2!1sen!2sid"
+            height={480}
+            style={{ border: 0, width: "100%" }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Facebook, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import MainButton from "../common/MainButton";
@@ -164,17 +164,41 @@ const Footer = () => {
             <div className="text-base text-muted-foreground flex flex-col gap-2 mt-3 ps-2">
               <p>
                 <span className="text-black font-semibold">Kantor:</span> MTH
-                Square GF A4/A <br /> Jl. MT Haryono Kav. <br /> 10 Jakarta
-                Timur 13330.
+                Jl. Pumpungan V No.46 A. <br />
+                Menur Pumpungan, Kec. <br />
+                Sukolilo, Surabaya, Jawa Timur 60118
               </p>
               <p>
-                <span className="text-black font-semibold">Whatsapp: </span>
-                0811-1191-750
+                <span className="text-black font-semibold">Whatsapp:</span>
+                +6282143525559 | +6282132505553
               </p>
               <p>
                 <span className="text-black font-semibold">Email: </span>
-                legal [at] legalitas.org
+                mitrajasalegalitas@email.com
               </p>
+            </div>
+            <div className="mt-5 flex gap-5 items-center">
+              <Link href="" target="_blank">
+                <Facebook
+                  size={20}
+                  className="hover:text-primary duration-300"
+                />
+              </Link>
+              <Link href="" target="_blank">
+                <Twitter
+                  size={20}
+                  className="hover:text-primary duration-300"
+                />
+              </Link>
+              <Link
+                href="https://www.instagram.com/mitrajasalegalitas/"
+                target="_blank"
+              >
+                <Instagram
+                  size={20}
+                  className="hover:text-primary duration-300"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -188,21 +212,21 @@ const Footer = () => {
           </p>
           <div className="flex justify-center items-center space-x-4">
             <Link
-              href="/"
+              href="/syarat-ketentuan"
               className="theme-gradient font-semibold hover:underline duration-300 text-primary"
             >
               Ketentuan
             </Link>
             <Separator orientation="vertical" className="w-[2px] h-[5px]" />
             <Link
-              href="/"
+              href="/privasi"
               className="theme-gradient font-semibold hover:underline duration-300 text-primary"
             >
               Privasi
             </Link>
             <Separator orientation="vertical" className="w-[2px] h-full" />
             <Link
-              href="/"
+              href="/login"
               className="theme-gradient font-semibold hover:underline duration-300 text-primary"
             >
               Login Klien

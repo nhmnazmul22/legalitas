@@ -18,6 +18,7 @@ import {
   Twitter,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 type VoucherProps = {
@@ -44,8 +45,8 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
   }, [selectedValue]);
 
   return (
-    <div className="w-full lg:max-w-sm secondary-hero-banner shadow p-[3px] rounded-md sticky top-[15%]">
-      <div className="p-5 w-full bg-white rounded-md">
+    <div className="w-full lg:w-fit secondary-hero-banner shadow p-[3px] rounded-md sticky top-[18%]">
+      <div className="p-5 mx-auto w-full bg-white rounded-md">
         <figure className="rounded-md overflow-hidden">
           <Image
             src={voucherDetails.thumbnail}
@@ -112,13 +113,22 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
         )}
         <div className="mt-5 py-10 bg-primary/10 rounded-md flex justify-center gap-3 items-center">
           <div className="p-2 rounded-full bg-primary cursor-pointer hover:translate-y-1.5 transition-all duration-300">
-            <Facebook className="text-white" />
+            <Link href="" target="_blank">
+              <Facebook className="text-white" />
+            </Link>
           </div>
           <div className="p-2 rounded-full bg-primary cursor-pointer hover:translate-y-1.5 transition-all duration-300">
-            <Twitter className="text-white" />
+            <Link href="" target="_blank">
+              <Twitter className="text-white" />
+            </Link>
           </div>
           <div className="p-2 rounded-full bg-primary cursor-pointer hover:translate-y-1.5 transition-all duration-300">
-            <Instagram className="text-white" />
+            <Link
+              href="https://www.instagram.com/mitrajasalegalitas/"
+              target="_blank"
+            >
+              <Instagram className="text-white" />
+            </Link>
           </div>
         </div>
       </div>

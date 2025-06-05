@@ -27,6 +27,7 @@ interface MainServiceItemsType {
   icon: string;
   title: string;
   description: string;
+  link: string;
 }
 
 interface ServiceType {
@@ -201,6 +202,19 @@ interface ProposalType {
   price: string;
   features: string[];
 }
+
+interface UserType {
+  _id?: string | number;
+  fullName: string;
+  email: string;
+  whatsappNumber: string;
+  service: string;
+  username: string;
+  notes?: string;
+  status: string;
+  address?: string;
+}
+
 export type {
   BlogType,
   BonusItem,
@@ -230,4 +244,5 @@ export type {
   ServicesListType,
   ServiceType,
   VoucherDetailsType,
+  UserType,
 };

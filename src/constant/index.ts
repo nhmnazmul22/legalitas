@@ -237,24 +237,28 @@ const mainServiceItems: MainServiceItemsType[] = [
     title: "22 year Melayani",
     description: "Sejak year 2002 kami telah memberikan layanan legalitas.",
     icon: "/images/main-service-icon-01.png",
+    link: "/tentang",
   },
   {
     id: 2,
     title: "Pendekatan Hukum",
     description: "Kami bekerja berdasarkan dasar hukum dan aspek legalitas.",
     icon: "/images/main-service-icon-02.png",
+    link: "/database-peraturan",
   },
   {
     id: 3,
     title: "Seluruh Indonesia",
     description: "Jangkauan layanan legalitas paling luas - seluruh Indonesia.",
     icon: "/images/main-service-icon-03.png",
+    link: "/kontak",
   },
   {
     id: 4,
     title: "Rekanan & Partnership",
     description: "Kami bekerjasama dengan penyedia virtual office terbaik.",
     icon: "/images/main-service-icon-04.png",
+    link: "/kontak",
   },
 ];
 

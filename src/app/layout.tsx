@@ -12,9 +12,9 @@ const poppinsSans = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "MITRA JASA LEGALITAS REV",
+  title: "Mitra Jasa Legalitas Rev",
   description:
-    "Legalitas sejak tahun 2002 memberikan layanan legalitas dan menyediakan 55.000++ database peraturan di Indonesia yang bisa di download dalam format PDF.",
+    "Konsultan Jasa Pengurusan Legalitas Terbaik dan Anti Ribet – Layanan Legalitas Usaha Anda",
 };
 
 export default function RootLayout({

@@ -77,9 +77,8 @@ export default async function ServiceDetailsPage() {
             </div>
             <BottomServiceSection />
           </div>
-          <div className="w-full lg:max-w-md secondary-hero-banner shadow p-[3px] rounded-md sticky top-[10%]">
-            <Voucher voucherDetails={voucherDetails} />
-          </div>
+
+          <Voucher voucherDetails={voucherDetails} />
         </div>
       </div>
       <Separator className="my-10" />

@@ -7,12 +7,30 @@ import {
 } from "@/components/ui/card";
 import { CheckCircle, Clock, FileText, Receipt } from "lucide-react";
 import { Progress } from "../ui/progress";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchUsers } from "@/store/userSlice";
+import type { RootState, AppDispatch } from "@/store";
+import { useSession } from "next-auth/react";
 
 const Dashboard = () => {
+  const { data: session } = useSession();
+
+  const dispatch = useDispatch<AppDispatch>();
+  const { items, loading, error } = useSelector(
+    (state: RootState) => state.user
+  );
+  const { data, status, message } = items;
+  useEffect(() => {
+    if (session?.user.id) {
+      dispatch(fetchUsers(session.user.id!));
+    }
+  }, [dispatch, session]);
+
   return (
     <div className="space-y-6">
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-lg">
-        <h1 className="text-3xl font-bold mb-2">Hi, User</h1>
+        <h1 className="text-3xl font-bold mb-2">Hi, {data && data.fullName}</h1>
         <p className="text-blue-100">
           Selamat datang di dashboard klien Legalitas.org
         </p>
@@ -57,7 +75,7 @@ const Dashboard = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">Status</p>
-                <p className="text-2xl font-bold">Aktif</p>
+                <p className="text-2xl font-bold">{data && data.status}</p>
               </div>
               <CheckCircle className="w-8 h-8 text-green-500" />
             </div>

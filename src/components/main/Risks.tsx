@@ -3,8 +3,15 @@ import { Badge } from "@/components/ui/badge";
 import { riskTags } from "@/constant";
 import FilterOptions from "./FilterOptions";
 import RiskTable from "./RiskTable";
-import TablePagination from "./TablePagination";
-
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 type RisksType = {
   children?: React.ReactNode;
 };
@@ -37,7 +44,31 @@ const Risks: React.FC<RisksType> = ({ children }) => {
           <div className="">
             <FilterOptions option={["10"]} />
             <RiskTable />
-            <TablePagination />
+            <Pagination className="mt-10">
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious href="/kbli" />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="/kbli">1</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="/kbli">2</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="/kbli">3</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="/kbli">4</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationNext href="/kbli" />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
           </div>
         </div>
       </div>

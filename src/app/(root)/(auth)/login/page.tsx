@@ -9,21 +9,32 @@ import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function LoginPage() {
   const [username, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
   const searchParams = useSearchParams();
   const error = searchParams.get("error");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const res = await signIn("credentials", {
-      username,
-      password,
-      redirect: true,
-      callbackUrl: "/client-dashboard",
-    });
+    setLoading(true);
+    try {
+      const res = await signIn("credentials", {
+        username,
+        password,
+        redirect: true,
+        callbackUrl: "/client-dashboard",
+      });
+      toast.success("Login successful");
+    } catch (err: any) {
+      toast.error("Login Failed");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -67,7 +78,11 @@ export default function LoginPage() {
                     className="text-base"
                   />
                 </div>
-                <Button type="submit" className="btn-gradient">
+                <Button
+                  type="submit"
+                  className="btn-gradient"
+                  disabled={loading}
+                >
                   Log in{" "}
                 </Button>
               </form>
@@ -87,7 +102,7 @@ export default function LoginPage() {
                   <li>
                     Salin atau tulis sendiri kredensial login dan gunakan untuk
                     masuk
-                  </li> 
+                  </li>
                 </ul>
               </div>
               <Separator className="my-4 bg-secondary-blue/20" />

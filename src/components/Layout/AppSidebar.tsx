@@ -37,9 +37,8 @@ export default function AppSidebar() {
           />
         </Link>
         <p className="mt-2 text-sm text-muted-foreground leading-[25px]">
-          Legalitas.org sejak tahun 2002 memberikan layanan legalitas dan
-          menyediakan 55.000++ database peraturan di Indonesia yang bisa di
-          download dalam format PDF.
+          Konsultan Jasa Pengurusan Legalitas Terbaik dan Anti Ribet – Layanan
+          Legalitas Usaha Anda
         </p>
         <div className="mt-2 flex flex-col gap-2">
           <p className="text-sm text-muted-foreground flex gap-2 items-center">
