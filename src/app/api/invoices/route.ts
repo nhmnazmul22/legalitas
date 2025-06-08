@@ -1,5 +1,4 @@
 import { dbConnect } from "@/lib/config/db";
-import BankModel from "@/lib/models/BankModel";
 import InvoiceModel from "@/lib/models/InvoiceModel";
 import { getCorsHeaders, generateInvoiceNumber } from "@/lib/utils";
 import { NextResponse } from "next/server";
