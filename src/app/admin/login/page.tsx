@@ -17,7 +17,7 @@ export default function AdminLoginPage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true); // start loading
+    setIsLoading(true);
     setError("");
 
     const res = await signIn("credentials", {
@@ -27,8 +27,12 @@ export default function AdminLoginPage() {
     });
 
     if (res?.error) {
-      setError("Email atau password salah.");
-      setIsLoading(false); // stop loading on error
+      if (res.error.toLowerCase().includes("too many")) {
+        setError("Terlalu banyak percobaan login. Coba lagi nanti.");
+      } else {
+        setError("Email atau password salah.");
+      }
+      setIsLoading(false);
     } else {
       router.push("/admin");
     }
