@@ -1,6 +1,6 @@
 import { ServiceType } from "@/types";
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import api from "@/lib/axios";
+import api from "@/lib/config/axios";
 
 interface ServiceState {
   items: {

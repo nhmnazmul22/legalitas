@@ -223,6 +223,94 @@ interface UserType {
   address?: string;
 }
 
+export interface ServiceType2 {
+  id: string;
+  name: string;
+}
+
+export interface UserType2 {
+  _id?: string | number;
+  fullName: string;
+  email: string;
+  whatsappNumber: string;
+  service: string;
+  username: string;
+  notes?: string;
+  status: string;
+  address?: string;
+  createdAt?: string;
+}
+
+export interface RequestedProposal {
+  _id?: string | number;
+  id?: string | number;
+  clientName: string;
+  clientEmail: string;
+  clientWhatsAppNumber: string;
+  voucherCode?: string | null;
+  status: string;
+  createdAt?: string;
+  updatedAt?: string;
+  proposalDetails: {
+    _id: string;
+    category: string;
+    name: string;
+    price: string;
+    features: string[];
+  };
+}
+
+export interface CommentType {
+  name: string;
+  email: string;
+  website?: string; // optional
+  comment: string;
+}
+
+export interface BlogType2 {
+  _id?: string;
+  title?: string;
+  thumbnail?: string;
+  shortDes?: string;
+  content?: string;
+  tags?: string[];
+  category?: string;
+  authorId?: string;
+  comments?: CommentType[];
+  createdAt?: string;
+}
+
+export interface RuleType {
+  _id?: string;
+  no: number | string;
+  ruleCode: string;
+  rule: string;
+  description: string;
+}
+
+export interface AdminType {
+  authorName?: string;
+  bio?: string;
+  email?: string;
+  currentPassword?: string;
+  password?: string;
+  phone?: string;
+  like?: string;
+  profileImg?: string;
+  socialLinks?: {
+    facebookLink?: string;
+    twitterLink?: string;
+    instagramLink?: string;
+  };
+}
+
+export interface BankInfo {
+  bankName?: string;
+  accountNo?: string;
+  accountHolder?: string;
+  address?: string;
+}
+
 export type {
   BlogType,
   BonusItem,

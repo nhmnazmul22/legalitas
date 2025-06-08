@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { ProposalType } from "@/types";
-import axiosInstance from "@/lib/axios"; // ✅ instance use
+import axiosInstance from "@/lib/config/axios"; // ✅ instance use
 import { toast } from "sonner";
 
 type ProposalFormDialogType = {
@@ -32,19 +32,18 @@ const ProposalFormDialog: React.FC<ProposalFormDialogType> = ({
   const [voucherCode, setVoucherCode] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
 
-
-  const resetValues = ()=>{
-    setDialogOpen(false)
-    setClientName("")
-    setClientEmail("")
-    setClientWhatsAppNumber("")
-    setVoucherCode("")
-  }
+  const resetValues = () => {
+    setDialogOpen(false);
+    setClientName("");
+    setClientEmail("");
+    setClientWhatsAppNumber("");
+    setVoucherCode("");
+  };
 
   const handleSubmit = async () => {
     if (!clientName || !clientEmail || !clientWhatsAppNumber) {
       toast.error("Harap isi semua bidang yang wajib diisi.");
-      resetValues()
+      resetValues();
       return;
     }
 
@@ -55,7 +54,6 @@ const ProposalFormDialog: React.FC<ProposalFormDialogType> = ({
         clientWhatsAppNumber,
         proposalId: proposal.id,
       };
-      console.log(requestBody)
       if (voucherCode.trim() !== "") {
         requestBody.voucherCode = voucherCode.trim();
       }
@@ -64,13 +62,12 @@ const ProposalFormDialog: React.FC<ProposalFormDialogType> = ({
         "/api/proposals/request-proposal",
         requestBody
       );
-      
+
       toast.success("Permintaan proposal berhasil dikirim!");
-      resetValues()
-  
+      resetValues();
     } catch (error: any) {
       toast.error("Terjadi kesalahan saat mengirim permintaan.");
-      resetValues()
+      resetValues();
       console.error(error);
     }
   };

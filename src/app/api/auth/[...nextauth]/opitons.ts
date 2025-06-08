@@ -1,11 +1,58 @@
-import api from "@/lib/axios";
+import api from "@/lib/config/axios";
+import { AdminType } from "@/types";
 import { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import bcrypt from "bcrypt";
 
+interface Admin {
+  status: string;
+  data: AdminType;
+}
 export const authOptions: AuthOptions = {
   providers: [
+    // Admin Authentication
     CredentialsProvider({
-      name: "Credentials",
+      name: "Admin Login",
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials?.password) {
+          return null;
+        }
+
+        try {
+          const response = await api.get<Admin>(
+            `/api/author/${credentials.email}`
+          );
+
+          const admin = response.data.data;
+          const isPassword = await bcrypt.compare(
+            credentials?.password,
+            admin.password!
+          );
+
+          if (credentials.email === admin.email && isPassword) {
+            return {
+              id: "admin",
+              name: "Admin",
+              email: admin.email,
+              role: "admin",
+            };
+          }
+
+          return null;
+        } catch (error) {
+          // Handle fetch error or admin not found
+          return null;
+        }
+      },
+    }),
+
+    // Client authentication
+    CredentialsProvider({
+      name: "Client Login",
       credentials: {
         username: { label: "Username", type: "text" },
         password: { label: "Password", type: "password" },
@@ -24,7 +71,7 @@ export const authOptions: AuthOptions = {
           const { user } = response.data;
 
           if (user) {
-            return user;
+            return { ...user, role: "client" };
           }
           return null;
         } catch (error) {
@@ -40,9 +87,13 @@ export const authOptions: AuthOptions = {
       if (user) {
         token.id = user.id;
         token.email = user.email;
-        token.username = user.username;
-        token.status = user.status;
+        token.role = user.role;
+        if (user.role == "client") {
+          token.username = user.username;
+          token.status = user.status;
+        }
       }
+
       return token;
     },
 
@@ -51,8 +102,11 @@ export const authOptions: AuthOptions = {
         session.user = {
           id: token.id,
           email: token.email,
-          username: token.username,
-          status: token.status,
+          role: token.role,
+          ...(token.role === "client" && {
+            username: token.username,
+            status: token.status,
+          }),
         };
       }
       return session;
