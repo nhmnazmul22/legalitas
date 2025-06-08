@@ -9,6 +9,9 @@ interface Admin {
   status: string;
   data: AdminType;
 }
+
+const isProd = process.env.NODE_ENV === "production";
+
 export const authOptions: AuthOptions = {
   providers: [
     // Client authentication
@@ -135,6 +138,19 @@ export const authOptions: AuthOptions = {
         };
       }
       return session;
+    },
+  },
+  cookies: {
+    sessionToken: {
+      name: isProd
+        ? "__Secure-next-auth.session-token"
+        : "next-auth.session-token",
+      options: {
+        httpOnly: true,
+        sameSite: "lax",
+        path: "/",
+        secure: isProd, // Only true in production (HTTPS)
+      },
     },
   },
   pages: {

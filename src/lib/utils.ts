@@ -65,3 +65,8 @@ export function truncateText(text: string, maxLength: number) {
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength) + "...";
 }
+
+export function generateInvoiceNumber() {
+  const randomNum = Math.floor(Math.random() * 90000) + 10000;
+  return `INV-${randomNum}`;
+}

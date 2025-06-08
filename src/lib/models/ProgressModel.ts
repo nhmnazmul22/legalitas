@@ -1,4 +1,3 @@
-/*
 // Import Mongoose
 import mongoose, { Document, Model, ObjectId, Schema } from "mongoose";
 
@@ -17,20 +16,18 @@ export interface Invoice extends Document {
 // Define the schema
 const DataSchema: Schema<Invoice> = new mongoose.Schema(
   {
-    service: { type: String, required: true },
-    invNo: { type: String, required: true },
-    amount: { type: String, required: true },
-    dueDate: { type: Date, required: true },
+    serviceType: { type: String, required: true },
+    firstStep: { type: String, required: true },
+    currentStep: { type: String, required: true },
+    initialNotes: { type: String },
+    progress: { type: String, required: true },
+    notificationMethods: { type: String },
     status: {
       type: String,
-      enum: ["pending", "paid", "rejected"],
-      default: "pending",
+      enum: ["reviews", "completed", "rejected"],
+      default: "reviews",
     },
     clientId: {
-      type: mongoose.Types.ObjectId,
-      required: true,
-    },
-    paymentId: {
       type: mongoose.Types.ObjectId,
       required: true,
     },
@@ -44,4 +41,3 @@ const InvoiceModel: Model<Invoice> =
 
 // Export the model
 export default InvoiceModel;
-*/

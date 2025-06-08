@@ -18,6 +18,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Eye, Plus, Send, Download } from "lucide-react"
 
 export default function InvoicesPage() {
+  
   const invoices = [
     {
       id: "INV-001",
