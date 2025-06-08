@@ -1,5 +1,6 @@
 import { dbConnect } from "@/lib/config/db";
 import UserModel from "@/lib/models/UserModel";
+import rateLimiter from "@/lib/ratelimiter";
 import { getCorsHeaders } from "@/lib/utils";
 import bcrypt from "bcrypt";
 import { NextResponse } from "next/server";
@@ -22,22 +23,7 @@ export async function OPTIONS(request: Request) {
 // Login the users
 export async function POST(request: Request) {
   const headers = getCorsHeaders(request);
-  const ip = request.headers.get("x-forwarded-for")?.split(",")[0] || "unknown";
 
-  try {
-    await rate.consume(ip); // Try to consume a point for this IP
-  } catch (rateLimiterRes) {
-    return NextResponse.json(
-      {
-        status: "Too Many Requests",
-        message: "Too many login attempts. Please try again later.",
-      },
-      {
-        status: 429,
-        headers,
-      }
-    );
-  }
   try {
     const { username, password } = await request.json();
 

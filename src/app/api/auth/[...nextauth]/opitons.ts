@@ -3,6 +3,7 @@ import { AdminType } from "@/types";
 import { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
+import rateLimiter from "@/lib/ratelimiter";
 
 interface Admin {
   status: string;
@@ -17,7 +18,19 @@ export const authOptions: AuthOptions = {
         email: { label: "Email", type: "text" },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials) {
+      async authorize(credentials, req) {
+        if (!credentials?.email || !credentials?.password) {
+          return null;
+        }
+        const ip =
+          (req && req.headers && req.headers["x-forwarded-for"]) || "admin";
+
+        try {
+          await rateLimiter.consume(ip.toString());
+        } catch {
+          throw new Error("Too many login attempts. Please try again later.");
+        }
+
         if (!credentials?.email || !credentials?.password) {
           return null;
         }
@@ -57,11 +70,18 @@ export const authOptions: AuthOptions = {
         username: { label: "Username", type: "text" },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials) {
+      async authorize(credentials, req) {
         if (!credentials?.username || !credentials?.password) {
           throw new Error("Username and password are required");
         }
+        const ip =
+          (req && req.headers && req.headers["x-forwarded-for"]) || "admin";
 
+        try {
+          await rateLimiter.consume(ip.toString());
+        } catch {
+          throw new Error("Too many login attempts. Please try again later.");
+        }
         try {
           const response = await api.post("/api/users/login-user", {
             username: credentials.username,
