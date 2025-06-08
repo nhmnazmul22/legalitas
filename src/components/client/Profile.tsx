@@ -18,7 +18,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "@/store/userSlice";
 import type { RootState, AppDispatch } from "@/store";
-import api from "@/lib/axios";
+import api from "@/lib/config/axios";
 import { toast } from "sonner";
 const Profile = () => {
   const [fullName, setFullName] = useState("");
