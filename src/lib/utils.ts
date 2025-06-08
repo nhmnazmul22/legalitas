@@ -42,7 +42,7 @@ const allowedOrigins = [
   "http://localhost:3001",
   "https://legalitas.vercel.app",
   "http://202.74.74.123",
-  "http://mitrajasalegalitas.co.id/",
+  "https://mitrajasalegalitas.co.id/",
 ];
 
 export function getCorsHeaders(request: Request) {

@@ -22,16 +22,15 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await signIn("credentials", {
+      const res = await signIn("clientLogin", {
         username,
         password,
         redirect: true,
         callbackUrl: "/client-dashboard",
       });
-      toast.success("Login successful");
     } catch (err: any) {
-      toast.error("Login Failed");
       console.error(err);
+      toast.error("Login failed");
     } finally {
       setLoading(false);
     }

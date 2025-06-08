@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Loader2 } from "lucide-react"; // spinner icon
+import { toast } from "sonner";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -20,21 +21,18 @@ export default function AdminLoginPage() {
     setIsLoading(true);
     setError("");
 
-    const res = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
-
-    if (res?.error) {
-      if (res.error.toLowerCase().includes("too many")) {
-        setError("Terlalu banyak percobaan login. Coba lagi nanti.");
-      } else {
-        setError("Email atau password salah.");
-      }
+    try {
+      const res = await signIn("adminLogin", {
+        email,
+        password,
+        redirect: true,
+        callbackUrl: "/admin",
+      });
+    } catch (err: any) {
+      console.error(err);
+      toast.error("Failed login");
+    } finally {
       setIsLoading(false);
-    } else {
-      router.push("/admin");
     }
   };
 

@@ -35,7 +35,7 @@ export async function middleware(request: NextRequest) {
 
   // ✅ Client section
   if (isClientRoute) {
-    if (!token || token.role !== "user") {
+    if (!token || token.role !== "client") {
       const userLoginUrl = new URL("/login", request.url);
       return NextResponse.redirect(userLoginUrl);
     }
