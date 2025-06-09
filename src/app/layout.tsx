@@ -24,6 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta
+        name="google-site-verification"
+        content="13Q6iYu32M-5WA8XOH_y4mlBmHqa1GuaIdJ6wW_3Mjw"
+      />
       <body
         className={`${poppinsSans.className} antialiased overflow-x-hidden bg-slate-50 w-full`}
       >
