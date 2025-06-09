@@ -222,6 +222,10 @@ interface UserType {
   status: string;
   address?: string;
 }
+export interface ServiceType2 {
+  id: string;
+  name: string;
+}
 
 export type {
   BlogType,
