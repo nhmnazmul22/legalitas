@@ -7,32 +7,31 @@ import { Separator } from "@/components/ui/separator";
 import { CircleAlert } from "lucide-react";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { toast } from "sonner";
 
 export default function LoginPage() {
   const [username, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-  const searchParams = useSearchParams();
-  const error = searchParams.get("error");
+  const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const res = await signIn("clientLogin", {
-        username,
-        password,
-        redirect: true,
-        callbackUrl: "/client-dashboard",
-      });
-    } catch (err: any) {
-      console.error(err);
-      toast.error("Login failed");
-    } finally {
+
+    const res = await signIn("credentials", {
+      username,
+      password,
+      redirect: false,
+    });
+    if (res?.error) {
+      setError("CredentialsSignin");
       setLoading(false);
+    } else {
+      setLoading(false);
+      router.push("/client-dashboard");
     }
   };
 
