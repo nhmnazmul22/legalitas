@@ -24,7 +24,8 @@ export default function LoginPage() {
     const res = await signIn("credentials", {
       username,
       password,
-      redirect: false,
+      redirect: true,
+      callbackUrl: "/client-dashboard",
     });
     if (res?.error) {
       setError("CredentialsSignin");
