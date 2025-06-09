@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Trust the proxy headers (important for HTTPS detection behind NGINX)
+  trustHost: true,
 };
 
 export default nextConfig;

@@ -24,16 +24,16 @@ export default function LoginPage() {
     const res = await signIn("credentials", {
       username,
       password,
-      redirect: true,
-      callbackUrl: "/client-dashboard",
+      redirect: false,
     });
+
     if (res?.error) {
       setError("CredentialsSignin");
-      setLoading(false);
-    } else {
-      setLoading(false);
-      router.push("/client-dashboard");
+    } else if (res?.url) {
+      router.push(res.url);
     }
+
+    setLoading(false);
   };
 
   return (
