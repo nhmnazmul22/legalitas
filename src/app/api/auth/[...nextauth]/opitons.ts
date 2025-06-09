@@ -30,7 +30,7 @@ export const authOptions: AuthOptions = {
         }
 
         try {
-          const response = await api.post("/api/users/login-user", {
+          const response = await api.post("/users/login-user", {
             username: credentials.username,
             password: credentials.password,
           });

@@ -25,6 +25,7 @@ export default function LoginPage() {
       username,
       password,
       redirect: false,
+      callbackUrl: "/client-dashboard",
     });
 
     if (res?.error) {
