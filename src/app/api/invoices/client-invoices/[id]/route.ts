@@ -1,6 +1,8 @@
 import { dbConnect } from "@/lib/config/db";
 import InvoiceModel from "@/lib/models/InvoiceModel";
+import UserModel from "@/lib/models/UserModel";
 import { getCorsHeaders, generateInvoiceNumber } from "@/lib/utils";
+import mongoose, { Mongoose } from "mongoose";
 import { NextResponse } from "next/server";
 
 // Load Database
@@ -10,17 +12,19 @@ const LoadDataBase = () => {
 
 LoadDataBase();
 
-export const POST = async (request: Request) => {
+export const GET = async (
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) => {
   const headers = getCorsHeaders(request);
   try {
-    const body = await request.json();
-    const { service, amount, dueDate, clientId, paymentId } = body;
+    const { id: clientId } = await params;
 
-    if (!service || !amount || !dueDate || !clientId || !paymentId) {
+    if (!clientId) {
       return NextResponse.json(
         {
           status: "Failed",
-          message: "Missing required fields",
+          message: "Valid client not found",
         },
         {
           status: 400,
@@ -29,50 +33,8 @@ export const POST = async (request: Request) => {
       );
     }
 
-    let generateInvNo = generateInvoiceNumber();
-
-    const prevInvoice = await InvoiceModel.findOne({ invNo: generateInvNo });
-
-    if (prevInvoice) {
-      generateInvoiceNumber();
-      return NextResponse.json(
-        {
-          status: "Failed",
-          message: "A invoice here in database with this invoice no.",
-        },
-        {
-          status: 400,
-          headers: headers,
-        }
-      );
-    }
-
-    const invoiceInfo = await InvoiceModel.create({
-      ...body,
-      invNo: generateInvNo,
-    });
-    return NextResponse.json(
-      { status: "Successful", data: invoiceInfo },
-      {
-        status: 201,
-        headers: headers,
-      }
-    );
-  } catch (err: any) {
-    return NextResponse.json(
-      { status: "Failed", message: err.toString() },
-      {
-        status: 500,
-        headers: headers,
-      }
-    );
-  }
-};
-
-export const GET = async (request: Request) => {
-  const headers = getCorsHeaders(request);
-  try {
     const invoices = await InvoiceModel.aggregate([
+      { $match: { clientId: new mongoose.Types.ObjectId(clientId) } },
       {
         $lookup: {
           from: "users",
@@ -116,6 +78,7 @@ export const GET = async (request: Request) => {
         }
       );
     }
+
     return NextResponse.json(
       {
         status: "Success",

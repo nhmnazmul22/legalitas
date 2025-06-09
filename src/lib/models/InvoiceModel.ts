@@ -19,6 +19,7 @@ const DataSchema: Schema<Invoice> = new mongoose.Schema(
     service: { type: String, required: true },
     invNo: { type: String, required: true },
     amount: { type: String, required: true },
+    description: { type: String, required: true },
     dueDate: { type: Date, required: true },
     status: {
       type: String,
