@@ -21,7 +21,7 @@ const initialState: ServiceState = {
 };
 
 export const fetchService = createAsyncThunk<ServiceType[]>(
-  "posts/fetchPosts",
+  "services/fetchServices",
   async () => {
     const response = await api.get<{ status: string; data: ServiceType[] }>(
       "/api/service"
@@ -30,7 +30,7 @@ export const fetchService = createAsyncThunk<ServiceType[]>(
   }
 );
 
-const postsSlice = createSlice({
+const serviceSlice = createSlice({
   name: "posts",
   initialState,
   reducers: {},
@@ -54,4 +54,4 @@ const postsSlice = createSlice({
   },
 });
 
-export default postsSlice.reducer;
+export default serviceSlice.reducer;

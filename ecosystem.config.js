@@ -15,7 +15,7 @@ module.exports = {
         NEXTAUTH_URL: "https://mitrajasalegalitas.co.id",
         NEXTAUTH_SECRET:
           "fb7c0e397aa23dcb2ddc9132387f4c0fd456feebfba684eab8a902d007cb3521",
-        NEXT_PUBLIC_API_BASE_URL: "/api",
+        NEXT_PUBLIC_API_BASE_URL: "http://localhost:3001",
         PORT: 3000,
       },
     },
