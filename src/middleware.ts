@@ -10,19 +10,26 @@ export async function middleware(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
-  const isPublicFile =
-    pathname.startsWith("/_next/") || pathname === "/favicon.ico";
+  // Allow these paths without auth
+  const isPublicPath =
+    pathname === "/login" ||
+    pathname.startsWith("/_next/") ||
+    pathname.startsWith("/public/") ||
+    pathname === "/favicon.ico";
 
-  const isLoginPage = pathname === "/login";
+  // Redirect unauthenticated users trying to access private pages
+  if (!token && !isPublicPath) {
+    return NextResponse.redirect(new URL("/login", request.url));
+  }
 
-  if (!token && !isLoginPage && !isPublicFile) {
-    const loginUrl = new URL("/login", request.url);
-    return NextResponse.redirect(loginUrl);
+  // Redirect authenticated users away from login page
+  if (token && pathname === "/login") {
+    return NextResponse.redirect(new URL("/", request.url));
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/client-dashboard"],
 };
