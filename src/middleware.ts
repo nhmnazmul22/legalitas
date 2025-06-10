@@ -5,26 +5,33 @@ import type { NextRequest } from "next/server";
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // ⚠️ Skip API routes and _next/static/ or _next/image/ etc.
+  if (
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/static")
+  ) {
+    return NextResponse.next();
+  }
+
   const token = await getToken({
     req: request,
     secret: process.env.NEXTAUTH_SECRET,
   });
 
-  // Only protect /client-dashboard
-  if (pathname === "/client-dashboard") {
-    if (!token) {
-      return NextResponse.redirect(new URL("/login", request.url));
-    }
+  // 🔐 Protect /client-dashboard
+  if (pathname.startsWith("/client-dashboard") && !token) {
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 
-  // If logged in, prevent access to /login
+  // 🚫 Prevent access to /login if already logged in
   if (token && pathname === "/login") {
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(new URL("/client-dashboard", request.url));
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/client-dashboard", "/login"],
+  matcher: ["/((?!api|_next|static).*)"], // ignore all static/api routes
 };
