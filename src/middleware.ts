@@ -5,27 +5,19 @@ import type { NextRequest } from "next/server";
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  const isAuthRoute = pathname.startsWith("/api/auth/");
-  const isPublicPath =
-    pathname === "/login" ||
-    pathname.startsWith("/_next/") ||
-    pathname.startsWith("/public/") ||
-    pathname === "/favicon.ico";
-
-  // Skip middleware for NextAuth routes
-  if (isAuthRoute) {
-    return NextResponse.next();
-  }
-
   const token = await getToken({
     req: request,
     secret: process.env.NEXTAUTH_SECRET,
   });
 
-  if (!token && !isPublicPath) {
-    return NextResponse.redirect(new URL("/login", request.url));
+  // Only protect /client-dashboard
+  if (pathname === "/client-dashboard") {
+    if (!token) {
+      return NextResponse.redirect(new URL("/login", request.url));
+    }
   }
 
+  // If logged in, prevent access to /login
   if (token && pathname === "/login") {
     return NextResponse.redirect(new URL("/", request.url));
   }
@@ -34,5 +26,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api/auth|favicon.ico).*)"],
+  matcher: ["/client-dashboard", "/login"],
 };
