@@ -25,7 +25,15 @@ const ProposalCard: React.FC<ProposalCardType> = ({ prop }) => {
       setLoading(true);
       const res = await api.post(
         `/api/proposals/generate-pdf/${prop._id}`,
-        prop,
+        {
+          title: prop.proposalTitle,
+          price: prop.proposalPrice,
+          date: formatDate(prop.createdAt!),
+          status: prop.status,
+          details: prop.proposalDetails.features,
+          includes: prop.includes,
+          note: prop.proposalContent,
+        },
         { responseType: "blob" }
       );
       if (res.status === 200) {
