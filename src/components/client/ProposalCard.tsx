@@ -1,6 +1,7 @@
 import { formatDate } from "@/lib/utils";
-import { ProposalType, SendProposalType } from "@/types";
+import { SendProposalType } from "@/types";
 import React, { useState } from "react";
+import axios from "axios";
 import {
   Card,
   CardContent,
@@ -10,8 +11,7 @@ import {
 } from "@/components/ui/card";
 import { CheckCircle, Download } from "lucide-react";
 import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
-import api from "@/lib/config/axios";
+import { Button } from "../ui/button";;
 import { toast } from "sonner";
 type ProposalCardType = {
   prop: SendProposalType;
@@ -23,8 +23,8 @@ const ProposalCard: React.FC<ProposalCardType> = ({ prop }) => {
   const downloadPdf = async () => {
     try {
       setLoading(true);
-      const res = await api.post(
-        `/api/proposals/generate-pdf/${prop._id}`,
+      const res = await axios.post(
+        `/api/proposal-pdf/${prop._id}`,
         {
           title: prop.proposalTitle,
           price: prop.proposalPrice,
