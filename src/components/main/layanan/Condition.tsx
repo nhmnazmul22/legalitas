@@ -36,10 +36,12 @@ const Condition: React.FC<ConditionProps> = ({
           <div className="h-fit">
             <Heading text="Blog PT Perorangan" />
             <BlogCard
-              thumbnail="/images/blog-1.png"
-              title="Panduan Lengkap PT Perorangan"
-              link="/"
-              shortDes="Dalam istilah hukum perkawinan terdapat istilah Perjanjian Pra Nikah"
+              blog={{
+                thumbnail: "/images/blog-1.png",
+                title: "Panduan Lengkap PT Perorangan",
+                shortDes:
+                  "Dalam istilah hukum perkawinan terdapat istilah Perjanjian Pra Nikah",
+              }}
             />
           </div>
         )}
