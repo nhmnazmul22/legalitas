@@ -41,7 +41,7 @@ export const formatDate = (date: string) => {
 const allowedOrigins = [
   "http://localhost:3001",
   "https://legalitas.vercel.app",
-  "http://202.74.74.123",
+  "https://202.74.74.123",
   "https://mitrajasalegalitas.co.id/",
 ];
 
@@ -65,4 +65,3 @@ export function truncateText(text: string, maxLength: number) {
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength) + "...";
 }
-
