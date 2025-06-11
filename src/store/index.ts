@@ -6,6 +6,9 @@ import ruleReducer from "@/store/ruleSlice";
 import PaginationReducer from "@/store/paginationSlice";
 import BlogReducer from "@/store/BlogSlice";
 import BlogReducerById from "@/store/BlogByIdSlice";
+import InvoiceReducer from "@/store/InvoiceSlice";
+import ProposalReducer from "@/store/ProposalSlice";
+import WorkProgressReducer from "@/store/WorkProgressSlice";
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +19,9 @@ export const store = configureStore({
     pagination: PaginationReducer,
     blogs: BlogReducer,
     singleBlog: BlogReducerById,
+    invoices: InvoiceReducer,
+    proposals: ProposalReducer,
+    workProgresses: WorkProgressReducer,
   },
 });
 

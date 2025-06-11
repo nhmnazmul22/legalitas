@@ -255,6 +255,63 @@ interface BlogType {
   updatedAt?: string;
 }
 
+interface SendProposalType {
+  _id?: string | number;
+  proposalTitle: string;
+  proposalContent: string;
+  proposalPrice: string;
+  includes: string[];
+  status: string;
+  proposalDetails: ProposalType;
+  clientDetails: UserType;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+interface BankInfo {
+  _id?: string | number;
+  bankName?: string;
+  accountNo?: string;
+  accountHolder?: string;
+  address?: string;
+}
+
+interface InvoiceType {
+  _id?: string | number;
+  service?: string;
+  invNo?: string;
+  amount?: string;
+  dueDate?: string;
+  description?: string;
+  status?: string;
+  bankDetails?: BankInfo;
+  clientDetails?: UserType;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+interface ProgressType {
+  _id?: string;
+  serviceType: string;
+  currentStep: {
+    _id?: string;
+    title: string;
+    status: string;
+  };
+  initialNotes?: string;
+  progressPercent: string;
+  notificationMethods?: string;
+  progressSteps?: {
+    _id?: string;
+    title: string;
+    status: string;
+  }[];
+  status: string;
+  clientDetails?: UserType;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
 export type {
   BlogType,
   BonusItem,
@@ -286,4 +343,7 @@ export type {
   VoucherDetailsType,
   UserType,
   RuleTableContentsType,
+  SendProposalType,
+  InvoiceType,
+  ProgressType,
 };
