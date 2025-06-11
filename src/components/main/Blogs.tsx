@@ -1,50 +1,31 @@
-import { BlogType } from "@/types";
+"use client";
+
 import MainButton from "../common/MainButton";
 import SectionHeading from "../common/SectionHeading";
 import BlogCard from "./BlogCard";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBlogs } from "@/store/BlogSlice";
+import { AppDispatch, RootState } from "@/store";
 
 const Blogs = () => {
-  const blogs: BlogType[] = [
-    {
-      id: "b-1",
-      thumbnail: "/images/blog-1.png",
-      title: "Cara Verifikasi KBLI Industri OSS: Panduan Lengkap",
-      shortDes:
-        "KBLI (Klasifikasi Baku Lapangan Usaha Indonesia) merupakan instrumen vital dalam perizinan usaha industri di Indonesia.",
-      link: "/",
-    },
-    {
-      id: "b-2",
-      thumbnail: "/images/blog-2.png",
-      title: "Cara Verifikasi KBLI Industri OSS: Panduan Lengkap",
-      shortDes:
-        "KBLI (Klasifikasi Baku Lapangan Usaha Indonesia) merupakan instrumen vital dalam perizinan usaha industri di Indonesia.",
-      link: "/",
-    },
-    {
-      id: "b-3",
-      thumbnail: "/images/blog-3.png",
-      title: "Cara Verifikasi KBLI Industri OSS: Panduan Lengkap",
-      shortDes:
-        "KBLI (Klasifikasi Baku Lapangan Usaha Indonesia) merupakan instrumen vital dalam perizinan usaha industri di Indonesia.",
-      link: "/",
-    },
-  ];
+  const dispatch = useDispatch<AppDispatch>();
+  const { data: blogs } = useSelector((state: RootState) => state.blogs.items);
+
+  useEffect(() => {
+    dispatch(fetchBlogs());
+  }, []);
 
   return (
     <section className="py-15 bg-primary/10">
       <div className="container">
         <SectionHeading badgeText="artikel" title="Tulisan Kami" />
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {blogs.map((blog) => (
-            <BlogCard
-              key={blog.id}
-              title={blog.title}
-              thumbnail={blog.thumbnail}
-              link={blog.link}
-              shortDes={blog.shortDes}
-            />
-          ))}
+          {blogs.map((blog, index) => {
+            if (index < 3) {
+              return <BlogCard key={blog._id} blog={blog} />;
+            }
+          })}
         </div>
 
         <MainButton

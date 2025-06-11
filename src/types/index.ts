@@ -73,14 +73,6 @@ interface RuleTableContentsType {
   description: string;
 }
 
-interface BlogType {
-  id?: string | number;
-  thumbnail: string;
-  title: string;
-  shortDes: string;
-  link: string;
-}
-
 interface RegulationType {
   id?: string | number;
   name: string;
@@ -225,6 +217,42 @@ interface UserType {
 export interface ServiceType2 {
   id: string;
   name: string;
+}
+
+export interface CommentType {
+  name: string;
+  email: string;
+  website?: string; // optional
+  comment: string;
+}
+interface AdminType {
+  authorName?: string;
+  bio?: string;
+  email?: string;
+  currentPassword?: string;
+  password?: string;
+  phone?: string;
+  like?: string;
+  profileImg?: string;
+  socialLinks?: {
+    facebookLink?: string;
+    twitterLink?: string;
+    instagramLink?: string;
+  };
+}
+
+interface BlogType {
+  _id?: string;
+  title?: string;
+  thumbnail?: string;
+  shortDes?: string;
+  content?: string;
+  tags?: string[];
+  category?: string;
+  authorDetails?: AdminType;
+  comments?: CommentType[];
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export type {

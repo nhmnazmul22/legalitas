@@ -12,13 +12,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
 
-const BlogCard: React.FC<BlogType> = (blog) => {
+type BlogCardType = {
+  blog: BlogType;
+};
+
+const BlogCard: React.FC<BlogCardType> = ({ blog }) => {
   return (
     <Card className="p-6 rounded-md shadow-md border-0 gap-3 hover:scale-[1.02] duration-300">
       <CardHeader className="p-0">
-        <Link href={blog.link}>
+        <Link href={`tulisan/${blog._id}`}>
           <figure className="rounded-md overflow-hidden">
-            <Image src={blog.thumbnail} alt="Blogs" width={560} height={560} />
+            <Image
+              src={blog.thumbnail || "/tulisan"}
+              alt="Blogs"
+              width={560}
+              height={560}
+              unoptimized
+            />
           </figure>
         </Link>
       </CardHeader>
@@ -35,7 +45,7 @@ const BlogCard: React.FC<BlogType> = (blog) => {
       <Separator />
       <CardFooter className="p-0">
         <Link
-          href={blog.link}
+          href={`tulisan/${blog._id}`}
           className="text-secondary-blue font-medium text-base flex gap-2 items-center hover:translate-x-1 hover:underline transition-all duration-300"
         >
           Selengkapnya <ArrowRight size={16} />

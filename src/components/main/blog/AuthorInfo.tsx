@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { BlogType } from "@/types";
 import {
   Facebook,
   Heart,
@@ -9,7 +10,11 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const AuthorInfo = () => {
+type BlogDetailsType = {
+  blog: BlogType;
+};
+
+const AuthorInfo: React.FC<BlogDetailsType> = ({ blog }) => {
   return (
     <div className="my-5">
       <div className="flex gap-3">
@@ -17,11 +22,11 @@ const AuthorInfo = () => {
           <Image src="/images/avater.png" alt="logo" width={300} height={300} />
         </figure>
         <div className="flex-1">
-          <h3 className="text-lg font-semibold">Legalitas.org</h3>
+          <h3 className="text-lg font-semibold">
+            {blog.authorDetails?.authorName}
+          </h3>
           <p className="text-sm text-muted-foreground mt-1 leading-[22px]">
-            Sejak tahun 2002 memberikan layanan legalitas yang terbaik dan
-            profesional. Kirimkan pertanyaan kepada konsultan Legalitas.org di
-            Kontak Kami
+            {blog.authorDetails?.bio}
           </p>
         </div>
       </div>
@@ -33,21 +38,20 @@ const AuthorInfo = () => {
           >
             <Heart className="group-hover:text-white transition-all duration-300" />
           </Button>
-          <p className="text-base font-semibold theme-gradient">2.2k Love</p>
+          <p className="text-base font-semibold theme-gradient">
+            {blog.authorDetails?.like} Love
+          </p>
         </div>
         <div className="flex gap-3">
-          <Link href="/">
+          <Link href={blog.authorDetails?.socialLinks?.facebookLink || ""}>
             {" "}
             <Facebook size={20} className="text-primary cursor-pointer" />
           </Link>
-          <Link href="/">
+          <Link href={blog.authorDetails?.socialLinks?.twitterLink || ""}>
             <Twitter size={20} className="text-primary cursor-pointer" />
           </Link>
-          <Link href="/">
+          <Link href={blog.authorDetails?.socialLinks?.instagramLink || ""}>
             <Instagram size={20} className="text-primary cursor-pointer" />
-          </Link>
-          <Link href="/">
-            <LinkedinIcon size={20} className="text-primary cursor-pointer" />
           </Link>
         </div>
       </div>

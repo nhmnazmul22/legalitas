@@ -4,6 +4,8 @@ import serviceReduce from "@/store/serviceSlice";
 import userReducer from "@/store/userSlice";
 import ruleReducer from "@/store/ruleSlice";
 import PaginationReducer from "@/store/paginationSlice";
+import BlogReducer from "@/store/BlogSlice";
+import BlogReducerById from "@/store/BlogByIdSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +14,8 @@ export const store = configureStore({
     user: userReducer,
     rule: ruleReducer,
     pagination: PaginationReducer,
+    blogs: BlogReducer,
+    singleBlog: BlogReducerById,
   },
 });
 

@@ -1,6 +1,11 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "../ui/badge";
 import ServiceCard from "./ServiceCard";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/store";
+import { useEffect } from "react";
+import { fetchService } from "@/store/serviceSlice";
+import ServiceCardSkeleton from "../skeleton/ServiceCard";
 
 type BottomServiceSectionProps = {
   classNames?: string;
@@ -11,6 +16,13 @@ const BottomServiceSection: React.FC<BottomServiceSectionProps> = ({
   classNames,
   isBadge = true,
 }) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const { data } = useSelector((state: RootState) => state.service.items);
+
+  useEffect(() => {
+    dispatch(fetchService());
+  }, [dispatch]);
+
   return (
     <div className="mt-5">
       {isBadge && (
@@ -28,45 +40,24 @@ const BottomServiceSection: React.FC<BottomServiceSectionProps> = ({
           classNames
         )}
       >
-        <ServiceCard
-          title="Perubahan Akta"
-          price="Rp 5juta"
-          description="Perubahan anggaran dasar / Akta Notaris"
-          features={[
-            "Drafting dokumen",
-            "Persiapan Minuta",
-            "Akta Notaris Perubahan",
-            "SK Persetujuan / SK Pemberitahuan",
-            " Dapat 20 KBLI",
-          ]}
-          link="/"
-        />
-        <ServiceCard
-          title="Perubahan Akta"
-          price="Rp 5juta"
-          description="Perubahan anggaran dasar / Akta Notaris"
-          features={[
-            "Drafting dokumen",
-            "Persiapan Minuta",
-            "Akta Notaris Perubahan",
-            "SK Persetujuan / SK Pemberitahuan",
-            " Dapat 20 KBLI",
-          ]}
-          link="/"
-        />
-        <ServiceCard
-          title="Perubahan Akta"
-          price="Rp 5juta"
-          description="Perubahan anggaran dasar / Akta Notaris"
-          features={[
-            "Drafting dokumen",
-            "Persiapan Minuta",
-            "Akta Notaris Perubahan",
-            "SK Persetujuan / SK Pemberitahuan",
-            " Dapat 20 KBLI",
-          ]}
-          link="/"
-        />
+        {data.length !== 0
+          ? data.map((service, index) => {
+              if (index < 3) {
+                return (
+                  <ServiceCard
+                    key={service._id}
+                    title={service.title}
+                    description={service.description}
+                    features={service.features}
+                    price={service.price}
+                    link={service.link}
+                  />
+                );
+              }
+            })
+          : Array.from({ length: 3 }).map((_item, index) => (
+              <ServiceCardSkeleton key={index} />
+            ))}
       </div>
     </div>
   );

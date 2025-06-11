@@ -1,36 +1,54 @@
-const BlogContents = () => {
-  return (
-    <div className="max-w-[400px] block max-xl:hidden">
-      <h4 className="text-lg font-semibold">Konten Tulisan</h4>
-      <ul className="blog-content flex flex-col gap-1 mt-3 text-sm text-muted-foreground font-normal">
-        <li>Dasar Hukum</li>
-        <li>
-          Penjelasan Umum
-          <ol>
-            <li>1. Pengertian Likuidator Dalam Pembubaran</li>
-            <li>2. Pengertian Kurator Dalam Pembubaran</li>
-          </ol>
-        </li>
-        <li>
-          Tugas dan Tanggung Jawab Likuidator dan Kurator
-          <ol>
-            <li>1. Tugas dan Tanggung Jawab Likuidator</li>
-            <li>2. Tugas dan Tanggung Jawab Kurator</li>
-          </ol>
-        </li>
-        <li>
-          Peran dan Kewenangan Likuidator dan Kurator Dalam Pembubaran
-          <ol>
-            <li>1. Peran dan Kewenangan Likuidator</li>
-            <li>2. Peran dan Kewenangan Kurator</li>
-          </ol>
-        </li>
-        <li>Perbedaan Likuidator dan Kurator dalam Pembubaran</li>
-        <li>Kesimpulan</li>
-        <li>Penutup</li>
-      </ul>
-    </div>
-  );
+import { Circle, CircleCheck } from "lucide-react";
+import { useEffect, useState } from "react";
+
+type Heading = {
+  id: string;
+  text: string;
+  level: number;
 };
+
+function BlogContents() {
+  const [headings, setHeadings] = useState<Heading[]>([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const contentEl = document.querySelector(".blog-details");
+      if (!contentEl) return;
+
+      const elements = Array.from(contentEl.querySelectorAll("h2, h3"));
+      const newHeadings = elements.map((el) => {
+        const text = el.textContent || "";
+        const level = parseInt(el.tagName[1]);
+        const id =
+          el.id ||
+          text
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^\w-]/g, "");
+        el.id = id;
+        return { id, text, level };
+      });
+
+      setHeadings(newHeadings);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <aside className="toc flex-1 max-w-sm sticky top-20 p-4 rounded max-h-[80vh] overflow-y-auto max-lg:hidden">
+      <h2 className="text-lg font-semibold mb-2">Table of Contents</h2>
+      <ul className="space-y-1 text-sm">
+        {headings.map(({ id, text, level }) => (
+          <li key={id} className={`ml-${(level - 1) * 4}`}>
+            <a href={`#${id}`} className="hover:underline flex gap-2">
+              <Circle size={14} /> <span>{text}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+}
 
 export default BlogContents;

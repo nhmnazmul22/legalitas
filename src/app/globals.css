@@ -213,10 +213,36 @@
   gap: 5px;
 }
 
-.blog-details .content-title {
+.blog-details h1 {
   font-size: 34px;
   font-weight: 600;
-  line-height: 70px;
+  line-height: 50px;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.blog-details h2 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 50px;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.blog-details h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.blog-details h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
   border-bottom-width: 2px;
   border-bottom-color: var(--primary);
   margin-bottom: 0.5rem;
