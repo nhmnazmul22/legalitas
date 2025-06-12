@@ -16,7 +16,6 @@ import { fetchInvoices } from "@/store/InvoiceSlice";
 import { fetchWorkProgress } from "@/store/WorkProgressSlice";
 import { fetchProposals } from "@/store/ProposalSlice";
 import { formatDate } from "@/lib/utils";
-import { useCommandState } from "cmdk";
 
 const Dashboard = () => {
   const { data: session } = useSession();
@@ -138,7 +137,7 @@ const Dashboard = () => {
                 </div>
                 <div className="space-y-2">
                   {uncompletedProgress.progressSteps?.map((step, index) => (
-                    <div className="flex items-center gap-2">
+                    <div key={index} className="flex items-center gap-2">
                       <div
                         className={`w-3 h-3 rounded-full ${
                           step.status === "completed"

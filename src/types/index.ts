@@ -312,6 +312,19 @@ interface ProgressType {
   updatedAt?: string;
 }
 
+interface FileType {
+  _id: string | number;
+  fileName: string;
+  fileLink: string;
+  size: string;
+  status: string;
+  clientDetails: UserType;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+
+
 export type {
   BlogType,
   BonusItem,
@@ -346,4 +359,5 @@ export type {
   SendProposalType,
   InvoiceType,
   ProgressType,
+  FileType,
 };

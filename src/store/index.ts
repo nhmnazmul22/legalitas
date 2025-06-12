@@ -9,6 +9,7 @@ import BlogReducerById from "@/store/BlogByIdSlice";
 import InvoiceReducer from "@/store/InvoiceSlice";
 import ProposalReducer from "@/store/ProposalSlice";
 import WorkProgressReducer from "@/store/WorkProgressSlice";
+import FileReducer from "@/store/FileSlice";
 
 export const store = configureStore({
   reducer: {
@@ -22,6 +23,7 @@ export const store = configureStore({
     invoices: InvoiceReducer,
     proposals: ProposalReducer,
     workProgresses: WorkProgressReducer,
+    files: FileReducer,
   },
 });
 

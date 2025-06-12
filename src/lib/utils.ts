@@ -65,3 +65,9 @@ export function truncateText(text: string, maxLength: number) {
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength) + "...";
 }
+
+export function convertMb(bytes: number) {
+  const fileSizeInMB = (bytes / (1024 * 1024)).toFixed(2);
+
+  return `${fileSizeInMB} MB`;
+}
