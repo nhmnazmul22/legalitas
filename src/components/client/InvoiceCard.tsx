@@ -26,7 +26,7 @@ const InvoiceCard: React.FC<InvoiceCardType> = ({ invo }) => {
   const downloadPdf = async () => {
     try {
       setLoading(true);
-      const res = await axios.post(`/api/invoice-pdf/${invo.invNo}`, invo, {
+      const res = await axios.post(`/api/pdf/invoice-pdf/${invo.invNo}`, invo, {
         responseType: "blob",
       });
       if (res.status === 200) {

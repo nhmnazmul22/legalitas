@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { CheckCircle, Download } from "lucide-react";
 import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";;
+import { Button } from "../ui/button";
 import { toast } from "sonner";
 type ProposalCardType = {
   prop: SendProposalType;
@@ -24,7 +24,7 @@ const ProposalCard: React.FC<ProposalCardType> = ({ prop }) => {
     try {
       setLoading(true);
       const res = await axios.post(
-        `/api/proposal-pdf/${prop._id}`,
+        `/api/pdf/proposal-pdf/${prop._id}`,
         {
           title: prop.proposalTitle,
           price: prop.proposalPrice,
