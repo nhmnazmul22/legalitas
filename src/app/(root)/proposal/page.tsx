@@ -8,6 +8,7 @@ import ProposalCard from "@/components/main/proposal/ProposalCard";
 import Link from "next/link";
 import SkeletonCard from "@/components/skeleton/SkeletonCard";
 import FilterOptions from "@/components/main/proposal/FilterOptions";
+import { normalize } from "@/lib/utils";
 
 export default function ProposalPage() {
   const [proposals, setProposals] = useState<ProposalType[]>([]);
@@ -16,7 +17,9 @@ export default function ProposalPage() {
   const searchParams = useSearchParams();
   const pname = searchParams.get("pname")?.toLowerCase() || "";
 
-  const category = useSelector((state: RootState) => state.filter.category);
+  const category: string = useSelector(
+    (state: RootState) => state.filter.category
+  );
 
   useEffect(() => {
     const fetchProposals = async () => {
@@ -25,20 +28,17 @@ export default function ProposalPage() {
           `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/proposals`
         );
         const data = await res.json();
-        const normalize = (str: string) =>
-          str
-            .toLowerCase()
-            .replace(/[^a-z0-9]/gi, " ")
-            .trim();
         const filtered = data.data.filter((proposal: ProposalType) => {
           const matchName = pname
             ? normalize(proposal.name) === normalize(pname)
-            : true;
+            : false;
           const matchCategory = category
-            ? proposal.category.toLowerCase() === category
-            : true;
-          return matchName && matchCategory;
+            ? proposal.category.toLowerCase() === category.toLowerCase()
+            : false;
+         
+          return matchName || matchCategory;
         });
+  
 
         setProposals(filtered);
       } catch (err) {

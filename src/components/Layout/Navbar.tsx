@@ -1,3 +1,5 @@
+"use client";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,8 +16,23 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { SidebarTrigger } from "../ui/sidebar";
+import { useEffect, useState } from "react";
+import api from "@/lib/config/axios";
+import { MenuServices } from "@/types";
 
 const Navbar = () => {
+  const [menuServices, setMenuServices] = useState<MenuServices>();
+
+  const fetchMenuServices = async () => {
+    const res = await api.get("/api/menu-services");
+    const data = res.data.data;
+    setMenuServices(data);
+  };
+
+  useEffect(() => {
+    fetchMenuServices();
+  }, []);
+
   return (
     <nav className="py-3 min-h-[80px] shadow-md flex items-center w-full sticky top-0 bg-white z-10">
       <div className="container flex justify-between items-center gap-2">
@@ -60,43 +77,44 @@ const Navbar = () => {
                      items-center justify-between"
                     >
                       <ul className="grid grid-cols-4 w-4xl gap-5 p-2 text-muted-foreground font-medium">
-                        {item.children.map((child) => {
-                          return (
-                            <div key={child.title}>
-                              <Link
-                                href="/"
-                                className="uppercase text-muted-foreground text-sm font-medium"
-                              >
-                                {child.title}
-                              </Link>
-                              <Separator className="my-2" />
-                              <div className="flex flex-col gap-2 items-start">
-                                {child.children &&
-                                  child.children.map((subChild) => {
-                                    return (
-                                      <Link
-                                        href={
-                                          subChild.link ? subChild.link : "/"
-                                        }
-                                        key={subChild.title}
-                                        className="w-full"
-                                      >
-                                        <Button
-                                          variant="ghost"
-                                          className="text-sm w-full justify-start font-medium hover:text-primary duration-300 whitespace-normal text-left"
+                        {menuServices &&
+                          menuServices.services.map((child) => {
+                            return (
+                              <div key={child.title}>
+                                <Link
+                                  href="/"
+                                  className="uppercase text-muted-foreground text-sm font-medium"
+                                >
+                                  {child.title}
+                                </Link>
+                                <Separator className="my-2" />
+                                <div className="flex flex-col gap-2 items-start">
+                                  {child.children &&
+                                    child.children.map((subChild) => {
+                                      return (
+                                        <Link
+                                          href={
+                                            subChild.link ? subChild.link : "/"
+                                          }
+                                          key={subChild.title}
+                                          className="w-full"
                                         >
-                                          {subChild.title}
-                                        </Button>
-                                      </Link>
-                                    );
-                                  })}
+                                          <Button
+                                            variant="ghost"
+                                            className="text-sm w-full justify-start font-medium hover:text-primary duration-300 whitespace-normal text-left"
+                                          >
+                                            {subChild.title}
+                                          </Button>
+                                        </Link>
+                                      );
+                                    })}
+                                </div>
                               </div>
-                            </div>
-                          );
-                        })}
+                            );
+                          })}
                         <div className="grid grid-cols-1 gap-0">
-                          {menuWithBanner.map((menu) => (
-                            <div key={menu.id} className="relative">
+                          {menuServices?.servicesWithBanner.children.map((menu, index) => (
+                            <div key={index} className="relative">
                               <figure className="h-full">
                                 <Image
                                   src={menu.bannerImg}

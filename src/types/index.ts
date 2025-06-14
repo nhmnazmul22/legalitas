@@ -2,7 +2,7 @@ interface MenuItem {
   id?: string | number;
   title: string;
   link?: string;
-  children?: MenuItem[];
+  children?: boolean;
 }
 
 interface MenuItemsWithBanner {
@@ -322,7 +322,31 @@ interface FileType {
   createdAt?: string;
   updatedAt?: string;
 }
+export interface ServiceItem {
+  title: string;
+  link: string;
+}
 
+export interface ServiceCategory {
+  title: string;
+  children: ServiceItem[];
+}
+
+export interface ServiceItemWithBanner {
+  menuName: string;
+  link: string;
+  bannerImg: string;
+}
+
+export interface ServiceCategoryWithBanner {
+  title: string;
+  children: ServiceItemWithBanner[];
+}
+
+export interface MenuServices {
+  services: ServiceCategory[];
+  servicesWithBanner: ServiceCategoryWithBanner;
+}
 
 
 export type {

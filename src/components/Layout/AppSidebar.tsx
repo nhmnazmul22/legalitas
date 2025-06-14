@@ -18,11 +18,24 @@ import { menuItems } from "@/constant";
 import { ArrowRight, Mail, Minus, Phone, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import api from "@/lib/config/axios";
+import { MenuServices } from "@/types";
 
 export default function AppSidebar() {
   const [openDropdown, setOpenDropdown] = useState(false);
+  const [menuServices, setMenuServices] = useState<MenuServices>();
+
+  const fetchMenuServices = async () => {
+    const res = await api.get("/api/menu-services");
+    const data = res.data.data;
+    setMenuServices(data);
+  };
+
+  useEffect(() => {
+    fetchMenuServices();
+  }, []);
 
   return (
     <Sidebar className="">
@@ -85,25 +98,26 @@ export default function AppSidebar() {
                   </CollapsibleTrigger>
                   <Separator className="mt-3" />
                   <CollapsibleContent className="flex flex-col gap-2 py-2 ps-2 CollapsibleContent">
-                    {item.children.map((child) => {
-                      return (
-                        child.children && (
-                          <div key={child.id}>
-                            {child.children.map((subChild) => (
-                              <div key={subChild.id} className="flex flex-col">
-                                <Link
-                                  href={subChild.link ? subChild.link : "/"}
-                                  className="hover:text-primary duration-300 font-medium"
-                                >
-                                  {subChild.title}
-                                </Link>
-                                <Separator className="my-2" />
-                              </div>
-                            ))}
-                          </div>
-                        )
-                      );
-                    })}
+                    {menuServices &&
+                      menuServices.services.map((child, index) => {
+                        return (
+                          child.children && (
+                            <div key={index}>
+                              {child.children.map((subChild, index) => (
+                                <div key={index} className="flex flex-col">
+                                  <Link
+                                    href={subChild.link ? subChild.link : "/"}
+                                    className="hover:text-primary duration-300 font-medium"
+                                  >
+                                    {subChild.title}
+                                  </Link>
+                                  <Separator className="my-2" />
+                                </div>
+                              ))}
+                            </div>
+                          )
+                        );
+                      })}
                   </CollapsibleContent>
                 </Collapsible>
               );

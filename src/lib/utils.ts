@@ -71,3 +71,9 @@ export function convertMb(bytes: number) {
 
   return `${fileSizeInMB} MB`;
 }
+
+export const normalize = (str: string) =>
+          str
+            .toLowerCase()
+            .replace(/[^a-z0-9]/gi, " ")
+            .trim();
