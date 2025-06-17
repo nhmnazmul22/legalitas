@@ -36,9 +36,9 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
 
   useEffect(() => {
     if (!selectedValue) {
-      setSelectedValue(voucherDetails.services[0]);
+      setSelectedValue(voucherDetails?.services?.[0]);
     }
-    const selectedItem = voucherDetails.features_Price.find(
+    const selectedItem = voucherDetails?.features_Price?.find(
       (item) => item.name === selectedValue
     );
     setSelectedService(selectedItem!);
@@ -49,7 +49,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
       <div className="p-5 mx-auto w-full bg-white rounded-md">
         <figure className="rounded-md overflow-hidden">
           <Image
-            src={voucherDetails.thumbnail}
+            src={voucherDetails?.thumbnail || "/"}
             alt="Company img"
             width={1024}
             height={1024}
@@ -59,10 +59,10 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
           <h3 className="text-lg font-semibold mb-2">Pilih Layanan:</h3>
           <Select value={selectedValue} onValueChange={setSelectedValue}>
             <SelectTrigger className="w-full">
-              <SelectValue placeholder={voucherDetails.services[0]} />
+              <SelectValue placeholder={voucherDetails?.services?.[0]} />
             </SelectTrigger>
             <SelectContent>
-              {voucherDetails.services.map((value, index) => (
+              {voucherDetails?.services?.map((value, index) => (
                 <SelectItem key={`${value}-${index}`} value={value}>
                   {value}
                 </SelectItem>
@@ -72,7 +72,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
         </div>
         <div className="mt-5 flex items-center justify-between">
           <h3 className="text-xl lg:text-2xl font-semibold theme-gradient">
-            {selectedService ? selectedService.price : "Rp. 0"}
+            {selectedService ? selectedService?.price : "Rp. 0"}
           </h3>
           {voucherDetails.isLimitedTime && (
             <Badge className="px-2 py-1 text-sm bg-red-200 text-red-500">
@@ -82,7 +82,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
         </div>
         <figure className="rounded-md overflow-hidden mt-5">
           <Image
-            src={voucherDetails.voucherImg}
+            src={voucherDetails?.voucherImg || "/"}
             alt="Company img"
             width={1024}
             height={1024}
@@ -90,7 +90,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
         </figure>
         <ul className="mt-5 flex flex-col gap-2">
           {selectedService &&
-            selectedService.features.map((item, index) => (
+            selectedService?.features?.map((item, index) => (
               <li
                 key={`${item}-${index}`}
                 className="flex items-center gap-2 text-base"
@@ -105,7 +105,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
           className="mt-5 mx-auto w-full"
           link={`/proposal?pname=${selectedService?.name}`}
         />
-        {voucherDetails.isJobCompletion && (
+        {voucherDetails?.isJobCompletion && (
           <p className="text-xs text-muted-foreground text-center flex items-center gap-2 justify-center mt-2">
             <RefreshCcw size={14} />{" "}
             <span className="">Jaminan pekerjaan selesai!</span>

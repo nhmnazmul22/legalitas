@@ -9,11 +9,12 @@ const Introduction: React.FC<IntroductionType> = ({ content, isBoxStyle }) => {
     <ShowMoreButton>
       <div className="mt-5">
         <Heading text="Pengantar" />
-        {content.map((item, index) => (
-          <p key={index} className="service-paragraph">
-            {parser(item)}
-          </p>
-        ))}
+        {content &&
+          content.map((item, index) => (
+            <div key={index} className="service-paragraph">
+              {parser(item)}
+            </div>
+          ))}
         {isBoxStyle && (
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
             <div className="bg-primary/10 p-5 rounded-md shadow">

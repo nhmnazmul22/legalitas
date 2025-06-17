@@ -16,11 +16,12 @@ const ServiceBasicInfo: React.FC<ServiceBasicInfoProps> = ({
   description,
   lotsOfBonus,
 }) => {
+  
   return (
     <div className="flex flex-col xl:flex-row gap-5 items-start">
       <figure>
         <Image
-          src={thumbnail}
+          src={thumbnail || "/"}
           alt="Service Banner"
           width={1024}
           height={1024}
@@ -31,17 +32,17 @@ const ServiceBasicInfo: React.FC<ServiceBasicInfoProps> = ({
         <p className="text-base md:text-lg leading-[26px] md:leading-[36px]">
           {description}
         </p>
-        {lotsOfBonus.length > 0 && (
+        {lotsOfBonus?.length > 0 && (
           <div className="hero-banner p-5 rounded-md border border-primary/20 shadow mt-5">
             <h3 className="text-lg font-semibold theme-gradient">
               Banyak bonus:
             </h3>
             <ul className="mt-3 grid grid-cols-2 gap-5">
-              {lotsOfBonus.map((item, index) => (
+              {lotsOfBonus?.map((item, index) => (
                 <Fragment key={`${item.bonusTitle}-${index}`}>
                   <li className="flex items-center gap-2">
                     <Image
-                      src={item.icon}
+                      src={item.icon || "/"}
                       alt={item.bonusTitle}
                       width={300}
                       height={300}

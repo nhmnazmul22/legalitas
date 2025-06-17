@@ -34,7 +34,7 @@ const Pricing: React.FC<PricingProps> = ({
             <TableHeader>
               <TableRow className="bg-secondary-blue hover:bg-secondary-blue">
                 <TableHead className="font-bold text-white text-left whitespace-normal"></TableHead>
-                {pricing.plans.map((value, index) => (
+                {pricing?.plans?.map((value, index) => (
                   <TableHead
                     key={`${value}-${index}`}
                     className="font-bold text-white text-center max-w-[130px] whitespace-normal"
@@ -50,39 +50,39 @@ const Pricing: React.FC<PricingProps> = ({
                   Harga
                 </TableCell>
                 <TableCell className="text-center whitespace-normal">
-                  {pricing.prices["plans-1"]}
+                  {pricing?.prices?.["plans-1"]}
                 </TableCell>
                 <TableCell className="text-center whitespace-normal">
-                  {pricing.prices["plans-2"]}
+                  {pricing?.prices?.["plans-2"]}
                 </TableCell>
-                {pricing.plans.length === 3 && (
+                {pricing.plans?.length === 3 && (
                   <TableCell className="text-center whitespace-normal">
-                    {pricing.prices["plans-3"]}
+                    {pricing?.prices?.["plans-3"]}
                   </TableCell>
                 )}
               </TableRow>
-              {pricing.features.map((value, index) => (
+              {pricing?.features?.map((value, index) => (
                 <TableRow key={`${value.name}-${index}`}>
                   <TableCell className="text-left whitespace-normal">
                     {value.name}
                   </TableCell>
                   <TableCell className="text-center whitespace-normal">
-                    {value.plans["plans-1"] === true ? (
+                    {value.plans?.["plans-1"] === true ? (
                       <CircleCheck className="mx-auto text-green-500" />
                     ) : (
                       <X className="text-destructive mx-auto border-[2px] rounded-full p-[2px] border-destructive" />
                     )}
                   </TableCell>
                   <TableCell className="text-center whitespace-normal">
-                    {value.plans["plans-2"] === true ? (
+                    {value.plans?.["plans-2"] === true ? (
                       <CircleCheck className="mx-auto text-green-500" />
                     ) : (
                       <X className="text-destructive mx-auto border-[2px] rounded-full p-[2px] border-destructive" />
                     )}
                   </TableCell>
-                  {value.plans["plans-3"] && (
+                  {value.plans?.["plans-3"] && (
                     <TableCell className="text-center whitespace-normal">
-                      {value.plans["plans-3"] === true ? (
+                      {value.plans?.["plans-3"] === true ? (
                         <CircleCheck className="mx-auto text-green-500" />
                       ) : (
                         <X className="text-destructive mx-auto border-[2px] rounded-full p-[2px] border-destructive" />
@@ -93,11 +93,11 @@ const Pricing: React.FC<PricingProps> = ({
               ))}
             </TableBody>
           </Table>
-          {pricing.footerImg && (
+          {pricing?.footerImg && (
             <div className="mt-5">
               <figure className="rounded-md overflow-hidden w-full">
                 <Image
-                  src={pricing.footerImg}
+                  src={pricing?.footerImg}
                   alt="Price Gallery"
                   width={1024}
                   height={1024}

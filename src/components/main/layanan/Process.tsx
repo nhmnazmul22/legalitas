@@ -16,13 +16,13 @@ const Process: React.FC<ProcessProps> = ({ process, process2 }) => {
       <div className="mt-5">
         <Heading text="Proses" />
         {process &&
-          process.map((item, index) => (
+          process?.map((item, index) => (
             <div key={index} className="mt-2">
               <SubHeading text={item.subsection} />
               {item.content.map((value, index) => (
-                <p key={`p-${index}`} className="service-paragraph">
+                <div key={`p-${index}`} className="service-paragraph">
                   {parser(value)}
-                </p>
+                </div>
               ))}
             </div>
           ))}

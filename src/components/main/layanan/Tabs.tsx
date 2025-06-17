@@ -38,7 +38,6 @@ type TabsSectionProps = {
 
 const TabsSection: React.FC<TabsSectionProps> = ({
   introduction,
-  process2,
   requiredDocuments,
   choosingBusinessField,
   faqs,
@@ -62,39 +61,57 @@ const TabsSection: React.FC<TabsSectionProps> = ({
         <TabsTrigger value="review">Review</TabsTrigger>
       </TabsList>
       <TabsContent value="pengantar">
-        <Introduction
-          content={introduction.content}
-          isBoxStyle={introduction.isBoxStyle}
-        />
+        {introduction ? (
+          <Introduction
+            content={introduction.content}
+            isBoxStyle={introduction.isBoxStyle}
+          />
+        ) : (
+          <p className="my-5 text-center italic">No introduction Found</p>
+        )}
       </TabsContent>
       <TabsContent value="dasar-hukum">
         <LegalBasis />
       </TabsContent>
       <TabsContent value="proses">
-        <Process process={process} process2={process2} />
+        {process ? (
+          <Process process={process} />
+        ) : (
+          <p className="my-5 text-center italic">No Process Found</p>
+        )}
       </TabsContent>
       <TabsContent value="syarat">
-        {requiredDocuments && choosingBusinessField && (
-          <Condition
-            requireDocuments={requiredDocuments}
-            choosingBusinessField={choosingBusinessField}
-          />
-        )}
-        {requiredDocuments2 && (
-          <Condition2 requiredDocuments={requiredDocuments2} />
+        {requiredDocuments?.length! > 0 &&
+          choosingBusinessField?.length! > 0 && (
+            <Condition
+              requireDocuments={requiredDocuments!}
+              choosingBusinessField={choosingBusinessField!}
+            />
+          )}
+        {requiredDocuments2?.length! > 0 && (
+          <Condition2 requiredDocuments={requiredDocuments2!} />
         )}
         {condition && (
           <Condition3 title={condition.title} content={condition.content} />
         )}
       </TabsContent>
       <TabsContent value="pricing">
-        <Pricing pricing={pricing} pricing2={pricing2} />
+        {pricing && <Pricing pricing={pricing} />}
+        {pricing2 && <Pricing pricing2={pricing2} />}
       </TabsContent>
       <TabsContent value="faq">
-        <Faq faq={faqs} />
+        {faqs ? (
+          <Faq faq={faqs} />
+        ) : (
+          <p className="my-5 text-center italic">No introduction Found</p>
+        )}
       </TabsContent>
       <TabsContent value="quiz">
-        <Quiz quiz={quiz} />
+        {quiz ? (
+          <Quiz quiz={quiz} />
+        ) : (
+          <p className="my-5 text-center italic">No Quiz Found</p>
+        )}
       </TabsContent>
       <TabsContent value="review">
         <Review />
