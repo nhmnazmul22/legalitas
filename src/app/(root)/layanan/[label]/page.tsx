@@ -15,7 +15,6 @@ import ServiceBasicInfo from "@/components/main/layanan/ServiceBasicInfo";
 import TabsSection from "@/components/main/layanan/Tabs";
 import VirtualOfficeGallery from "@/components/main/layanan/VirtualOfficeGallery";
 import Voucher from "@/components/main/layanan/Voucher";
-import { toast } from "sonner";
 
 export default async function ServiceDetailsPage({
   params,
@@ -35,7 +34,6 @@ export default async function ServiceDetailsPage({
     );
 
     if (!res.ok) {
-      toast.error("Something went wrong");
       throw new Error("Failed to fetch data");
     }
 
@@ -43,9 +41,8 @@ export default async function ServiceDetailsPage({
     servicePageData = data.data;
   } catch (error) {
     console.error("Error fetching service page data:", error);
-    toast.error("Something went wrong");
   }
-  console.log(servicePageData);
+
   const basicInfo = servicePageData.serviceBasicInfo || {};
   const introduction = servicePageData.introduction || {};
   const processData = servicePageData.process || [];
@@ -57,6 +54,10 @@ export default async function ServiceDetailsPage({
   const conditions = servicePageData.conditions || {};
   const quiz = servicePageData.quiz || [];
   const voucherDetails = servicePageData.voucherDetails || {};
+
+  if (!servicePageData || !basicInfo.serviceName) {
+    return <div className="container py-20">Service not found.</div>;
+  }
 
   return (
     <>
