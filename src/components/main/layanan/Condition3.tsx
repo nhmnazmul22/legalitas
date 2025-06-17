@@ -2,7 +2,7 @@ import { Condition3Props } from "@/types";
 import { CircleCheck } from "lucide-react";
 import Heading from "./Heading";
 
-const Condition3: React.FC<Condition3Props> = ({ title, content }) => {
+const Condition3: React.FC<Condition3Props> = ({ title, content = [] }) => {
   return (
     <div className="mt-5">
       <Heading text={title} />

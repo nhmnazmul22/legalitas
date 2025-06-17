@@ -109,9 +109,10 @@ export default async function ServiceDetailsPage({
                     choosingBusinessField={choosingBusinessField}
                   />
                 )}
-              {requiredDocuments.length > 0 && (
-                <Condition2 requiredDocuments={requiredDocuments} />
-              )}
+              {requiredDocuments.length > 0 &&
+                choosingBusinessField.length === 0 && (
+                  <Condition2 requiredDocuments={requiredDocuments} />
+                )}
 
               {conditions && (
                 <Condition3
