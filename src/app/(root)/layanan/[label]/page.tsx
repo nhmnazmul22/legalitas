@@ -55,7 +55,7 @@ export default async function ServiceDetailsPage({
   const quiz = servicePageData.quiz || [];
   const voucherDetails = servicePageData.voucherDetails || {};
 
-  if (!servicePageData || !basicInfo.serviceName) {
+  if (!servicePageData) {
     return <div className="container py-20">Service not found.</div>;
   }
 
