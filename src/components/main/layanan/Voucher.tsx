@@ -26,6 +26,7 @@ type VoucherProps = {
 };
 
 const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
+  console.log(voucherDetails);
   const [selectedValue, setSelectedValue] = useState<string>("");
   const [selectedService, setSelectedService] = useState<{
     category: string;
@@ -49,7 +50,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
       <div className="p-5 mx-auto w-full bg-white rounded-md">
         <figure className="rounded-md overflow-hidden">
           <Image
-            src={voucherDetails?.thumbnail || "/"}
+            src={voucherDetails?.thumbnail || "/images/company-google-img.jpeg"}
             alt="Company img"
             width={1024}
             height={1024}
@@ -82,7 +83,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
         </div>
         <figure className="rounded-md overflow-hidden mt-5">
           <Image
-            src={voucherDetails?.voucherImg || "/"}
+            src={voucherDetails?.voucherImg || "/images/voucher-img.png"}
             alt="Company img"
             width={1024}
             height={1024}
