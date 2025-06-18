@@ -73,7 +73,7 @@ const Voucher: React.FC<VoucherProps> = ({ voucherDetails }) => {
         </div>
         <div className="mt-5 flex items-center justify-between">
           <h3 className="text-xl lg:text-2xl font-semibold theme-gradient">
-            {selectedService ? selectedService?.price : "Rp. 0"}
+            {selectedService ? selectedService?.price : voucherDetails.price}
           </h3>
           {voucherDetails.isLimitedTime && (
             <Badge className="px-2 py-1 text-sm bg-red-200 text-red-500">
