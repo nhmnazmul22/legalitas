@@ -1,0 +1,466 @@
+{
+  "serviceBasicInfo": {
+    "serviceName": "CV / Commanditaire Vennootschap",
+    "shortDes": "Jasa Pendirian CV dengan bonus VOUCHER DISKON 10% untuk pemesanan berikutnya!",
+    "isBestSeller": true,
+    "thumbnail": "https://legalitas.org/uploads/1/2024-03/jasa_pendirian_cv.jpg",
+    "description": "Jasa legalitas di Indonesia sejak tahun 2002 | Legalitas.org menyediakan layanan pendirian CV + Virtual Office di Jakarta dan bisa PKP | Call Now",
+    "lotsOfBonus": [
+      {
+        "bonusTitle": "5 Rekening",
+        "bonusSubTitle": "Bank",
+        "icon": "/images/icon/bonus-icon-03.png"
+      },
+      {
+        "bonusTitle": "20 Kode",
+        "bonusSubTitle": "KBLI",
+        "icon": "/images/icon/bonus-icon-02.png"
+      },
+      {
+        "bonusTitle": "1 Direktur",
+        "bonusSubTitle": "Kartu Nama",
+        "icon": "/images/icon/bonus-icon-04.png"
+      },
+      {
+        "bonusTitle": "Stempel",
+        "bonusSubTitle": "Perusahaan",
+        "icon": "/images/icon/bonus-icon-07.png"
+      },
+      {
+        "bonusTitle": "eFIN",
+        "bonusSubTitle": "Perusahaan",
+        "icon": "/images/icon/bonus-icon-01.png"
+      },
+      {
+        "bonusTitle": "Akun OSS",
+        "bonusSubTitle": "& Izin Impor",
+        "icon": "/images/icon/bonus-icon-06.png"
+      }
+    ]
+  },
+  "introduction": {
+    "content": [
+      "Pengertian <b>Persekutuan Komanditer</b> atau <b><i>Commanditaire Vennootschap</i></b> (bahasa Belanda) atau sering disebut dengan <b>CV</b>, secara umum adalah suatu bentuk badan usaha kemitraan yang tidak memiliki batas modal minimal, yang didirikan oleh dua orang atau lebih dimana beberapa anggota memiliki tanggung jawab yang tidak terbatas dan beberapa anggota lainnya memiliki tanggung jawab yang terbatas.<br>",
+      "<p>Legalitas.org menyediakan layanan jasa pendirian CV dengan <span class='theme-gradient'>PROMO DISKON 10%</span> untuk pemesanan berikutnya. Berikut ini adalah alasan kenapa harus menggunakan layanan jasa pembuatan CV di Legalitas.org.</p>"
+    ],
+    "isBoxStyle": true
+  },
+  "process": [
+    {
+      "subsection": "Pendiri CV",
+      "content": [
+        "Sesuai dengan ketentuan Pasal 19 KUHD / Kitab Undang-Undang Hukum Dagang, dijelaskan bahwa harus ada minimal dua orang pendiri, yang sekutu aktif serta pasif.<br/>Sesuai dengan ketentuan Pasal 1 ayat (1) Permenkumham 17/2018, bahwa CV adalah persekutuan yang didirikan oleh satu atau lebih sekutu komanditer dengan satu atau lebih sekutu komplementer, untuk menjalankan usaha secara terus menerus.<br/>Pendiri CV ketika proses jasa pendirian CV telah menyepakati tentang nama, tempat kedudukan, bidang usaha, permodalan dan pengurus serta hal lainnya yang akan dituangkan di dalam akta notaris."
+      ]
+    },
+    {
+      "subsection": "Notaris",
+      "content": [
+        "Sesuai dengan UU No. 2/2014 tentang Jabatan Notaris, bahwa Notaris adalah pejabat umum yang membuat akta autentik.<br/>Proses pendirian CV dilakukan berdasarkan akta yang dibuat oleh Notaris dan kemudian di daftarkan dalam sistem SABU di Kementerian Hukum dan HAM."
+      ]
+    },
+    {
+      "subsection": "Menteri Hukum & Hak Asasi Manusia",
+      "content": [
+        "Sesuai dengan <b>Pasal 7 ayat (4) UU 40/2007 tentang Perseroan Terbatas</b>, Menteri adalah Menteri Hukum dan HAM, menerbitkan Surat Keputusan pengesahan badan hukum perseroan terbatas."
+      ]
+    },
+    {
+      "subsection": "NPWP",
+      "content": [
+        "Sesuai dengan Peraturan Dirjen Pajak No. PER-02/PJ/2018, Nomor Pokok Wajib Pajak adalah nomor yang diberikan kepada Wajib Pajak sebagai sarana dalam administrasi perpajakan yang dipergunakan sebagai tanda pengenal diri atau identitas Wajib Pajak dalam melaksanakan hak dan memenuhi kewajiban perpajakannya.<br/>Ketika proses SK Menteri, sistem SABH otomatis telah memberikan nomor NPWP terhadap pengesahan CV baru, dan untuk kartu NPWP bisa dimintakan permohonan kepada kantor pajak setempat dalam proses jasa pendirian CV."
+      ]
+    },
+    {
+      "subsection": "NIB dan Izin Usaha",
+      "content": [
+        "Dalam rangka percepatan dan peningkatan penanaman modal dan berusaha, pemerintah mengeluarkan PP No. 5/2021 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, pelayanan Perizinan Berusaha terintegrasi secara elektronik (Online Single Submission).  <br/>Di dalam platform OSS ini terdapat nomor identitas usaha yang disebut Nomor Induk Berusaha (NIB) dan penegasan tentang jenis perizinan berupa a. Izin Usaha; dan b. Izin Komersial atau Operasional."
+      ]
+    }
+  ],
+  "requiredDocuments": [
+    "KTP sekutu aktif & sekutu pasif;",
+    "Nomor telepon dan email perusahaan;",
+    "Mengisi formulir pendirian CV; dan",
+    "Tanda tangan dokumen Notaris"
+  ],
+  "choosingBusinessField": [
+    "KBLI adalah kode bidang usaha di Indonesia",
+    "Di Legalitas.org kamu bisa pilih hingga 20 kode KBLI / bidang usaha.",
+    "Klik Tabel KBLI Terbaru untuk cari KBLI."
+  ],
+  "pricing": {
+    "plans": ["CV", "CV + Izin", "CV + Izin + VO"],
+    "features": [
+      {
+        "name": "Pengecekan Nama CV",
+        "plans": {
+          "plans-1": true,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Pemesanan Nama CV",
+        "plans": {
+          "plans-1": true,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Persiapan Minuta",
+        "plans": {
+          "plans-1": true,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Akta Pendirian CV",
+        "plans": {
+          "plans-1": true,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "SK Menteri",
+        "plans": {
+          "plans-1": true,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Dapat 20 KBLI 🏆",
+        "plans": {
+          "plans-1": true,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "NPWP",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "SKT Pajak",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "NIB",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "K3L, SPPL, UMK Tata Ruang",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Buka 5 (lima) rekening Bank 🏆",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Stempel perusahaan 🏆",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Kartu nama 1 (satu) Direktur 🏆",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "EFIN Perusahaan 🏆",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Akun OSS, Izin Impor & Akses Kepabeanan 🏆",
+        "plans": {
+          "plans-1": false,
+          "plans-2": true,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Virtual Office 1 tahun 🏆",
+        "plans": {
+          "plans-1": false,
+          "plans-2": false,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Alamat kantor yang prestisius",
+        "plans": {
+          "plans-1": false,
+          "plans-2": false,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Meeting di 6 Lokasi di Jakarta",
+        "plans": {
+          "plans-1": false,
+          "plans-2": false,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Total 21 Meeting Room",
+        "plans": {
+          "plans-1": false,
+          "plans-2": false,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Layanan Resepsionis",
+        "plans": {
+          "plans-1": false,
+          "plans-2": false,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Penerimaan Surat",
+        "plans": {
+          "plans-1": false,
+          "plans-2": false,
+          "plans-3": true
+        }
+      },
+      {
+        "name": "Smart TV, Pantry, Coffee & Tea",
+        "plans": {
+          "plans-1": false,
+          "plans-2": false,
+          "plans-3": true
+        }
+      }
+    ],
+    "prices": {
+      "plans-1": "Rp 3.000.000",
+      "plans-2": "Rp 5.500.000",
+      "plans-3": "Rp 7.900.000"
+    },
+    "footerImg": "/images/price-gallery-01.png"
+  },
+  "faqs": [
+    {
+      "question": "Berapa minimal Modal Dasar CV?",
+      "ans": "Dalam ketentuan di KUHD atau Permenkumham tentang Pendaftaran Badan Usaha CV, tidak disebutkan berapa minimal modal CV. Jadi pendiri CV boleh saja mendirikan CV dengan modal Rp 1 juta."
+    },
+    {
+      "question": "Apakah ada persentase kepemilikan?",
+      "ans": "Dalam ketentuan di KUHD atau Permenkumham tentang Pendaftaran Badan Usaha CV, tidak disebutkan mengenai persentase kepemilikan CV. Akan tetapi pada praktek yang biasa kami lakukan, bebas memilih untuk mencantumkan atau tidak mencantumkan persentase kepemilikan di Akta Pendirian CV."
+    },
+    {
+      "question": "Nama CV minimal 3 kata?",
+      "ans": "Pernyataan ini salah. Ketentuan nama minimal 3 (tiga) kata hanya berlaku untuk badan hukum PT (sesuai PP 43/2011). Jadi boleh saja didirikan CV dengan nama terdiri dari 1 (satu) kata saja."
+    },
+    {
+      "question": "Pendaftaran di Pengadilan atau Menkumham?",
+      "ans": "Sesuai dengan ketentuan KUHD maka pendaftaran CV dilakukan di Pengadilan Negeri tempat dan kedudukan CV tersebut berada. Akan tetapi ketentuan tersebut diubah pada tahun 2018, melalui Permenkumham 17/2018 bahwa pendaftaran badan usaha CV dilakukan di Sistem Administrasi Badan Umum (SABU) di Kementrian Hukum dan Hak Asasi Manusia Republik Indonesia. Proses pendaftaran dilakukan oleh Notaris secara online."
+    }
+  ],
+  "quiz": [],
+  "voucherDetails": {
+    "thumbnail": "/images/company-google-img.png",
+    "services": [
+      "Pendirian CV",
+      "CV + Izin",
+      "CV + Izin + Virtual Office",
+      "CV + Izin + Virtual Office + PKP",
+      "CV + Izin + Virtual Office SCBD",
+      "CV + Izin + Virtual Office SCBD + PKP"
+    ],
+    "price": "Rp. 2.250.000",
+    "isLimitedTime": true,
+    "voucherImg": "/images/voucher-img.png",
+    "features_Price": [
+      {
+        "category": "CV / Commanditaire Vennootschap",
+        "name": "Pendirian CV",
+        "price": "Rp. 2.250.000",
+        "features": [
+          "Pengecekan Nama CV",
+          "Pemesanan Nama CV",
+          "Persiapan Minuta",
+          "Akta Pendirian CV",
+          "SK SABU",
+          "Dapat 20 KBLI"
+        ]
+      },
+      {
+        "category": "CV / Commanditaire Vennootschap",
+        "name": "CV + Izin",
+        "price": "Rp. 4.500.000",
+        "features": [
+          "Pengecekan Nama CV",
+          "Pemesanan Nama CV",
+          "Persiapan Minuta",
+          "Akta Pendirian CV",
+          "SK SABU",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      },
+      {
+        "category": "CV / Commanditaire Vennootschap",
+        "name": "CV + Izin + Virtual Office",
+        "price": "Rp. 7.062.782",
+        "features": [
+          "Pengecekan Nama CV",
+          "Pemesanan Nama CV",
+          "Persiapan Minuta",
+          "Akta Pendirian CV",
+          "SK SABU",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "K3L - SPPL - UMK Tata Ruang",
+          "Virtual Office 1 tahun",
+          "Alamat kantor yang prestisius",
+          "Meeting di 6 Lokasi di Jakarta",
+          "Total 21 Meeting Room",
+          "Layanan Resepsionis",
+          "Penerimaan Surat",
+          "Smart TV - Pantry - Coffee & Tea",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      },
+      {
+        "category": "CV / Commanditaire Vennootschap",
+        "name": "CV + Izin + Virtual Office SCBD",
+        "price": "Rp. 7.608.000",
+        "features": [
+          "Pengecekan Nama CV",
+          "Pemesanan Nama CV",
+          "Persiapan Minuta",
+          "Akta Pendirian CV",
+          "SK SABU",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "K3L - SPPL - UMK Tata Ruang",
+          "Virtual Office 1 tahun",
+          "Lokasi Strategis di Gedung Bursa Efek Indonesia SCBD",
+          "Meeting di 6 Lokasi di Jakarta",
+          "Total 21 Meeting Room",
+          "Layanan Resepsionis",
+          "Penerimaan Surat",
+          "Smart TV - Pantry - Coffee & Tea",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      },
+      {
+        "category": "CV / Commanditaire Vennootschap",
+        "name": "CV + Izin + Virtual Office + PKP",
+        "price": "Rp. 8.862.782",
+        "features": [
+          "Pengecekan Nama CV",
+          "Pemesanan Nama CV",
+          "Persiapan Minuta",
+          "Akta Pendirian CV",
+          "SK SABU",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "K3L - SPPL - UMK Tata Ruang",
+          "SPPKP",
+          "Virtual Office 1 tahun",
+          "Alamat kantor yang prestisius",
+          "Meeting di 6 Lokasi di Jakarta",
+          "Total 21 Meeting Room",
+          "Layanan Resepsionis",
+          "Penerimaan Surat",
+          "Smart TV - Pantry - Coffee & Tea",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      },
+      {
+        "category": "CV / Commanditaire Vennootschap",
+        "name": "CV + Izin + Virtual Office SCBD + PKP",
+        "price": "Rp. 9.408.000",
+        "features": [
+          "Pengecekan Nama CV",
+          "Pemesanan Nama CV",
+          "Persiapan Minuta",
+          "Akta Pendirian CV",
+          "SK SABU",
+          "NPWP",
+          "SKT Pajak",
+          "NIB / Izin Usaha",
+          "K3L - SPPL - UMK Tata Ruang",
+          "SPPKP",
+          "Virtual Office 1 tahun",
+          "Lokasi Strategis di Gedung Bursa Efek Indonesia SCBD",
+          "Meeting di 6 Lokasi di Jakarta",
+          "Total 21 Meeting Room",
+          "Layanan Resepsionis",
+          "Penerimaan Surat",
+          "Smart TV - Pantry - Coffee & Tea",
+          "[BONUS] Dapat 20 KBLI",
+          "[BONUS] Buka 5 (lima) rekening Bank",
+          "[BONUS] Stempel perusahaan",
+          "[BONUS] Kartu nama 1 (satu) Direktur",
+          "[BONUS] EFIN Badan",
+          "[BONUS] Akun OSS - Izin Impor & Akses Kepabeanan"
+        ]
+      }
+    ],
+    "isJobCompletion": true
+  }
+}
