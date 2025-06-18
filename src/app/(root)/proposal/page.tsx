@@ -1,14 +1,14 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import { useSelector } from "react-redux";
+import FilterOptions from "@/components/main/proposal/FilterOptions";
+import ProposalCard from "@/components/main/proposal/ProposalCard";
+import SkeletonCard from "@/components/skeleton/SkeletonCard";
+import { normalize } from "@/lib/utils";
 import { RootState } from "@/store";
 import { ProposalType } from "@/types";
-import ProposalCard from "@/components/main/proposal/ProposalCard";
 import Link from "next/link";
-import SkeletonCard from "@/components/skeleton/SkeletonCard";
-import FilterOptions from "@/components/main/proposal/FilterOptions";
-import { normalize } from "@/lib/utils";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function ProposalPage() {
   const [proposals, setProposals] = useState<ProposalType[]>([]);
@@ -35,12 +35,15 @@ export default function ProposalPage() {
           const matchCategory = category
             ? proposal.category.toLowerCase() === category.toLowerCase()
             : false;
-         
+
           return matchName || matchCategory;
         });
-  
 
-        setProposals(filtered);
+        if (filtered.length > 0) {
+          setProposals(filtered);
+        } else {
+          setProposals(data.data);
+        }
       } catch (err) {
         console.error("Failed to fetch proposals:", err);
       } finally {
